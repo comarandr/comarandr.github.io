@@ -2,6 +2,6 @@
 
 ## Appunti
 
-[Matematica Discreta prova](./matematica-discreta-prova.md)
+[Matematica Discreta](./MatematicaDiscreta.html)
 
 ## Altre cose
