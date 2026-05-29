@@ -15,7 +15,7 @@ permalink: /algebraLineare/
 
 ## operazioni
 
-- n-pla: $(a_1, \ldots, a_n)$
+- n-pla: $ (a_1, \ldots, a_n) $
 
 - somma:
 
@@ -65,7 +65,7 @@ $$
 
 ## formulette geometriche
 
-**rette passanti per $O$**: $\mathcal{L}(v) = \{\lambda v : \lambda \in \mathbb{R}\}$ $\lambda$ parametro
+**rette passanti per $O$**: $ \mathcal{L}(v) = \{\lambda v : \lambda \in \mathbb{R}\} $ $ \lambda $ parametro
 **ortogonalità**: $<a \cdot b> = 0$ prodotto scalare nullo
 **angolo tra due n-ple**:
 
@@ -73,35 +73,35 @@ $$
 \alpha = arcos( \frac{<a \cdot b>}{||a|| \cdot ||b||})
 $$
 
-**rete affini**: $\mathcal{L}(v) + w = \lambda v + w \quad \forall \lambda \in \mathbb{R}$
+**rete affini**: $ \mathcal{L}(v) + w = \lambda v + w \quad \forall \lambda \in \mathbb{R} $
 **retta per 2 punti**: $ (1 -\lambda)P = \lambda Q : (\lambda (P-Q) + P) $
-**combinazione affine**: $\alpha P + \beta Q \mid \alpha + \beta = 1 $
-**combinazione connessa**: $\alpha P + \beta Q \quad \alpha , \beta \in [0,1] \; \land \; \alpha + \beta = 1 $
+**combinazione affine**: $ \alpha P + \beta Q \mid \alpha + \beta = 1 $
+**combinazione connessa**: $ \alpha P + \beta Q \quad \alpha , \beta \in [0,1] \; \land \; \alpha + \beta = 1 $
 
 ## Risoluzioni geometria dello spazio
 
-**equazione retta**: $\begin{cases} x = v_1 \cdot t + p_1 \\ y = v_2 \cdot t + p_2 \\ z = v_3 \cdot t + p_3 \end{cases}$
+**equazione retta**: $ \begin{cases} x = v_1 \cdot t + p_1 \\ y = v_2 \cdot t + p_2 \\ z = v_3 \cdot t + p_3 \end{cases} $
 
-$t(v_1 v_2 v_3) + (p_1 p_2 p_3)$
+$ t(v_1 v_2 v_3) + (p_1 p_2 p_3) $
 
 **retta per $2$ punti**: $ t(B-A) + A $
 
-$\begin{cases} x = (b_1 - a_1) \cdot t + a_1 \\ y = (b_2 - a_2) \cdot t + a_2 \\ z = (b_3 - a_3) \cdot t + a_3 \end{cases}$
+$ \begin{cases} x = (b_1 - a_1) \cdot t + a_1 \\ y = (b_2 - a_2) \cdot t + a_2 \\ z = (b_3 - a_3) \cdot t + a_3 \end{cases} $
 
-**spazio perpendicolare a $v (v_1 v_2 v_3)$**: $<v, x> = 0$
-NB: in $\mathbb{R}^2$ è una retta
+**spazio perpendicolare a $ v (v_1 v_2 v_3) $**: $ <v, x> = 0 $
+NB: in $ \mathbb{R}^2 $ è una retta
 
-**spazio perpendicolare a $v (v_1 v_2 v_3)$ e passante per $P$**: $<v, x> = <v, P>$
+**spazio perpendicolare a $ v (v_1 v_2 v_3) $ e passante per $ P $**: $ <v, x> = <v, P> $
 
-**equazione del piano**: $\pi : ax + by + cz = d$
+**equazione del piano**: $ \pi : ax + by + cz = d $
 
-**retta perpendicolare al piano $\pi$**: $v = (a,b,c)$ perpendicolare al piano $\pi : ax + by +cz =d$
+**retta perpendicolare al piano $ \pi $**: $ v = (a,b,c) $ perpendicolare al piano $ \pi : ax + by +cz =d $
 NB componenti vettori uguali a coefficienti piano
 
-**retta passante per un punto $P(p_x, p_y, p_z)$ ovvero traslazione**: $d = a \cdot p_x + b \cdot p_y + c \cdot p_z$
-$ax + by + cz = a \cdot p_x + b \cdot p_y + c \cdot p_z$
+**retta passante per un punto $ P(p_x, p_y, p_z) $ ovvero traslazione**: $ d = a \cdot p_x + b \cdot p_y + c \cdot p_z $
+$ ax + by + cz = a \cdot p_x + b \cdot p_y + c \cdot p_z $
 
-**piano contenente $2$ rette**: $\begin{cases} x = v_1 \cdot t + w_1 \cdot s \\ y = v_2 \cdot t + w_2 \cdot s \\ z = v_3 \cdot t + w_3 \cdot s \end{cases}$
+**piano contenente $ 2 $ rette**: $\begin{cases} x = v_1 \cdot t + w_1 \cdot s \\ y = v_2 \cdot t + w_2 \cdot s \\ z = v_3 \cdot t + w_3 \cdot s \end{cases}$
 forma parametrica da risolvere per ottenere forma cartesiana
 
 **retta in $\mathbb{R}^2$ dati $2$ piani**: $r: \begin{cases} a_1 x + b_1 y + c_1 z = d_1 \\ a_2 x + b_2 y + c_2 z = d_2 \end{cases}$

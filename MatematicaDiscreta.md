@@ -25,8 +25,8 @@ permalink: /MatematicaDiscreta/
 ## Insiemi
 
 **Insieme**: concetto porimitivo, collezione di oggetti detti elementi
-**Cardinalità $ |A|$**: numero di elementi di un insieme $ A$
-**Insieme vuoto $ \emptyset$**: insieme senza elementi, $ |\emptyset| = 0$
+**Cardinalità $ \vert A \vert$**: numero di elementi di un insieme $ A$
+**Insieme vuoto $ \emptyset$**: insieme senza elementi, $ \vert \emptyset \vert = 0$
 **A sottoinsieme di B**: $ A \subseteq B$ se ogni elemento di A è anche in B
 **prodotto cartesiano $ A \times B$**: insieme di tutte le coppie $ (a, b)$ con $ a \in A$ e $ b \in B$
 
@@ -135,15 +135,15 @@ $ s(n) $ sia a sinistra che a destra ma con coefficienti diversi per non eliders
 
 ## Probabilità
 
-**universo $ S $**: $ Pr(S) = P|S| = 1 $
+**universo $ S $**: $ Pr(S) = P \mid S \mid = 1 $
 
-**distribuita uniforme**: $ Pr(A) = p|A|= \frac{|A|}{|S|} $
+**distribuita uniforme**: $ Pr(A) = p \vert A\vert= \frac{\vertA\vert}{\vertS\vert} $
 
-**probabilità condizionata**: $ Pr(A|B) = \frac{Pr(A \cap B)}{Pr(B)} $
+**probabilità condizionata**: $ Pr(A\vertB) = \frac{Pr(A \cap B)}{Pr(B)} $
 
 **probabilità eventi indipendenti**: $ Pr(A \cap B) = Pr(A) \cdot Pr(B) $
 
-**teorema di Bayes**: $ Pr(B|A) = \frac{Pr(A|B) \cdot Pr(B)}{Pr(A)} $
+**teorema di Bayes**: $ Pr(B\vert A) = \frac{Pr(A\vert B) \cdot Pr(B)}{Pr(A)} $
 
 ## Matematica degli interi
 
@@ -181,17 +181,17 @@ Calcolo di $ MCD(a,b) $
 
 $ p \in \mathbb{N}, p \gt 1. $
 
-- $ p \text{ primo} \iff \forall a, b \in \mathbb{N} \text{ se } \ p | ab \implies p | a \lor p | b $
-- $ \text{se } p|a_1 \cdot a_2 \cdots a_r \implies p | a_i \text{ (almeno un } i \in [1, r]) $
+- $ p \text{ primo} \iff \forall a, b \in \mathbb{N} \text{ se } \ p \vert  ab \implies p \vert a \lor p \vert b $
+- $ \text{se } p \mid a_1 \cdot a_2 \cdot \ldots \cdot a_r \implies p \vert a_i \text{ (almeno un } i \in [1, r]) $
 
 **Teorema fondamentale dell'aritmetica**:
 
-$$ \forall n \in \mathbb{N}, n \geq 2\\ n = p_1 \cdot p_2 \cdots p_i \ \text{ con } p_i = \text{fattore primo} $$
+$$ \forall n \in \mathbb{N}, n \geq 2\\ n = p_1 \cdot p_2 \cdot \ldots \cdot p_i \ \text{ con } p_i = \text{fattore primo} $$
 
-Per cui dati $ a,b $ con $ a = p_1^{n_1} \cdot p_2^{n_2} \cdots p_k^{n_k}$ e $ b = p_1^{m_1} \cdot p_2^{m_2} \cdots p_k^{m_k} $
+Per cui dati $ a,b $ con $ a = p_1^{n_1} \cdot p_2^{n_2} \cdot \ldots \cdot p_k^{n_k}$ e $ b = p_1^{m_1} \cdot p_2^{m_2} \cdot \ldots \cdot p_k^{m_k} $
 
-- $$ mcm(a,b) = p_1^{\max(n_1,m_1)} \cdot p_2^{\max(n_2,m_2)} \cdots p_k^{\max(n_k,m_k)} $$
-- $$ MCD(a,b) = p_1^{\min(n_1,m_1)} \cdot p_2^{\min(n_2,m_2)} \cdots p_k^{\min(n_k,m_k)} $$
+- $$ mcm(a,b) = p_1^{\max(n_1,m_1)} \cdot p_2^{\max(n_2,m_2)} \cdot \ldots \cdot p_k^{\max(n_k,m_k)} $$
+- $$ MCD(a,b) = p_1^{\min(n_1,m_1)} \cdot p_2^{\min(n_2,m_2)} \cdot \ldots \cdot p_k^{\min(n_k,m_k)} $$
 
 **Primo contenuto in un fattoriale $ N!$**
 
@@ -238,15 +238,15 @@ $ k $ elementi diversi, $ n_1 $ del primo tipo, $ n_2 $ del secondo tipo, $ \ldo
 ### Principio di somma
 
 $ S = S_1 \cup S_2 \cup \ldots \cup S_k $
-$ |S| = |S_1| + |S_2| + \ldots + |S_k| $
+$ \vert S \vert = \vert S_1 \vert + \vert S_2 \vert + \ldots + \vert S_k \vert $
 
-**conteggio indiretto**: $ |A| = |S| + |S'| \implies |S| = |A| - |S'|$
+**conteggio indiretto**: $ \vert A \vert = \vert S \vert + \vert S' \vert \implies \vert S \vert = \vert A \vert - \vert S' \vert $
 
 ### Principio di prodotto
 
 $ S$: insieme di tute le coppie $ (a,b)$: $ a$ in $ p$ modi, $ b$ in $ q$ modi dato il primo
 
-$ |S| = p \cdot q$
+$ \vert S \vert = p \cdot q$
 
 dimostrazione mediate principio somma
 
@@ -260,7 +260,7 @@ $$ \text{n-ple: } S = p_1 \cdot p_2 \cdot \ldots \cdot p_n $$
 
 dato $ A = \{a_1, a_2, \ldots, a_n\} $ il sottoinsieme è un booleano per ogni elemento (è incluso? T/F)
 
-$$\mathcal{P}(A) = 2^{|A|} $$
+$$\mathcal{P}(A) = 2^{\vert A \vert} $$
 
 ## Coefficiente binomiale
 
@@ -325,7 +325,7 @@ $ k! $: permutazioni possibili del sottoinsieme
 
 $ S = \{a_1, a_2, \ldots, a_k\} $ con $ \{a_1 \cdot n_1, a_2 \cdot n_2, \ldots, a_k \cdot n_k\} $
 
-**permutazioni**: $$ \Pi_s=\frac{n!}{n_1! \cdot n_2! \cdots n_k!} $$
+**permutazioni**: $$ \Pi_s=\frac{n!}{n_1! \cdot n_2! \cdot \ldots \cdot n_k!} $$
 
 ### Combinazioni con ripetizioni
 
@@ -356,15 +356,15 @@ $ S = \text{\{insieme di elementi con } p_1, p_2, \ldots, p_m \text{ proprietà\
 
 insieme degli elementi che non possiedono alcuna proprietà $ p_1, \ldots, p_m $:
 
-$ |\bar{A_1} \cap \bar{A_2} \cap \ldots \cap \bar{A_m}| = $
+$ \vert \bar{A_1} \cap \bar{A_2} \cap \ldots \cap \bar{A_m} \vert = $
 
-$ = | S | $
-$ - \sum |A_{i_1}| $
-$ + \sum |A_{i_1} \cap A_{i_2}| $
+$ = \vert S \vert $
+$ - \sum \vert A_{i_1} \vert $
+$ + \sum \vert A_{i_1} \cap A_{i_2} \vert $
 $ \ldots $
-$ + (-1)^d |A_1 \cap A_2 \cap \ldots \cap A_d| $
+$ + (-1)^d \vert A_1 \cap A_2 \cap \ldots \cap A_d \vert $
 $ \ldots $
-$ + (-1)^m |A_1 \cap A_2 \cap \ldots \cap A_m|$
+$ + (-1)^m \vert A_1 \cap A_2 \cap \ldots \cap A_m \vert $
 
 ### Spiazzamenti
 
@@ -408,14 +408,14 @@ approsimmazione: $ z_n \approx \frac{n!}{e}$
 
 **vertice isolato**: ha grado 0 ($ d(v) = 0$)
 
-**Teorema somma dei gradi dei vertici**: $$\sum_{v \in V} d(v) = 2|E|$$ sommatoria dei gradi dei vertici è il doppio della cardinalità degli archi
+**Teorema somma dei gradi dei vertici**: $$\sum_{v \in V} d(v) = 2 \vert E \vert $$ sommatoria dei gradi dei vertici è il doppio della cardinalità degli archi
 
 ```mermaid
 graph LR 
   A((A)) --- B((B))
 ```
 
-$ |E| = 1, \; d(A) + d(B) = 1 + 1 = 2 $
+$ \vert E \vert = 1, \; d(A) + d(B) = 1 + 1 = 2 $
 
 <br>
 
@@ -425,7 +425,7 @@ graph LR
   B((B)) --- C((C))
 ```
 
-$ |E|= 2, \; d(A) + d(B) + d(C) = 1 + 2 + 1 = 4 $
+$ \vert E \vert = 2, \; d(A) + d(B) + d(C) = 1 + 2 + 1 = 4 $
 
 **Teorema numero di vertici di grado dispari**: in ogni grafo c'è un numero pari di vertici di grado dispari
 
@@ -448,7 +448,7 @@ graph LR
     B((3)) --- D((1))
 ```
 
-$ \implies |v: d(v) \text{ dispari}| = |\{a,b,c,d\}|= 4$
+$ \implies \vert v: d(v) \text{ dispari} \vert = \vert \{a,b,c,d\} \vert = 4 $
 
 **Sequenza grafica**: $ (d_1, \ldots, d_n)$ è una sequenza grafica se esiste un grafo $ G$ in cui $ d_1, \ldots, d_n$ corrisponde ai gradi di $ G$
 
@@ -471,16 +471,16 @@ $ G_{[S]} = (S, E')$ con $ S \subseteq V$, è composto da $ ij \in E$ con $ i,j 
 
 **grafo completo**: ogni coppia di nodi è collegata da un arco
 
-- Si indica con $ K_n$, con $ n$ vertici e $ |E| = \frac{n(n-1)}{2}$ lati
+- Si indica con $ K_n$, con $ n$ vertici e $ \vert E \vert = \frac{n(n-1)}{2}$ lati
 - Si chiama **clique** se è un sottografo
 
 **clique**: sottografo completo. Insieme di elementi mutualmente compatibili
 
-**Grafo complementare**: dato $ G = (V, E)$ si definisce con $ \bar{G} = (V, \bar{E})$ con $ \bar{E} = \{uw | v,w \in V, vw \not\in E\}$
+**Grafo complementare**: dato $ G = (V, E)$ si definisce con $ \bar{G} = (V, \bar{E})$ con $ \bar{E} = \{uw \mid v,w \in V, vw \not\in E\}$
 
 **Insieme indipendente (stabile) di vertici**: dato $ S \subseteq V,\ ij \not\in E\ \forall i,j \in S$. Soltanto se il grafo indotto è una clique
 
-**Lati grafo completo $ n$ vertici**: Sia $ G$ completo. $ |V| = n \implies |E| = \frac{n(n-1)}{2}$
+**Lati grafo completo $ n$ vertici**: Sia $ G$ completo. $ \vert V \vert = n \implies \vert E \vert = \frac{n(n-1)}{2}$
 
 **Cammino**: sequenza di vertici $ v_0, v_1, \ldots, v_k$ per cui dato $ i \in (0, k-1)$ allora $ v_i v_{i+1} \in E$
 
@@ -510,7 +510,7 @@ $$\delta(S):= \{ij : i \in S,\ j \in V-S\}$$ taglio, esiste coppia di nodi adiac
 Si denota con $ G = (V_1, V_2, E)$
 
 **Teorema**: $ G$ bipartito se e solo se ogni ciclo in $ G$ numero pari di nodi
-_nota_: $ G$ può essere bipartito con $ |V|$ dispari, ma in tal caso non hamiltoniano per il teorema precedente
+_nota_: $ G$ può essere bipartito con $ \vert V \vert$ dispari, ma in tal caso non hamiltoniano per il teorema precedente
 
 **grafo bipartito completo**: $ ij \in E \quad \forall V_1\ e \forall j \in V_2$
 
@@ -555,14 +555,14 @@ _nota_: $ G$ può essere bipartito con $ |V|$ dispari, ma in tal caso non hamilt
 
 **proprietà albero**: $ n$ nodi, $ n-1$ archi
 
-- grafo con $ n \geq 3$ nodi e $ |E| \gt n-1$ non è aciclico
-- grafo con $ n \geq 3$ nodi e $ |E| \lt n-1$ non è connesso
+- grafo con $ n \geq 3$ nodi e $ \vert E \vert \gt n-1$ non è aciclico
+- grafo con $ n \geq 3$ nodi e $ \vert E \vert \lt n-1$ non è connesso
 
 **proprietà albero**:
 
 1. connesso e aciclico (definizione)
-2. connesso e $ |E| = |V| -1$
-3. aciclico e $ |E| = |V| -1$
+2. connesso e $ \vert E \vert = \vert V \vert -1$
+3. aciclico e $ \vert E \vert = \vert V \vert -1$
 4. connesso e $ \forall i,j \in V$ esiste cammino $ ij$ ed è unico
 5. connesso e la rimozione di un qualsiasi arco sconnette $ G$
 6. aciciclico e $ \forall i,j \in V : ij \not\in E$, se aggiungo l'arco $ ij$ diventa ciclico
@@ -609,14 +609,14 @@ Rappresenta la sommatoria di tutte le distanze tra i vertici
 **calcolo indice di Wiener**: dato $ T=(V,E)$, arco $ e=uv \in E$
 
 - **carico arco**: $ \lambda (e) = n_u \cdot n_v$
-$ n_u, n_v (=|V| - n_u)$ sono numero di nodi delle componenti connesse indotte dal taglio di $ e$ in $ T$
+$ n_u, n_v (= \vert V \vert - n_u)$ sono numero di nodi delle componenti connesse indotte dal taglio di $ e$ in $ T$
 
 **formula calcolo indice di Wiener**:
 $$ W(T) = \sum_{e \in E} \lambda (e)$$
 
 per ogni arco calcolo il **prodotto** tra il **numero di nodi** delle due **componenti connesse**, poi **sommo** tutti i prodotti
 
-**lemma**: $ T=(V,E) \quad |V|$ dispari $ \implies W(T)$ pari
+**lemma**: $ T=(V,E) \quad \vert V \vert$ dispari $ \implies W(T)$ pari
 
 ### Grafi orientati (diretto, digrafo)
 
