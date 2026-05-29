@@ -1,21 +1,8 @@
-# Base configuration
-title: "Comarandr's Notes"
-theme: jekyll-theme-cayman
+title: Appunti
+theme: minima
 markdown: kramdown
-highlighter: rouge
-permalink: pretty
-
-collections:
-  pages:
-    output: true
-    permalink: /:path/
+kramdown:
+  math_engine: mathjax
 
 
 
-
-
-
-
-
-# Style Variables
-brand_color: "#DA253B"
