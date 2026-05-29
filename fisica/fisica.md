@@ -94,11 +94,11 @@ $0.0005 \pm 0.001$ &rarr; $(5 \pm 1) \cdot 10^{-3}$
 
 $P = x = \vec{OP}$
 
-$| \vec{OP'} | = |\vec{OP} |$
+$ \vert \vec{OP'} \vert = \vert \vec{OP} \vert $
 
 <img src="AsseCoordinato.jpeg" alt="Asse Coordinato" width="400"/>
 
-$ x \text{ posizione} \begin{cases} \vert \vec{OP} \vert \text{ se } \vec{OP} \text{ concorde nel verso positivo} \\ - \vert \vec{OP} \vert \text{ se } \vec{OP} \text{ discorde nel verso positivo} \end{cases} $
+$ x \text{ posizione} \begin{cases} \vert \vec{OP} \vert \text{ se } \vec{OP}  \text{ concorde nel verso positivo} \\\\\\ - \vert \vec{OP} \vert \text{ se } \vec{OP} \text{ discorde nel verso positivo} \end{cases} $
 
 **DUE DIMENSIONI**:
 
