@@ -41,11 +41,11 @@ body.toc-visible #toc-toggle {
 
 #toc-sidebar {
   position: fixed;
-  top: 73px;
+  top: 0;
   right: 0;
   width: 260px;
-  height: calc(100dvh - 73px);
-  max-height: calc(100dvh - 73px);
+  height: 100dvh;
+  max-height: 100dvh;
   background: #ffffff;
   border-left: 1px solid #e0e0e0;
   overflow-y: auto;
