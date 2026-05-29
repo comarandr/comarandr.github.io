@@ -3,4 +3,4 @@ title: Comarandr homepage
 description: Bookmark this to keep an eye on my project updates!
 
 markdown: kramdown
-  math_engine: "null"
+math_engine: "null"
