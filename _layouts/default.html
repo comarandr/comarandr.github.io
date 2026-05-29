@@ -43,9 +43,18 @@
 
   <!-- Mermaid -->
   <script src="https://unpkg.com/mermaid@8.9.3/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({ startOnLoad: true, theme: "default" });
-  </script>
+<script>
+  mermaid.initialize({ startOnLoad: false, theme: "default" });
+
+  document.querySelectorAll('code.language-mermaid').forEach(function(el) {
+    var div = document.createElement('div');
+    div.classList.add('mermaid');
+    div.textContent = el.textContent;
+    el.parentNode.replaceWith(div);
+  });
+
+  mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+</script>
 
 </body>
 </html>
