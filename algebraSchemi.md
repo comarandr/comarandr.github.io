@@ -66,7 +66,9 @@ $$
 ## formulette geometriche
 
 **rette passanti per $O$**: $ \mathcal{L}(v) = \{\lambda v : \lambda \in \mathbb{R}\} $ $ \lambda $ parametro
+
 **ortogonalità**: $<a \cdot b> = 0$ prodotto scalare nullo
+
 **angolo tra due n-ple**:
 
 $$
@@ -74,8 +76,11 @@ $$
 $$
 
 **rete affini**: $ \mathcal{L}(v) + w = \lambda v + w \quad \forall \lambda \in \mathbb{R} $
+
 **retta per 2 punti**: $ (1 -\lambda)P = \lambda Q : (\lambda (P-Q) + P) $
+
 **combinazione affine**: $ \alpha P + \beta Q \mid \alpha + \beta = 1 $
+
 **combinazione connessa**: $ \alpha P + \beta Q \quad \alpha , \beta \in [0,1] \; \land \; \alpha + \beta = 1 $
 
 ## Risoluzioni geometria dello spazio
@@ -119,13 +124,17 @@ stesso vettore direttore
 
 ## Matrici
 
-**matrice m x n** $A = \begin{bmatrix} a_{11} & a_{12} & \ldots & a_{1n} \\ a_{21} & a_{22} & \ldots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \ldots & a_{mn} \end{bmatrix}$
-
-m righe, n colonne
+**matrice m x n**: $ m $ righe, $ n $ colonne
+$$
+A = \begin{bmatrix} a_{11} & a_{12} & \ldots & a_{1n} \\ a_{21} & a_{22} & \ldots & a_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ a_{m1} & a_{m2} & \ldots & a_{mn} \end{bmatrix}
+$$
 
 **matrice quadrata**: matrice con stesso numero di righe e colonne, appartenente a $\mathbb{R}^n$
 
-**traccia**: $tr(A) = \begin{bmatrix} a_{11} & \ldots & \ldots & \ldots \\ \ldots & a_{22} & \ldots & \ldots \\ \vdots & \vdots & \ddots & \vdots \\ \ldots & \ldots & \ldots & a_{nn} \end{bmatrix}$
+**traccia**: considero solo gli elementi sulla diagonale principale e li sommo
+$$
+tr(A) = \begin{bmatrix} a_{11} & \ldots & \ldots & \ldots \\ \ldots & a_{22} & \ldots & \ldots \\ \vdots & \vdots & \ddots & \vdots \\ \ldots & \ldots & \ldots & a_{nn} \end{bmatrix}
+$$
 
 $$
 tr(A) = \sum_{i=1}^n a_{ii}
@@ -403,12 +412,12 @@ $$
 
 **Teorema di Rouché-Capelli**:
 
-$rg(A) = rg (\begin{bmatrix} A | b \end{bmatrix})$ sistema ammissibile
+$rg(A) = rg (\begin{bmatrix} A \vert b \end{bmatrix})$ sistema ammissibile
 
-- $rg(A) = rg (\begin{bmatrix} A|b \end{bmatrix}) = n (x_n)$ unica soluzione
-- $rg(A) = rg (\begin{bmatrix} A|b \end{bmatrix}) < n (x_n)$ infinite soluzioni
+- $rg(A) = rg (\begin{bmatrix} A \vert b \end{bmatrix}) = n (x_n)$ unica soluzione
+- $rg(A) = rg (\begin{bmatrix} A \vert b \end{bmatrix}) < n (x_n)$ infinite soluzioni
 
-$rg(A) \neq rg (\begin{bmatrix} A|b \end{bmatrix})$ sistema impossibile
+$rg(A) \neq rg (\begin{bmatrix} A \vert b \end{bmatrix})$ sistema impossibile
 
 ### Calcolo del determinante
 
