@@ -50,7 +50,7 @@ $\Delta T = (22 \pm 1)m$
 | $ S \Delta T $ | 21 | 23 |
 | --- | --- | --- |
 | 96 | 4.571... | 4.173... |
-|98 | 4.619... | 4.217... |
+| 98 | 4.619... | 4.217... |
 
 $Vm$ varia da 4.619 - 4.173 = 0.446
 
@@ -98,7 +98,7 @@ $| \vec{OP'} | = |\vec{OP} |$
 
 <img src="AsseCoordinato.jpeg" alt="Asse Coordinato" width="400"/>
 
-$ x \text{ posizione} \begin{cases} |\vec{OP}| \text{ se } \vec{OP} \text{ concorde nel verso positivo} \\ -|\vec{OP}| \text{ se } \vec{OP} \text{ discorde nel verso positivo} \end{cases}$
+$ x \text{ posizione} \begin{cases} \vert \vec{OP} \vert \text{ se } \vec{OP} \text{ concorde nel verso positivo} \\ - \vert \vec{OP} \vert \text{ se } \vec{OP} \text{ discorde nel verso positivo} \end{cases} $
 
 **DUE DIMENSIONI**:
 
@@ -143,7 +143,9 @@ $v(t) = a_m t + v_0$
 **ACCELERAZIONE MEDIA**: $$a_m = \frac{\Delta v}{\Delta t}$$
 
 **ACCELERAZIONE ISTANTANEA**: $$a(t) = \lim_{\Delta t \to 0} \frac{\Delta v}{\Delta t} = \frac{dv(t)}{dt}$$
+
 <br>
+
 <img src="uniformementeAccelerato.jpeg" alt="Uniformemente Accelerato" width="800"/>
 
 #### IN BREVE

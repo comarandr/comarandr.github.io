@@ -13,7 +13,10 @@
     window.MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        macros: {
+          everymath: ['\\displaystyle']
+        }
       },
       svg: {
         fontCache: 'global'
