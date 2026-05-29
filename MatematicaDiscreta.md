@@ -511,6 +511,16 @@ _nota_: $ G$ può essere bipartito con $ \vert V \vert$ dispari, ma in tal caso 
 
 **grafo bipartito completo**: $ ij \in E \quad \forall V_1\ e \forall j \in V_2$
 
+```mermaid
+graph LR
+    A((A)) --- D((D))
+    A((A)) --- E((E))
+    B((B)) --- D((D))
+    B((B)) --- E((E))
+    C((C)) --- D((D))
+    C((C)) --- E((E))
+```
+
 **Teorema**: $ G = (V, E)$ con $ n \geq 3$ vertici. Se $ d(v) + d(w) \geq n\quad \forall v,w \in V $ allora è hamiltoniano
 
 **Corollario**: $ \forall v \in V \quad d(v) \geq \frac{n}{2} \implies G \text{ è hamiltoniano}$
@@ -558,9 +568,9 @@ _nota_: $ G$ può essere bipartito con $ \vert V \vert$ dispari, ma in tal caso 
 ```mermaid
 graph LR
 
-subgraph G1["<n-1 archi"]
+subgraph G1["< n-1 archi"]
     A((A)) --- B((B))
-    A((A))) -.-> C((C))
+    A((A)) -.- C((C))
 end
 
 subgraph G2["n-1 archi"]
@@ -591,7 +601,22 @@ G1 ~~~ G2 ~~~ G3
 
 **albero di diametro massimo**: cammino lineare
 
+```mermaid
+graph LR
+    A((A)) --- B((B))
+    B((B)) --- C((C))
+    C((C)) --- D((D))
+```
+
 **albero di diametro minimo**: albero a stella (un solo nodo interno)
+
+```mermaid
+graph LR
+    A((A)) --- B((B))
+    A((A)) --- C((C))
+    D((D)) --- A((A))
+    E((E)) --- A((A))
+```
 
 **albero di supporto**: $ T = (V, E_T)$ dati i vertici di un grafo e **alcuni** archi appartenti a $ E$, la rimozione di un arco sconnette $ T$
 
