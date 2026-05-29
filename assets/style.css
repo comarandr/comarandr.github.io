@@ -20,9 +20,9 @@ header {
   top: 12px;
   right: 12px;
   z-index: 9999;
-  background: #f0f0f0;        /* era #1a1a2e — grigio chiaro invece di blu scuro */
-  color: #1a1a2e;             /* era #e8e8f0 — testo scuro su sfondo chiaro */
-  border: 1px solid #d0d0d0;  /* NUOVO — bordo sottile per definire il bottone */
+  background: #f0f0f0;
+  color: #1a1a2e;
+  border: 1px solid #d0d0d0;
   border-radius: 6px;
   padding: 6px 11px;
   font-size: 0.78rem;
@@ -30,13 +30,13 @@ header {
   font-weight: 600;
   cursor: pointer;
   letter-spacing: 0.04em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);  /* era 0.25 — ombra più leggera */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: background 0.2s;
 }
-#toc-toggle:hover { background: #e0e0e0; } /* era #2e2e50 */
+#toc-toggle:hover { background: #e0e0e0; }
 
 body.toc-visible #toc-toggle {
-  right: 272px;  /* 260px larghezza sidebar + 12px margine originale */
+  right: 272px;
 }
 
 #toc-sidebar {
@@ -67,8 +67,8 @@ body.toc-visible #toc-toggle {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #999999;             /* era #5a5a8a — grigio neutro */
-  border-bottom: 1px solid #ebebeb; /* era #2a2a4a */
+  color: #999999;
+  border-bottom: 1px solid #ebebeb;
   margin-bottom: 0.4rem;
   font-family: system-ui, sans-serif;
 }
@@ -83,30 +83,30 @@ body.toc-visible #toc-toggle {
   padding: 0.32rem 0.75rem 0.32rem calc(0.9rem + var(--depth, 0) * 0.75rem);
   font-family: system-ui, sans-serif;
   font-size: 0.78rem;
-  color: #222222;             /* era #9898c8 — testo scuro leggibile */
+  color: #222222;
   text-decoration: none;
   border-left: 2px solid transparent;
   line-height: 1.35;
   transition: color 0.15s, background 0.15s, border-color 0.15s;
 }
 #toc-list li a:hover {
-  color: #111111;             /* era #e0e0f8 */
-  background: #f5f5f5;        /* era rgba bianco 5% — grigio chiarissimo */
+  color: #111111;
+  background: #f5f5f5;
 }
 #toc-list li a.toc-active {
-  color: #1d4ed8;             /* era #ffffff — blu scuro leggibile su bianco */
+  color: #1d4ed8;
   border-left-color: #2563eb;
-  background: #eff6ff;        /* era rgba blu 14% — azzurro pastello */
+  background: #eff6ff;
 }
 #toc-list li.toc-h1 a {
   font-weight: 700;
-  color: #000000;             /* era #b8b8e0 — quasi nero per massimo peso */
+  color: #000000;
   font-size: 0.8rem;
 }
 #toc-list li.toc-h4 a,
 #toc-list li.toc-h5 a,
 #toc-list li.toc-h6 a {
-  color: #555555;             /* era #6868a0 — grigio tenue per livelli profondi */
+  color: #555555;
   font-size: 0.73rem;
 }
 
@@ -119,31 +119,35 @@ body:not(.toc-visible) main {
   transition: margin-right 0.28s ease;
 }
 
-@media (max-width: 768px) {
-  #toc-sidebar {
-    width: 100%;
-    border-left: none;
-  }
-}
-
-@media (max-width: 768px) {
-  #toc-toggle {
-    padding: 10px 16px;  /* area touch più grande */
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 768px) {
-  body.toc-visible main {
-    margin-right: 0;  /* sovrascrive il 276px del desktop */
-  }
-}
-
+/* ── Tablet (769px–1024px) ── */
 @media (min-width: 769px) and (max-width: 1024px) {
   #toc-sidebar {
     width: 220px;
+    padding-top: 52px;
   }
   body.toc-visible main {
-    margin-right: 236px;  /* 220px + 16px */
+    margin-right: 236px;
+  }
+  body.toc-visible #toc-toggle {
+    right: 232px;  /* 220px + 12px */
+  }
+}
+
+/* ── Mobile (fino a 768px) ── */
+@media (max-width: 768px) {
+  #toc-toggle {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+  #toc-sidebar {
+    width: 100%;
+    border-left: none;
+    padding-top: 60px;
+  }
+  body.toc-visible main {
+    margin-right: 0;
+  }
+  body.toc-visible #toc-toggle {
+    right: 12px;  /* rimane a destra, non si sposta */
   }
 }
