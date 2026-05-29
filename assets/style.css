@@ -30,8 +30,8 @@ header {
       right: 12px;
       z-index: 9999;
       background: #ffffff;
-      color: #e8e8f0;
-      border: none;
+      color: #1e3a8a;
+      border: 1px solid #e5e7eb;
       border-radius: 6px;
       padding: 6px 11px;
       font-size: 0.78rem;
@@ -44,7 +44,7 @@ header {
       /* Quando la sidebar è visibile il bottone stacca dal bordo
          per non sovrapporsi al contenuto della sidebar stessa  */
     }
-    #toc-toggle:hover { background: #2e2e50; }
+    #toc-toggle:hover { background: #eff6ff; }
 
     /* — Sidebar — — — — — — — — — — — — — — — — — — — — — — — */
 #toc-sidebar {
@@ -56,17 +56,19 @@ header {
     background: #ffffff;
     overflow-y: auto;
     overflow-x: hidden;
-    z-index: 999;
+    z-index: 9999;
     padding: 52px 0 2rem;   /* 52px = spazio per il bottone toggle */
     box-shadow: -3px 0 18px rgba(0,0,0,0.18);
     scrollbar-width: thin;
-    scrollbar-color: #3a3a5c #1a1a2e;
+    scrollbar-color: #c7d2fe #ffffff;
     /* Transizione per apertura/chiusura fluida */
     transition: transform 0.28s ease;
   }
     /* Stato NASCOSTO: la sidebar scivola fuori schermo a destra */
 #toc-sidebar.sidebar-hidden {
     transform: translateX(100%);
+    pointer-events: none;
+    opacity: 0;
   }
 
     /* — Intestazione interna "Indice" — — — — — — — — — — — — */
@@ -76,8 +78,8 @@ header {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #5a5a8a;
-  border-bottom: 1px solid #2a2a4a;
+  color: #1e3a8a;
+  border-bottom: 1px solid #e5e7eb;
   margin-bottom: 0.4rem;
   font-family: system-ui, sans-serif;
 }
