@@ -146,7 +146,7 @@ L = \begin{bmatrix} \lambda_{11} & 0 & \ldots & 0 \\ x & \lambda_{22} & \ldots &
 **matrice trasposta**: le righe diventano colonne o viceversa
 
 ```math
-A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ \vdots & \vdots\\ a_{n1} & a_{n2} \end{bmatrix} \rarr A^T = \begin{bmatrix} a_{11} & a_{21} & \ldots & a_{n1} \\ a_{12} & a_{22} & \ldots & a_{n2} \end{bmatrix}
+A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ \vdots & \vdots\\ a_{n1} & a_{n2} \end{bmatrix} \rightarrow A^T = \begin{bmatrix} a_{11} & a_{21} & \ldots & a_{n1} \\ a_{12} & a_{22} & \ldots & a_{n2} \end{bmatrix}
 ```
 
 ```math
@@ -197,8 +197,8 @@ stesso **endomorfismo** rappresentato in basi diverse
 
 **spazio vettoriale $V$**: insieme $V \neq \emptyset$ dove sono definite:
 
-- **somma**: $V \times V \rarr V \quad v + w$
-- **prodotto**: $\mathbb{R} \times V \rarr V \quad \lambda v$
+- **somma**: $V \times V \rightarrow V \quad v + w$
+- **prodotto**: $\mathbb{R} \times V \rightarrow V \quad \lambda v$
 
 **condizioni per essere spazio vettoriale**:
 
@@ -272,7 +272,7 @@ dati 2 sottospazi $U, W$ di $V$
 
 ## Applicazioni lineari
 
-**applicazione lineare $F: V \rarr W$**
+**applicazione lineare $F: V \rightarrow W$**
 
 **condizioni di linearità**:
 
@@ -306,7 +306,7 @@ A = [A^1 \; A^2 \; \ldots \; A^n] = \begin{bmatrix} \begin{bmatrix} \; \\ F(v_1)
 
 $B = (b_1, b_2, b_3)$, $B' = (b'_1, b'_2, b'_3)$
 
-$B \rarr B'$
+$B \rightarrow B'$
 
 ```math
 M[id, B, B'] = \begin{bmatrix} \begin{bmatrix} \; \\ b_1 \\ \; \end{bmatrix}_{B'} \begin{bmatrix} \; \\ b_2 \\ \; \end{bmatrix}_{B'} \begin{bmatrix} \; \\ b_3 \\ \; \end{bmatrix}_{B'} \end{bmatrix}
@@ -316,7 +316,7 @@ M[id, B, B'] = \begin{bmatrix} \begin{bmatrix} \; \\ b_1 \\ \; \end{bmatrix}_{B'
 \begin{array}{c} [b_1]_{B'} = (x_1, x_2, x_3) \ | \ x_1 b_1' + x_2 b_2' + x_3 b_3' = b_1 \\ [b_2]_{B'} = (x_1, x_2, x_3) \ | \ x_1 b_1' + x_2 b_2' + x_3 b_3' = b_2 \\ [b_3]_{B'} = (x_1, x_2, x_3) \ | \ x_1 b_1' + x_2 b_2' + x_3 b_3' = b_3 \end{array}
 ```
 
-$B' \rarr B$
+$B' \rightarrow B$
 
 ```math
 M[id, B', B] = \begin{bmatrix} \begin{bmatrix} \; \\ b'_1 \\ \; \end{bmatrix}_{B} \begin{bmatrix} \; \\ b'_2 \\ \; \end{bmatrix}_{B} \begin{bmatrix} \; \\ b'_3 \\ \; \end{bmatrix}_{B} \end{bmatrix}
@@ -328,7 +328,7 @@ M[id, B', B] = \begin{bmatrix} \begin{bmatrix} \; \\ b'_1 \\ \; \end{bmatrix}_{B
 
 **caso di applicazioni lineari**:
 
-$B' \rarr B \rarr \hat{B} \rarr \hat{B}'$
+$B' \rightarrow B \rightarrow \hat{B} \rightarrow \hat{B}'$
 
 ```math
 M[id, B', \hat{B}'] = M[id, \hat{B}, \hat{B}'] \cdot M[id, B, \hat{B}] \cdot M[id, B', B]
@@ -384,7 +384,7 @@ Ovviamente queste regole possono essere combinate
 
 **matrice inversa con metodo di Gauss**:
 ```math
-\begin{bmatrix} A & | & I_n \end{bmatrix} \rarr \begin{bmatrix} I_n & | & A^{-1} \end{bmatrix}
+\begin{bmatrix} A & | & I_n \end{bmatrix} \rightarrow \begin{bmatrix} I_n & | & A^{-1} \end{bmatrix}
 ```
 
 **Teorema di Rouché-Capelli**:
