@@ -28,6 +28,127 @@
   {% if site.plugins contains 'jekyll-seo-tag' %}
     {% seo %}
   {% endif %}
+
+  <!-- ============================================================
+  MODIFICA 1 — Stili della sidebar
+  Aggiunto un blocco <style> inline direttamente nel layout così
+  non serve toccare style.css. Contiene:
+    - il pulsante toggle fisso in alto a destra
+    - il pannello sidebar (posizione fissa, larghezza, sfondo)
+    - i livelli h1–h6 con indentatura progressiva (--depth)
+    - la transizione visibile ↔ nascosta via classe .sidebar-hidden
+    - lo scroll-spy: la voce attiva viene evidenziata in blu
+    - il main si restringe/allarga in sincronia con la sidebar
+  ============================================================ -->
+  <style>
+    /* — Pulsante toggle — — — — — — — — — — — — — — — — — — — */
+    #toc-toggle {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      z-index: 9999;
+      background: #1a1a2e;
+      color: #e8e8f0;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 11px;
+      font-size: 0.78rem;
+      font-family: system-ui, sans-serif;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      transition: background 0.2s;
+      /* Quando la sidebar è visibile il bottone stacca dal bordo
+         per non sovrapporsi al contenuto della sidebar stessa  */
+    }
+    #toc-toggle:hover { background: #2e2e50; }
+
+    /* — Sidebar — — — — — — — — — — — — — — — — — — — — — — — */
+    #toc-sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 260px;
+      height: 100vh;
+      background: #1a1a2e;
+      overflow-y: auto;
+      overflow-x: hidden;
+      z-index: 999;
+      padding: 52px 0 2rem;   /* 52px = spazio per il bottone toggle */
+      box-shadow: -3px 0 18px rgba(0,0,0,0.18);
+      scrollbar-width: thin;
+      scrollbar-color: #3a3a5c #1a1a2e;
+      /* Transizione per apertura/chiusura fluida */
+      transition: transform 0.28s ease;
+    }
+    /* Stato NASCOSTO: la sidebar scivola fuori schermo a destra */
+    #toc-sidebar.sidebar-hidden {
+      transform: translateX(100%);
+    }
+
+    /* — Intestazione interna "Indice" — — — — — — — — — — — — */
+    #toc-sidebar .toc-header {
+      padding: 0 1rem 0.5rem;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #5a5a8a;
+      border-bottom: 1px solid #2a2a4a;
+      margin-bottom: 0.4rem;
+      font-family: system-ui, sans-serif;
+    }
+
+    /* — Lista voci TOC — — — — — — — — — — — — — — — — — — — */
+    #toc-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    #toc-list li a {
+      display: block;
+      /* Indentatura dinamica: ogni livello aggiunge 0.75rem
+         grazie alla variabile CSS --depth impostata via JS    */
+      padding: 0.32rem 0.75rem 0.32rem calc(0.9rem + var(--depth, 0) * 0.75rem);
+      font-family: system-ui, sans-serif;
+      font-size: 0.78rem;
+      color: #9898c8;
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      line-height: 1.35;
+      transition: color 0.15s, background 0.15s, border-color 0.15s;
+    }
+    #toc-list li a:hover {
+      color: #e0e0f8;
+      background: rgba(255,255,255,0.05);
+    }
+    /* Voce attiva (scroll-spy) */
+    #toc-list li a.toc-active {
+      color: #ffffff;
+      border-left-color: #2563eb;
+      background: rgba(37,99,235,0.14);
+    }
+    /* h1 in grassetto, peso visivo maggiore */
+    #toc-list li.toc-h1 a { font-weight: 700; color: #b8b8e0; font-size: 0.8rem; }
+    /* h4–h6 più tenue */
+    #toc-list li.toc-h4 a,
+    #toc-list li.toc-h5 a,
+    #toc-list li.toc-h6 a { color: #6868a0; font-size: 0.73rem; }
+
+    /* — Main: si stringe quando la sidebar è aperta — — — — — */
+    body.toc-visible main {
+      /* 260px = larghezza sidebar + 16px margine */
+      margin-right: 276px;
+      transition: margin-right 0.28s ease;
+    }
+    body:not(.toc-visible) main {
+      margin-right: 0;
+      transition: margin-right 0.28s ease;
+    }
+  </style>
+  <!-- fine MODIFICA 1 ======================================== -->
+
 </head>
 
 <body>
