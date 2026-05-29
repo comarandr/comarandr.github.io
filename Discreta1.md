@@ -1,4 +1,8 @@
-# Matematica discreta
+---
+layout: default
+title: Discreta 1
+permalink: /discreta1/
+---
 
 ## Indice
 
@@ -11,10 +15,6 @@
 7. [Probabilità](#probabilità)
 8. [Matematica degli interi](#matematica-degli-interi)
 9. [Segno permutazioni (parità e disparità)](#segno-permutazioni-parità-e-disparità)
-10. [Principio della piccionaia](#principio-della-piccionaia)
-11. [Principio di somma e del prodotto](#principio-di-somma-e-del-prodotto)
-12. [Principio di inclusione-esclusione](#principio-di-inclusione-esclusione)
-13. [Teoria dei Grafi](#teoria-dei-grafi)
 
 ## Contare
 
@@ -219,4 +219,3 @@ data $\pi =\{\pi_1, \ldots, \pi_n\}$ permutazione, tutti i modi per trasformarla
 
 - o richiedono un numero **pari** di trasposizioni
 - o richiedono un numero **dispari** di trasposizioni
-

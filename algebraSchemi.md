@@ -1,15 +1,21 @@
-# Algebra lineare
+---
+layout: default
+title: Algebra lineare
+permalink: /algebraLineare/
+---
+
 
 ## Indice
+
 1. [Spazi vettoriali](#spazi-vettoriali)
 2. [Basi e dimensione](#basi-e-dimensione)
 3. [Applicazioni lineari](#applicazioni-lineari)
 4. [Sistemi lineari](#sistemi-lineari)
-
-
-- n-pla: $(a_1, \ldots, a_n)$
+5. [Autovettori e autovalori](#autovettori-e-autovalori)
 
 ## operazioni
+
+- n-pla: $(a_1, \ldots, a_n)$
 
 - somma:
 
@@ -17,31 +23,31 @@
 (a_1 a_2 a_3) + (b_1 b_2 b_3) = (a_1 + b_1, a_2 + b_2, a_3 + b_3)
 ```
 
-- prodotto con scalare: 
+- prodotto con scalare:
 
 ```math
 \lambda \cdot (a_1 a_2 a_3) = (\lambda \cdot a_1, \lambda \cdot a_2, \lambda \cdot a_3)
-
 ```
-- prodotto scalare: 
 
-```math 
+- prodotto scalare:
+
+```math
 <v \cdot w> = v_1 \cdot w_1 + v_2 \cdot w_2 + v_3 \cdot w_3
 ```
 
-- norma (radice del prodotto scalare di sè stesso): 
+- norma (radice del prodotto scalare di sè stesso):
 
 ```math
 ||v|| = \sqrt{v_1^2 + v_2^2 + v_3^2} = \sqrt{<v \cdot v>}
 ```
 
-- distanza (radice della norma della differenza): 
+- distanza (radice della norma della differenza):
 
 ```math
 d(v, w) = \sqrt{(v_1 - w_1)^2 + (v_2 - w_2)^2 + (v_3 - w_3)^2} = \sqrt{||v - w||}
 ```
 
-- disuguaglianza triangolare: 
+- disuguaglianza triangolare:
 
 ```math
 ||a + b|| \leq ||a|| + ||b||
@@ -61,7 +67,7 @@ d(v, w) = \sqrt{(v_1 - w_1)^2 + (v_2 - w_2)^2 + (v_3 - w_3)^2} = \sqrt{||v - w||
 
 **rette passanti per $O$**: $\mathcal{L}(v) = \{\lambda v : \lambda \in \mathbb{R}\}$ $\lambda$ parametro
 **ortogonalità**: $<a \cdot b> = 0$ prodotto scalare nullo
-**angolo tra due n-ple**: 
+**angolo tra due n-ple**:
 
 ```math
 \alpha = arcos( \frac{<a \cdot b>}{||a|| \cdot ||b||})
@@ -161,7 +167,8 @@ a_{ij} = (A^T)_{ji}
 
 - somma/differenza: ```(A + B)_{ij} = A_{ij} + B_{ij}```
 
-**prodotto matriciale $ A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times p} $**: 
+**prodotto matriciale $ A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times p} $**:
+
 ```math
  \begin{matrix} A_1 \\ A_2 \end{matrix} \begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \end{bmatrix} \cdot \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \\ b_{31} & b_{32} \end{bmatrix} = \begin{bmatrix} <A_1, B^1> & <A_1 , B^2> \\ <A_2, B^1> & <A_2, B^2> \end{bmatrix} 
  ```
@@ -236,6 +243,7 @@ se $W,U$ sottospazi vettoriali allora intersezione $W \cap U$ è sottospazio vet
 ```math
  w = \sum_{i=1}^n \lambda_i v_i
 ```
+
 $w$ generato da $v_1, v_2, \ldots, v_n$
 
 **inviluppo lineare**: insieme di tutte le combinazioni lineari di un insieme di vettori $S = \{v_1, v_2, \ldots, v_n\}$. È un sottospazio vettoriale
@@ -298,6 +306,7 @@ dati 2 sottospazi $U, W$ di $V$
 $F(v_1), F(v_2), \ldots, F(v_p)$ L.I. $\iff v_1, v_2, \ldots, v_p$ L.I.
 
 **matrice associata a una applicazione lineare**:
+
 ```math
 A = [A^1 \; A^2 \; \ldots \; A^n] = \begin{bmatrix} \begin{bmatrix} \; \\ F(v_1) \\ \; \end{bmatrix}_{B'} & \begin{bmatrix} \; \\ F(v_2) \\ \; \end{bmatrix}_{B'} & \ldots & \begin{bmatrix} \; \\ F(v_n) \\ \; \end{bmatrix}_{B'} \\ \end{bmatrix}
 ```
@@ -374,15 +383,20 @@ Ovviamente queste regole possono essere combinate
 
 **procedimento**:
 
-1. opero sulla **matrice estesa** $ \begin{bmatrix} A & | & b \end{bmatrix} $
-2. trasformo la matrice in **matrice in forma echelon** con le regole di Gauss
-```math
-\begin{bmatrix} 0 & p_1 & * & * & * & * \\ 0 & 0 & 0 & p_2 & * & * \\ 0 & 0 & 0 & 0 & p_3 & * \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} \begin{array}{c} \; \\ \text{numero di pivot = rango} \\ \text{pivot in ultima colonna : sol. impossibile} \\ \; \end{array} 
-```
-3. riscrivo il sistema con la matrice a gradini
-4. risolvo il sistema con sostituzione all'indietro
+- opero sulla **matrice estesa** $ \begin{bmatrix} A & | & b \end{bmatrix} $
+
+- trasformo la matrice in **matrice in forma echelon** con le regole di Gauss
+
+  ```math
+  \begin{bmatrix} 0 & p_1 & * & * & * & * \\ 0 & 0 & 0 & p_2 & * & * \\ 0 & 0 & 0 & 0 & p_3 & * \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} \begin{array}{c} \; \\ \text{numero di pivot = rango} \\ \text{pivot in ultima colonna : sol. impossibile} \\ \; \end{array} 
+  ```
+
+- riscrivo il sistema con la matrice a gradini
+
+- risolvo il sistema con sostituzione all'indietro
 
 **matrice inversa con metodo di Gauss**:
+
 ```math
 \begin{bmatrix} A & | & I_n \end{bmatrix} \rightarrow \begin{bmatrix} I_n & | & A^{-1} \end{bmatrix}
 ```
@@ -401,12 +415,14 @@ $rg(A) \neq rg (\begin{bmatrix} A|b \end{bmatrix})$ sistema impossibile
 Dati $v_1, v_2, \ldots, v_n \mathbb{R}^n \; LD \implies det(v_1, v_2, \ldots, v_n) = 0$
 Dati $v_1, v_2, \ldots, v_n \mathbb{R}^n \; LI \implies det(v_1, v_2, \ldots, v_n) \neq 0$
 
-**determinante matrice 2x2**: 
+**determinante matrice 2x2**:
+
 ```math
 det \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} = a_{11} a_{22} - a_{12} a_{21}
 ```
 
-**Regola di Sarrus**: 
+**Regola di Sarrus**:
+
 ```math
  \begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{vmatrix} \begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \\ a_{31} & a_{32} \end{array} = \begin{array}{c} a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32} \\ - (a_{13} a_{22} a_{31} + a_{11} a_{23} a_{32} + a_{12} a_{21} a_{33})\end{array}
  ```
@@ -420,6 +436,7 @@ scelgo una riga o colonna e sviluppo il determinante rispetto a quella riga o co
 ```math
 det(A) = \sum_{j=1}^n [(-1)^{i+j} \cdot a_{ij} \cdot det(M_{ij})]
 ```
+
 con $M_{ij}$ matrice ottenuta da $A$ eliminando riga $i$ e colonna $j$
 
 - esempio con matrice 3x3 scegliendo la prima riga:

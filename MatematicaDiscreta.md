@@ -1,4 +1,8 @@
-# Matematica discreta
+---
+layout: default
+title: Matematica Discreta
+permalink: /MatematicaDiscreta/
+---
 
 ## Indice
 
