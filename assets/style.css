@@ -35,18 +35,22 @@ header {
 }
 #toc-toggle:hover { background: #e0e0e0; } /* era #2e2e50 */
 
+body.toc-visible #toc-toggle {
+  right: 272px;  /* 260px larghezza sidebar + 12px margine originale */
+}
+
 #toc-sidebar {
   position: fixed;
-  top: 0;
+  top: 73px;
   right: 0;
   width: 260px;
-  height: 100vh;
+  height: calc(100vh - 73px);
   background: #ffffff;        /* era #1a1a2e — sfondo bianco */
   border-left: 1px solid #e0e0e0; /* NUOVO — separatore laterale sottile */
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 999;
-  padding: 52px 0 2rem;
+  padding: 8px 0 4rem;
   box-shadow: -3px 0 18px rgba(0,0,0,0.07); /* era 0.18 — ombra più morbida */
   scrollbar-width: thin;
   scrollbar-color: #d0d0d0 #ffffff; /* era #3a3a5c #1a1a2e */
@@ -78,7 +82,7 @@ header {
   padding: 0.32rem 0.75rem 0.32rem calc(0.9rem + var(--depth, 0) * 0.75rem);
   font-family: system-ui, sans-serif;
   font-size: 0.78rem;
-  color: #444444;             /* era #9898c8 — testo scuro leggibile */
+  color: #222222;             /* era #9898c8 — testo scuro leggibile */
   text-decoration: none;
   border-left: 2px solid transparent;
   line-height: 1.35;
@@ -95,13 +99,13 @@ header {
 }
 #toc-list li.toc-h1 a {
   font-weight: 700;
-  color: #111111;             /* era #b8b8e0 — quasi nero per massimo peso */
+  color: #000000;             /* era #b8b8e0 — quasi nero per massimo peso */
   font-size: 0.8rem;
 }
 #toc-list li.toc-h4 a,
 #toc-list li.toc-h5 a,
 #toc-list li.toc-h6 a {
-  color: #aaaaaa;             /* era #6868a0 — grigio tenue per livelli profondi */
+  color: #555555;             /* era #6868a0 — grigio tenue per livelli profondi */
   font-size: 0.73rem;
 }
 
