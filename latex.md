@@ -1,4 +1,8 @@
-# LATEX BASE
+---
+layout: default
+title: LaTeX
+permalink: /latex/
+---
 
 ## Creare un documento
 

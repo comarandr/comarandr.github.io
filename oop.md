@@ -1,4 +1,8 @@
-# PROGR. A OGGETTI SCHEMI
+---
+layout: default
+title: Programmazione a oggetti
+permalink: /oop/
+---
 
 ## Concetti di base
 

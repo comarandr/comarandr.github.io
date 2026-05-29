@@ -1,4 +1,8 @@
-# Schemi JSON
+---
+layout: default
+title: Json
+permalink: /json/
+---
 
 ## Introduzione
 

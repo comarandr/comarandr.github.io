@@ -1,4 +1,8 @@
-# Schemi YAML
+---
+layout: default
+title: YAML
+permalink: /yaml/
+---
 
 ## Introduzione
 
