@@ -24,15 +24,10 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
   <!-- Mermaid -->
-  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-      mermaid.initialize({
-        startOnLoad: true
-      });
-    });
-  </script>
+  <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({ startOnLoad: true });
+    </script>
 
   <!-- SEO Jekyll (opzionale ma consigliato) -->
   {% if site.plugins contains 'jekyll-seo-tag' %}
