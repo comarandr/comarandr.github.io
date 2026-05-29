@@ -44,16 +44,17 @@ body.toc-visible #toc-toggle {
   top: 73px;
   right: 0;
   width: 260px;
-  height: calc(100vh - 73px);
-  background: #ffffff;        /* era #1a1a2e — sfondo bianco */
-  border-left: 1px solid #e0e0e0; /* NUOVO — separatore laterale sottile */
+  height: calc(100dvh - 73px);
+  max-height: calc(100dvh - 73px);
+  background: #ffffff;
+  border-left: 1px solid #e0e0e0;
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 999;
   padding: 8px 0 4rem;
-  box-shadow: -3px 0 18px rgba(0,0,0,0.07); /* era 0.18 — ombra più morbida */
+  box-shadow: -3px 0 18px rgba(0,0,0,0.07);
   scrollbar-width: thin;
-  scrollbar-color: #d0d0d0 #ffffff; /* era #3a3a5c #1a1a2e */
+  scrollbar-color: #d0d0d0 #ffffff;
   transition: transform 0.28s ease;
 }
 #toc-sidebar.sidebar-hidden {
@@ -116,4 +117,33 @@ body.toc-visible main {
 body:not(.toc-visible) main {
   margin-right: 0;
   transition: margin-right 0.28s ease;
+}
+
+@media (max-width: 768px) {
+  #toc-sidebar {
+    width: 100%;
+    border-left: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #toc-toggle {
+    padding: 10px 16px;  /* area touch più grande */
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body.toc-visible main {
+    margin-right: 0;  /* sovrascrive il 276px del desktop */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  #toc-sidebar {
+    width: 220px;
+  }
+  body.toc-visible main {
+    margin-right: 236px;  /* 220px + 16px */
+  }
 }
