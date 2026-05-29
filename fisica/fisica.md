@@ -1,6 +1,10 @@
-# FISICA MECCANICA
+---
+layout: default
+title: Fisica
+permalink: /fisica/
+---
 
-## Parte 1 - CINEMATICA
+## Fisica parte 1 - CINEMATICA
 
 **RISULTATO DI MISURA**: $ x + \Delta x $
 
