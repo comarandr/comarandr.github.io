@@ -411,33 +411,30 @@ approsimmazione: $z_n \approx \frac{n!}{e}$
 **Teorema somma dei gradi dei vertici**: $$\sum_{v \in V} d(v) = 2|E|$$ sommatoria dei gradi dei vertici è il doppio della cardinalità degli archi
 
 ```mermaid
-graph G {
-    rankdir=LR a -- b; } 
+graph LR 
+  A((A)) --- B((B))
 ```
 
-$|E| = 1, \; d(a) + d(b) = 1 + 1 = 2 $
+$|E| = 1, \; d(A) + d(B) = 1 + 1 = 2 $
 
 <br>
 
 ```mermaid
-graph G { rankdir=LR a -- b; b -- c; } 
+graph LR
+  A((A)) --- B((B))
+  B((B)) --- C((C))
 ```
 
-$ |E|= 2, \; d(a) + d(b) + d(c) = 1 + 2 + 1 = 4 $
+$ |E|= 2, \; d(A) + d(B) + d(C) = 1 + 2 + 1 = 4 $
 
 **Teorema numero di vertici di grado dispari**: in ogni grafo c'è un numero pari di vertici di grado dispari
 
 ```mermaid
-graph G {
-    rankdir=LR 
-    ".." [style=dashed]
-    " 1" -- " 2";
-    " 2" -- ".." [style=dashed];
-    ".." [style=dashed]; 
-    ".." -- "2" [style=dashed];
-    "2" -- "1";    
-    
-}
+graph LR 
+    A((1)) --- B((2))
+    B((2)) --- C((..))
+    C((..)) --- D((2))
+    D((2)) --- E((1))    
 ```
 
 $\implies$ deve esserci un altro nodo di grado dispari, magari NON adiacente
@@ -445,12 +442,10 @@ $\implies$ deve esserci un altro nodo di grado dispari, magari NON adiacente
 <br>
 
 ```mermaid
-graph G {
-    rankdir=LR 
-    "a (1)" -- "b (3)"; 
-    "b (3)" -- "c (1)";
-    "b (3)" -- "d (1)";
-}
+graph LR
+    A((1)) --- B((3))
+    B((3)) --- C((1))
+    B((3)) --- D((1))
 ```
 
 $\implies |v: d(v) \text{ dispari}| = |\{a,b,c,d\}|= 4$
@@ -530,25 +525,17 @@ _nota_: $G$ può essere bipartito con $|V|$ dispari, ma in tal caso non hamilton
 - **contrazione di un arco**: rimuovo arco $ij$ e sostituisco con nodo $e'$. Gli archi in $i$ e $j$ ora coincidono in $e'$.
 
   ```mermaid
-  graph G {
-      rankdir=LR
-      a -- i
-      i -- j [style=dashed]
-      j -- b 
-      i [style=dashed]
-      j [style=dashed]
-  }
+  graph LR
+      A((1)) -- I((2))
+      I((2)) -- J((3)) 
+      J((3)) -- B((1))
+      I((2)) 
   ```
 
-
-  
   ```mermaid
-  graph G {
-      rankdir=LR
-      a -- "e'"
-      "e'"-- b 
-      "e'"[style=dashed]
-  }
+  graph LR
+      A((1)) -- "E'"
+      "E'"-- B((2)) 
   ```
 
 **Teorema**: $G$ planare se e solo se non ha $k_5$ o $k_{3,3}$ fra i suoi minori
