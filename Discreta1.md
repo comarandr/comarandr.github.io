@@ -60,3 +60,14 @@ considerando anche $z_1 \equiv_n z_2$:
 - $x+z_1 \equiv_n y+z_2$
 - $x \cdot z_1 \equiv_n y \cdot z_2$
 
+## Funzioni
+
+**iniettiva**: $x \neq x' \implies f(x) \neq f(x')$
+**suriettiva**: $f: A \to B\ f(A) = B $
+**biiettiva**: iniettiva e suriettiva, invertibile
+
+**ceiling**: $\lceil x \rceil = \min \{v \in \mathbb{Z} : v \geq x\}$ più piccolo intero maggiore o uguale a $x$
+**floor**: $\lfloor x \rfloor = \max \{v \in \mathbb{Z} : v \leq x\}$ più grande intero minore o uguale a $x$
+
+**composta**: $f \circ g(x) = f(g(x))$
+
