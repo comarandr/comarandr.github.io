@@ -9,6 +9,12 @@ kramdown:
   syntax_highlighter: rouge 
   syntax_highlighter_opts: 
     disable: false
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      mermaid: true
   
 
 
