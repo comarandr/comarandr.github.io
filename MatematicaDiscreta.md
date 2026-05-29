@@ -361,15 +361,8 @@ $ S = \text{\{insieme di elementi con } p_1, p_2, \ldots, p_m \text{ proprietà\
 
 insieme degli elementi che non possiedono alcuna proprietà $ p_1, \ldots, p_m $:
 
-$ \vert \bar{A_1} \cap \bar{A_2} \cap \ldots \cap \bar{A_m} \vert = $
+$$ \begin{array}{ll} \vert \bar{A_1} \cap \bar{A_2} \cap \ldots \cap \bar{A_m}  \vert = & \vert S \vert \\ \; & - \sum \vert A_{i_1} \vert \\ \; & + \sum \vert A_{i_1} \cap A_{i_2} \vert \\ \; & \ldots \\ \; & + (-1)^d \vert A_1 \cap A_2 \cap \ldots \cap A_d \vert \\ \; & \ldots \\ \; & + (-1)^m \vert A_1 \cap A_2 \cap \ldots \cap A_m \vert \end{array} $$
 
-$ = \vert S \vert $
-$ - \sum \vert A_{i_1} \vert $
-$ + \sum \vert A_{i_1} \cap A_{i_2} \vert $
-$ \ldots $
-$ + (-1)^d \vert A_1 \cap A_2 \cap \ldots \cap A_d \vert $
-$ \ldots $
-$ + (-1)^m \vert A_1 \cap A_2 \cap \ldots \cap A_m \vert $
 
 ### Spiazzamenti
 
