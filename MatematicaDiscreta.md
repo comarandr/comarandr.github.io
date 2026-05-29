@@ -2,7 +2,6 @@
 layout: default
 title: Matematica Discreta
 permalink: /MatematicaDiscreta/
-mermaid: true
 ---
 
 ## Indice
@@ -25,7 +24,7 @@ mermaid: true
 
 ## Insiemi
 
-**Insieme**: concetto porimitivo, collezione di oggetti detti elementi
+**Insieme**: concetto primitivo, collezione di oggetti detti elementi
 
 **Cardinalità $ \vert A \vert$**: numero di elementi di un insieme $ A$
 
