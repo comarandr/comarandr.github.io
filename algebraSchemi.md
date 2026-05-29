@@ -4,31 +4,44 @@
 
 ## operazioni
 
-- somma: 
+- somma:
+
 ```math
 (a_1 a_2 a_3) + (b_1 b_2 b_3) = (a_1 + b_1, a_2 + b_2, a_3 + b_3)
 ```
+
 - prodotto con scalare: 
+
 ```math
 \lambda \cdot (a_1 a_2 a_3) = (\lambda \cdot a_1, \lambda \cdot a_2, \lambda \cdot a_3)
+
 ```
 - prodotto scalare: 
+
 ```math 
 <v \cdot w> = v_1 \cdot w_1 + v_2 \cdot w_2 + v_3 \cdot w_3
 ```
+
 - norma (radice del prodotto scalare di sè stesso): 
+
 ```math
 ||v|| = \sqrt{v_1^2 + v_2^2 + v_3^2} = \sqrt{<v \cdot v>}
 ```
+
 - distanza (radice della norma della differenza): 
+
 ```math
 d(v, w) = \sqrt{(v_1 - w_1)^2 + (v_2 - w_2)^2 + (v_3 - w_3)^2} = \sqrt{||v - w||}
 ```
+
 - disuguaglianza triangolare: 
+
 ```math
 ||a + b|| \leq ||a|| + ||b||
 ```
+
 - disuguaglianza di Cauchy-Schwarz:
+
 ```math
 |\sum_{i=1}^n a_i \cdot b_i| \leq ||a|| \cdot ||b||
 ```
@@ -42,9 +55,11 @@ d(v, w) = \sqrt{(v_1 - w_1)^2 + (v_2 - w_2)^2 + (v_3 - w_3)^2} = \sqrt{||v - w||
 **rette passanti per $O$**: $\mathcal{L}(v) = \{\lambda v : \lambda \in \mathbb{R}\}$ $\lambda$ parametro
 **ortogonalità**: $<a \cdot b> = 0$ prodotto scalare nullo
 **angolo tra due n-ple**: 
+
 ```math
 \alpha = arcos( \frac{<a \cdot b>}{||a|| \cdot ||b||})
 ```
+
 **rete affini**: $\mathcal{L}(v) + w = \lambda v + w \quad \forall \lambda \in \mathbb{R}$
 **retta per 2 punti**: $ (1 -\lambda)P = \lambda Q : (\lambda (P-Q) + P) $
 **combinazione affine**: $\alpha P + \beta Q \mid \alpha + \beta = 1 $
