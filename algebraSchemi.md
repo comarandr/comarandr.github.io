@@ -5,7 +5,7 @@ permalink: /algebraLineare/
 ---
 
 
-## Indice
+## Indice Algebra lineare
 
 1. [Spazi vettoriali](#spazi-vettoriali)
 2. [Basi e dimensione](#basi-e-dimensione)

@@ -1,4 +1,8 @@
-# BASE DI GIT
+---
+layout: default
+title: Git
+permalink: /git/
+---
 
 ## Creare una repository
 

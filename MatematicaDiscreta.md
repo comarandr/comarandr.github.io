@@ -4,7 +4,7 @@ title: Matematica Discreta
 permalink: /MatematicaDiscreta/
 ---
 
-## Indice
+## Indice di Matematica Discreta
 
 1. [Contare](#contare)
 2. [Insiemi](#insiemi)
@@ -363,7 +363,6 @@ insieme degli elementi che non possiedono alcuna proprietà $ p_1, \ldots, p_m $
 
 $$ \begin{array}{ll} \vert \bar{A_1} \cap \bar{A_2} \cap \ldots \cap \bar{A_m}  \vert = & \vert S \vert \\ \; & - \sum \vert A_{i_1} \vert \\ \; & + \sum \vert A_{i_1} \cap A_{i_2} \vert \\ \; & \ldots \\ \; & + (-1)^d \vert A_1 \cap A_2 \cap \ldots \cap A_d \vert \\ \; & \ldots \\ \; & + (-1)^m \vert A_1 \cap A_2 \cap \ldots \cap A_m \vert \end{array} $$
 
-
 ### Spiazzamenti
 
 **spiazzamento**: permutazione $ \pi = (\pi_1, \pi_2, \ldots, \pi_n)$ con $ \pi_i \neq i\ \forall i \in [1, \ldots, n] $
@@ -496,9 +495,9 @@ $ G_{[S]} = (S, E')$ con $ S \subseteq V$, è composto da $ ij \in E$ con $ i,j 
 
 **taglio**: insieme di lati che se rimossi aumento il numero di componenti connesse
 
-Partendo da $ S$, posso definire taglio
+Partendo da $ S $, posso definire taglio
 
-$$\delta(S):= \{ij : i \in S,\ j \in V-S\}$$ taglio, esiste coppia di nodi adiacenti ($ V,V-S$)
+$$ \delta(S):= \{ij : i \in S,\ j \in V-S \} $$ taglio, esiste coppia di nodi adiacenti ($ V,V-S $)
 
 **circuito hamiltoniano (permutazione circolare)**: permutazione in cui ogni vertice è preceduto / seguito da un vertice che gli è adiacente in $ G$
 
@@ -556,6 +555,28 @@ _nota_: $ G$ può essere bipartito con $ \vert V \vert$ dispari, ma in tal caso 
 - grafo con $ n \geq 3$ nodi e $ \vert E \vert \gt n-1$ non è aciclico
 - grafo con $ n \geq 3$ nodi e $ \vert E \vert \lt n-1$ non è connesso
 
+```mermaid
+graph LR
+
+subgraph G1["<n-1 archi"]
+    A((A)) --- B((B))
+    A((A))) -.-> C((C))
+end
+
+subgraph G2["n-1 archi"]
+    D((D)) --- E((E))
+    D((D)) --- F((F))
+end
+
+subgraph G3["> n-1 archi"]
+    G((G)) --- H((H))
+    G((G)) --- I((I))
+    H((H)) --- I((I))
+end
+
+G1 ~~~ G2 ~~~ G3
+```
+
 **proprietà albero**:
 
 1. connesso e aciclico (definizione)
@@ -600,6 +621,16 @@ Inclusi isomorfi ma non identici: 3 nodi, 3 alberi. 3 nodi, 1 albero non isomorf
 
 Rappresenta la sommatoria di tutte le distanze tra i vertici
 
+```mermaid
+graph LR
+    A((1)) --- B((3))
+    C((1)) --- B((3)) 
+    B((3)) --- D((4))
+    E((1)) --- D((4))
+    D((4)) --- F((2))
+    F((2)) --- G((1))
+```
+
 **Teorema**: $ \forall t \neq 2, 5$ esiste un grafo $ G$ tale che $ W(G) = t$
 
 **Lemma**: Per ogni $ G = (V, E)$ di diametro $ 2$, $ G' = (V,E \cup \{e\})$ per ogni $ e \not\in E$ $$W(G') = W(G) - 2$$
@@ -615,6 +646,14 @@ $$ W(T) = \sum_{e \in E} \lambda (e)$$
 per ogni arco calcolo il **prodotto** tra il **numero di nodi** delle due **componenti connesse**, poi **sommo** tutti i prodotti
 
 **lemma**: $ T=(V,E) \quad \vert V \vert$ dispari $ \implies W(T)$ pari
+
+```mermaid
+graph LR
+    A((A)) --- B((B))
+    B((B)) --- C((C))
+```
+
+$ W(T) = \lambda (AB) + \lambda (BC) = 1^{\{A\}} \cdot 2^{\{B,C\}} + 2^{\{A,B\}} \cdot 1^{\{C\}} = 4$
 
 ### Grafi orientati (diretto, digrafo)
 
@@ -649,6 +688,32 @@ Dato un albero orientato $ T$ $ k$-ario
 - **livello nodo**: lunghezza del cammino dalla radice al nodo
 - **altezza**: livello massimo di un qualsiasi nodo
 - **numero di nodi**: al più $ k^l$ nodi di livello $ l$
+
+```mermaid
+graph TD
+    subgraph "Livello 0: 2^0 = 1 nodo"
+      A((Radice))
+    end
+
+    subgraph "Livello 1: 2^1 = 2 nodi"
+        B((B))
+        C((C))
+    end
+
+    subgraph "Livello 2: 2^2 = 4 nodi"
+        D((D))
+        E((E))
+        F((F))
+        G((G))
+    end
+
+    A --- B
+    A --- C
+    B --- D
+    B --- E
+    C --- F
+    C --- G
+```
 
 ### Grafi pesati
 
