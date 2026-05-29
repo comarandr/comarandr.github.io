@@ -135,15 +135,15 @@ $ s(n) $ sia a sinistra che a destra ma con coefficienti diversi per non eliders
 
 ## Probabilità
 
-**universo $ S $**: $ Pr(S) = P \mid S \mid = 1 $
+**universo $ S $**: $ Pr(S) = P \vert S \vert = 1 $
 
-**distribuita uniforme**: $ Pr(A) = p \vert A\vert= \frac{\vertA\vert}{\vertS\vert} $
+**distribuita uniforme**: $ Pr(A) = p \vert A \vert= \frac{\vert A \vert}{\vert S \vert} $
 
-**probabilità condizionata**: $ Pr(A\vertB) = \frac{Pr(A \cap B)}{Pr(B)} $
+**probabilità condizionata**: $ Pr(A \vert B) = \frac{Pr(A \cap B)}{Pr(B)} $
 
 **probabilità eventi indipendenti**: $ Pr(A \cap B) = Pr(A) \cdot Pr(B) $
 
-**teorema di Bayes**: $ Pr(B\vert A) = \frac{Pr(A\vert B) \cdot Pr(B)}{Pr(A)} $
+**teorema di Bayes**: $ Pr(B \vert A) = \frac{Pr(A \vert B) \cdot Pr(B)}{Pr(A)} $
 
 ## Matematica degli interi
 
