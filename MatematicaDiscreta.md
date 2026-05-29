@@ -410,18 +410,16 @@ approsimmazione: $z_n \approx \frac{n!}{e}$
 
 **Teorema somma dei gradi dei vertici**: $$\sum_{v \in V} d(v) = 2|E|$$ sommatoria dei gradi dei vertici è il doppio della cardinalità degli archi
 
-
-```dot 
+```mermaid
 graph G {
     rankdir=LR a -- b; } 
-``` 
+```
 
 $|E| = 1, \; d(a) + d(b) = 1 + 1 = 2 $
 
 <br>
 
-
-```dot
+```mermaid
 graph G { rankdir=LR a -- b; b -- c; } 
 ```
 
@@ -429,7 +427,7 @@ $ |E|= 2, \; d(a) + d(b) + d(c) = 1 + 2 + 1 = 4 $
 
 **Teorema numero di vertici di grado dispari**: in ogni grafo c'è un numero pari di vertici di grado dispari
 
-```dot
+```mermaid
 graph G {
     rankdir=LR 
     ".." [style=dashed]
@@ -446,7 +444,7 @@ $\implies$ deve esserci un altro nodo di grado dispari, magari NON adiacente
 
 <br>
 
-```dot
+```mermaid
 graph G {
     rankdir=LR 
     "a (1)" -- "b (3)"; 
@@ -531,7 +529,7 @@ _nota_: $G$ può essere bipartito con $|V|$ dispari, ma in tal caso non hamilton
 
 - **contrazione di un arco**: rimuovo arco $ij$ e sostituisco con nodo $e'$. Gli archi in $i$ e $j$ ora coincidono in $e'$.
 
-  ```dot
+  ```mermaid
   graph G {
       rankdir=LR
       a -- i
@@ -544,7 +542,7 @@ _nota_: $G$ può essere bipartito con $|V|$ dispari, ma in tal caso non hamilton
 
 
   
-  ```dot
+  ```mermaid
   graph G {
       rankdir=LR
       a -- "e'"
