@@ -10,6 +10,8 @@ permalink: /
 
 [Algebra lineare](./algebraSchemi.md)
 
+[Fisica](./fisica/fisica.md)
+
 [Git](./git.md)
 
 [LaTeX](./latex.md)
