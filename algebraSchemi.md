@@ -1,5 +1,12 @@
 # Algebra lineare
 
+## Indice
+1. [Spazi vettoriali](#spazi-vettoriali)
+2. [Basi e dimensione](#basi-e-dimensione)
+3. [Applicazioni lineari](#applicazioni-lineari)
+4. [Sistemi lineari](#sistemi-lineari)
+
+
 - n-pla: $(a_1, \ldots, a_n)$
 
 ## operazioni
@@ -369,12 +376,16 @@ Ovviamente queste regole possono essere combinate
 
 1. opero sulla **matrice estesa** $ \begin{bmatrix} A & | & b \end{bmatrix} $
 2. trasformo la matrice in **matrice in forma echelon** con le regole di Gauss
-```\begin{bmatrix} 0 & p_1 & * & * & * & * \\ 0 & 0 & 0 & p_2 & * & * \\ 0 & 0 & 0 & 0 & p_3 & * \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} \begin{array}{c} \; \\ \text{numero di pivot = rango} \\ \text{pivot in ultima colonna : sol. impossibile} \\ \; \end{array} ```
+```math
+\begin{bmatrix} 0 & p_1 & * & * & * & * \\ 0 & 0 & 0 & p_2 & * & * \\ 0 & 0 & 0 & 0 & p_3 & * \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} \begin{array}{c} \; \\ \text{numero di pivot = rango} \\ \text{pivot in ultima colonna : sol. impossibile} \\ \; \end{array} 
+```
 3. riscrivo il sistema con la matrice a gradini
 4. risolvo il sistema con sostituzione all'indietro
 
 **matrice inversa con metodo di Gauss**:
-``` \begin{bmatrix} A & | & I_n \end{bmatrix} \rarr \begin{bmatrix} I_n & | & A^{-1} \end{bmatrix} ```
+```math
+\begin{bmatrix} A & | & I_n \end{bmatrix} \rarr \begin{bmatrix} I_n & | & A^{-1} \end{bmatrix}
+```
 
 **Teorema di Rouché-Capelli**:
 
@@ -390,11 +401,13 @@ $rg(A) \neq rg (\begin{bmatrix} A|b \end{bmatrix})$ sistema impossibile
 Dati $v_1, v_2, \ldots, v_n \mathbb{R}^n \; LD \implies det(v_1, v_2, \ldots, v_n) = 0$
 Dati $v_1, v_2, \ldots, v_n \mathbb{R}^n \; LI \implies det(v_1, v_2, \ldots, v_n) \neq 0$
 
-**determinante matrice 2x2**: ```math
+**determinante matrice 2x2**: 
+```math
 det \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} = a_{11} a_{22} - a_{12} a_{21}
 ```
 
-**Regola di Sarrus**: ```math
+**Regola di Sarrus**: 
+```math
  \begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{vmatrix} \begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \\ a_{31} & a_{32} \end{array} = \begin{array}{c} a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32} \\ - (a_{13} a_{22} a_{31} + a_{11} a_{23} a_{32} + a_{12} a_{21} a_{33})\end{array}
  ```
 
@@ -403,6 +416,7 @@ $M_{ij}$ matrice ottenuta da $A$ eliminando riga $i$ e colonna $j$
 
 **Sviluppo di Laplace**:
 scelgo una riga o colonna e sviluppo il determinante rispetto a quella riga o colonna
+
 ```math
 det(A) = \sum_{j=1}^n [(-1)^{i+j} \cdot a_{ij} \cdot det(M_{ij})]
 ```
@@ -420,7 +434,8 @@ con $M_{ij}$ matrice ottenuta da $A$ eliminando riga $i$ e colonna $j$
 2. trasposta della matrice dei complementi algebrici
 3. divido per il determinante della matrice originale
 
-in generale: 
+in generale:
+
 ```math
 b_{ij} = \frac{\bar{a}_{ji}}{\det(A)} 
 ```
