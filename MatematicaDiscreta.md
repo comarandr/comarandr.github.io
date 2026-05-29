@@ -509,7 +509,7 @@ Si denota con $ G = (V_1, V_2, E)$
 **Teorema**: $ G$ bipartito se e solo se ogni ciclo in $ G$ numero pari di nodi
 _nota_: $ G$ può essere bipartito con $ \vert V \vert$ dispari, ma in tal caso non hamiltoniano per il teorema precedente
 
-**grafo bipartito completo**: $ ij \in E \quad \forall V_1\ e \forall j \in V_2$
+**grafo bipartito completo**: $ ij \in E \quad \forall i \in V_1\ \land \forall j \in V_2$
 
 ```mermaid
 graph LR
