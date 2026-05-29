@@ -21,7 +21,15 @@
       }
     };
   </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+ 
+  {% if page.mermaid %}
+  <script src="https://unpkg.com/mermaid@8.9.3/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, theme: "default" });
+  </script>
+  {% endif %}
+
+</body>
 
   <!-- SEO Jekyll (opzionale ma consigliato) -->
   {% if site.plugins contains 'jekyll-seo-tag' %}

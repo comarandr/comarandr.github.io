@@ -2,6 +2,7 @@
 layout: default
 title: Matematica Discreta
 permalink: /MatematicaDiscreta/
+mermaid: true
 ---
 
 ## Indice
@@ -435,7 +436,7 @@ graph LR
     D((2)) --- E((1))    
 ```
 
-$ \implies$ deve esserci un altro nodo di grado dispari, magari NON adiacente
+$ \implies $ deve esserci un altro nodo di grado dispari, magari NON adiacente
 
 <br>
 
