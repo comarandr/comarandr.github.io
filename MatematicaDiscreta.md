@@ -659,7 +659,7 @@ Dato un albero orientato $ T$ $ k$-ario
 
 ### Grafi pesati
 
-**grafo pesato**: $ G = (V,E,p)$ con $ p$ funzione $ p:E \rarr \mathbb{R}$ oppure $ p:V \rarr \mathbb{R}$
+**grafo pesato**: $ G = (V,E,p)$ con $ p$ funzione $ p:E \rightarrow \mathbb{R}$ oppure $ p:V \rightarrow \mathbb{R}$
 analogo se orientato $ G = (N,A,p)$
 
 $ p(e)/p(a)$: peso arco/lato
