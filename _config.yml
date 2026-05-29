@@ -2,6 +2,7 @@ title: Appunti
 description: Raccolta di appunti vari
 theme: minima
 markdown: kramdown
+mermaid: true
 kramdown:
   input: GFM
   math_engine: mathjax
