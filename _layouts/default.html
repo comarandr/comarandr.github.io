@@ -6,7 +6,6 @@
 
   <title>{{ page.title | default: site.title }}</title>
 
-  <!-- CSS base (opzionale) -->
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 
   <!-- MathJax -->
@@ -21,17 +20,8 @@
       }
     };
   </script>
- 
-  {% if page.mermaid %}
-  <script src="https://unpkg.com/mermaid@8.9.3/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({ startOnLoad: true, theme: "default" });
-  </script>
-  {% endif %}
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-</body>
-
-  <!-- SEO Jekyll (opzionale ma consigliato) -->
   {% if site.plugins contains 'jekyll-seo-tag' %}
     {% seo %}
   {% endif %}
@@ -50,6 +40,12 @@
   <footer>
     <p>{{ site.footer | default: "Powered by Jekyll" }}</p>
   </footer>
+
+  <!-- Mermaid -->
+  <script src="https://unpkg.com/mermaid@8.9.3/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: true, theme: "default" });
+  </script>
 
 </body>
 </html>
