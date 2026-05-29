@@ -25,22 +25,27 @@ permalink: /MatematicaDiscreta/
 ## Insiemi
 
 **Insieme**: concetto porimitivo, collezione di oggetti detti elementi
+
 **Cardinalità $ \vert A \vert$**: numero di elementi di un insieme $ A$
+
 **Insieme vuoto $ \emptyset$**: insieme senza elementi, $ \vert \emptyset \vert = 0$
+
 **A sottoinsieme di B**: $ A \subseteq B$ se ogni elemento di A è anche in B
+
 **prodotto cartesiano $ A \times B$**: insieme di tutte le coppie $ (a, b)$ con $ a \in A$ e $ b \in B$
 
 ## Relazioni
 
-**riflessiva**: $ x \smile x\ \forall x $
-**antiriflessiva**: $ \neg (x \smile x)\ \forall x $
+- **riflessiva**: $ x \smile x\ \forall x $
+- **antiriflessiva**: $ \neg (x \smile x)\ \forall x $
 
-**simmetrica**: $ x \smile y \implies y \smile x $
-**antisimmetrica**: $ x \smile y\ \implies \neg (y \smile x) $
+- **simmetrica**: $ x \smile y \implies y \smile x $
+- **antisimmetrica**: $ x \smile y\ \implies \neg (y \smile x) $
 
-**transitiva**: $ (x \smile y) \land (y \smile z) \implies (x \smile z) $
+- **transitiva**: $ (x \smile y) \land (y \smile z) \implies (x \smile z) $
 
 **D'ORDINE**: irriflessiva, antisimmetrica e transitiva
+
 **D'EQUIVALENZA**: riflessiva, simmetrica e transitiva
 
 Le relazioni d'equivalenza implicano una partizione dell'insieme in classi di equivalenza
@@ -66,12 +71,12 @@ considerando anche $ z_1 \equiv_n z_2 $:
 
 ## Funzioni
 
-**iniettiva**: $ x \neq x' \implies f(x) \neq f(x') $
-**suriettiva**: $ f: A \to B\ f(A) = B $
-**biiettiva**: iniettiva e suriettiva, invertibile
+- **iniettiva**: $ x \neq x' \implies f(x) \neq f(x') $
+- **suriettiva**: $ f: A \to B\ f(A) = B $
+- **biiettiva**: iniettiva e suriettiva, invertibile
 
-**ceiling**: $ \lceil x \rceil = \min \{v \in \mathbb{Z} : v \geq x\} $ più piccolo intero maggiore o uguale a $ x$
-**floor**: $ \lfloor x \rfloor = \max \{v \in \mathbb{Z} : v \leq x\} $ più grande intero minore o uguale a $ x $
+- **ceiling**: $ \lceil x \rceil = \min \{v \in \mathbb{Z} : v \geq x\} $ più piccolo intero maggiore o uguale a $ x$
+- **floor**: $ \lfloor x \rfloor = \max \{v \in \mathbb{Z} : v \leq x\} $ più grande intero minore o uguale a $ x $
 
 **composta**: $ f \circ g(x) = f(g(x)) $
 
