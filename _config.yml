@@ -3,7 +3,12 @@ description: Raccolta di appunti vari
 theme: minima
 markdown: kramdown
 kramdown:
+  input: GFM
   math_engine: mathjax
+  syntax_highlighter: 
+  syntax_highlighter_opts: 
+    disable: false
+  
 
 
 

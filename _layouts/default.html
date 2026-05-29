@@ -2,29 +2,43 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>{{ page.title }}</title>
 
-  <!-- MathJax -->
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <!-- =========================
+       MATHJAX (CONFIG PRIMA)
+  ========================== -->
   <script>
     window.MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      options: {
+        // fondamentale per Markdown Jekyll
+        skipHtmlTags: [
+          'script', 'noscript', 'style',
+          'textarea', 'pre', 'code', 'svg'
+        ]
       }
     };
   </script>
+
   <script async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-
-  <!-- Mermaid -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({ startOnLoad: true });
   </script>
 
-  <link rel="stylesheet" href="/assets/style.css">
+  <!-- =========================
+       MERMAID
+  ========================== -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
 </head>
 
 <body>
+
   <header>
     <h1>{{ site.title }}</h1>
   </header>
@@ -32,5 +46,30 @@
   <main>
     {{ content }}
   </main>
+
+  <!-- =========================
+       RENDER PIPELINE
+       (CRITICO PER JEKYLL + MARKDOWN)
+  ========================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+
+      // MERMAID FIRST
+      if (window.mermaid) {
+        mermaid.initialize({
+          startOnLoad: false
+        });
+
+        await mermaid.run();
+      }
+
+      // MATHJAX SECOND
+      if (window.MathJax) {
+        await MathJax.typesetPromise();
+      }
+
+    });
+  </script>
+
 </body>
 </html>

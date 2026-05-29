@@ -19,49 +19,49 @@ permalink: /algebraLineare/
 
 - somma:
 
-```math
+\[
 (a_1 a_2 a_3) + (b_1 b_2 b_3) = (a_1 + b_1, a_2 + b_2, a_3 + b_3)
-```
+\]
 
 - prodotto con scalare:
 
-```math
+\[
 \lambda \cdot (a_1 a_2 a_3) = (\lambda \cdot a_1, \lambda \cdot a_2, \lambda \cdot a_3)
-```
+\]
 
 - prodotto scalare:
 
-```math
+\[
 <v \cdot w> = v_1 \cdot w_1 + v_2 \cdot w_2 + v_3 \cdot w_3
-```
+\]
 
 - norma (radice del prodotto scalare di sè stesso):
 
-```math
+\[
 ||v|| = \sqrt{v_1^2 + v_2^2 + v_3^2} = \sqrt{<v \cdot v>}
-```
+\]
 
 - distanza (radice della norma della differenza):
 
-```math
+\[
 d(v, w) = \sqrt{(v_1 - w_1)^2 + (v_2 - w_2)^2 + (v_3 - w_3)^2} = \sqrt{||v - w||}
-```
+\]
 
 - disuguaglianza triangolare:
 
-```math
+\[
 ||a + b|| \leq ||a|| + ||b||
-```
+\]
 
 - disuguaglianza di Cauchy-Schwarz:
 
-```math
+\[
 |\sum_{i=1}^n a_i \cdot b_i| \leq ||a|| \cdot ||b||
-```
+\]
 
-```math
+\[
 |<a \cdot b>| \leq ||a|| \cdot ||b||
-```
+\]
 
 ## formulette geometriche
 
@@ -69,9 +69,9 @@ d(v, w) = \sqrt{(v_1 - w_1)^2 + (v_2 - w_2)^2 + (v_3 - w_3)^2} = \sqrt{||v - w||
 **ortogonalità**: $<a \cdot b> = 0$ prodotto scalare nullo
 **angolo tra due n-ple**:
 
-```math
+\[
 \alpha = arcos( \frac{<a \cdot b>}{||a|| \cdot ||b||})
-```
+\]
 
 **rete affini**: $\mathcal{L}(v) + w = \lambda v + w \quad \forall \lambda \in \mathbb{R}$
 **retta per 2 punti**: $ (1 -\lambda)P = \lambda Q : (\lambda (P-Q) + P) $
@@ -127,37 +127,37 @@ m righe, n colonne
 
 **traccia**: $tr(A) = \begin{bmatrix} a_{11} & \ldots & \ldots & \ldots \\ \ldots & a_{22} & \ldots & \ldots \\ \vdots & \vdots & \ddots & \vdots \\ \ldots & \ldots & \ldots & a_{nn} \end{bmatrix}$
 
-```math
-tr(A) = \sum_{i=1}^n a_{ii} 
-```
+\[
+tr(A) = \sum_{i=1}^n a_{ii}
+\]
 
 **matrice diagonale**: matrice quadrata con tutti gli elementi nulli tranne quelli sulla diagonale principale
 
-```math
+\[
 D = \begin{bmatrix} \lambda_1 & 0 & \ldots & 0 \\ 0 & \lambda_2 & \ldots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \ldots & \lambda_n \end{bmatrix}
-```
+\]
 
 **matrice triangolare superiore**: matrice quadrata con tutti gli elementi nulli al di sotto della diagonale principale
 
-```math
+\[
 U = \begin{bmatrix} \lambda_{11} & x & \ldots & y \\ 0 & \lambda_{22} & \ldots & z \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \ldots & \lambda_{nn} \end{bmatrix}
-```
+\]
 
 **matrice triangolare inferiore**: matrice quadrata con tutti gli elementi nulli al di sopra della diagonale principale
 
-```math
+\[
 L = \begin{bmatrix} \lambda_{11} & 0 & \ldots & 0 \\ x & \lambda_{22} & \ldots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ y & z & \ldots & \lambda_{nn} \end{bmatrix}
-```
+\]
 
 **matrice trasposta**: le righe diventano colonne o viceversa
 
-```math
+\[
 A = \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ \vdots & \vdots\\ a_{n1} & a_{n2} \end{bmatrix} \rightarrow A^T = \begin{bmatrix} a_{11} & a_{21} & \ldots & a_{n1} \\ a_{12} & a_{22} & \ldots & a_{n2} \end{bmatrix}
-```
+\]
 
-```math
+\[
 a_{ij} = (A^T)_{ji}
-```
+\]
 
 **matrice simmetrica**: matrice quadrata che è uguale alla sua trasposta, $A = A^T \implies a_{ij} = a_{ji}$
 
@@ -165,17 +165,17 @@ a_{ij} = (A^T)_{ji}
 
 ## operazioni tra matrici
 
-- somma/differenza: ```(A + B)_{ij} = A_{ij} + B_{ij}```
+- somma/differenza: \](A + B)_{ij} = A_{ij} + B_{ij}\]
 
 **prodotto matriciale $ A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{n \times p} $**:
 
-```math
- \begin{matrix} A_1 \\ A_2 \end{matrix} \begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \end{bmatrix} \cdot \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \\ b_{31} & b_{32} \end{bmatrix} = \begin{bmatrix} <A_1, B^1> & <A_1 , B^2> \\ <A_2, B^1> & <A_2, B^2> \end{bmatrix} 
- ```
+\[
+ \begin{matrix} A_1 \\ A_2 \end{matrix} \begin{bmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \end{bmatrix} \cdot \begin{bmatrix} b_{11} & b_{12} \\ b_{21} & b_{22} \\ b_{31} & b_{32} \end{bmatrix} = \begin{bmatrix} <A_1, B^1> & <A_1 , B^2> \\ <A_2, B^1> & <A_2, B^2> \end{bmatrix}
+ \]
 
-```math
+\[
 \begin{bmatrix}  a_{11} \cdot b_{11} + a_{12} \cdot b_{21} + a_{13} \cdot b_{31} & a_{11} \cdot b_{12} + a_{12} \cdot b_{22} + a_{13} \cdot b_{32} \\ \; & \; \\ a_{21} \cdot b_{11} + a_{22} \cdot b_{21} + a_{23} \cdot b_{31} & a_{21} \cdot b_{12} + a_{22} \cdot b_{22} + a_{23} \cdot b_{32} \end{bmatrix}
-```
+\]
 
 Nota bene: $AB \neq BA$
 
@@ -220,7 +220,7 @@ stesso **endomorfismo** rappresentato in basi diverse
 
 **proprietà spazio vettoriale**:
 
-1. $\exist \bold{0} \in V : v + \bold{0} = v \quad \forall v \in V$ ed è *unico*
+1. $\exist \bold{0} \in V : v + \bold{0} = v \quad \forall v \in V$ ed è _unico_
 2. $\bold{0} \cdot v = \bold{0} \quad \forall v \in V$
 3. $\alpha \cdot v \iff \alpha = 0 \lor v = \bold{0} $
 4. $ v + u = v + w \iff u = w$
@@ -230,9 +230,9 @@ stesso **endomorfismo** rappresentato in basi diverse
 
 **condizione sottospazio vettoriale**:
 
-```math
+\[
 \lambda v + \mu w \in W \quad \forall v,w \in W \; \land \; \forall \lambda, \mu \in \mathbb{R}
-```
+\]
 
 NOTA: se $0 \not\in W$ allora $W$ non è sottospazio vettoriale
 
@@ -240,17 +240,17 @@ se $W,U$ sottospazi vettoriali allora intersezione $W \cap U$ è sottospazio vet
 
 **combinazione lineare**: $ \lambda_1 v_1 + \lambda_2 v_2 + \ldots + \lambda_n v_n $ con $v_i$ vettori e $\lambda_i$ valori in $\mathbb{R}$
 
-```math
+\[
  w = \sum_{i=1}^n \lambda_i v_i
-```
+\]
 
 $w$ generato da $v_1, v_2, \ldots, v_n$
 
 **inviluppo lineare**: insieme di tutte le combinazioni lineari di un insieme di vettori $S = \{v_1, v_2, \ldots, v_n\}$. È un sottospazio vettoriale
 
-```math
- \mathcal{L}<W> = \mathcal{L}< v_1, v_2, \ldots, v_n > \ = \ \{ \lambda_1 v_1, \ldots, \lambda_n v_n \} : \lambda_i \in \mathbb{R}
-```
+\[
+ \mathcal{L}\<W\> = \mathcal{L}< v_1, v_2, \ldots, v_n > \ = \ \{ \lambda_1 v_1, \ldots, \lambda_n v_n \} : \lambda_i \in \mathbb{R}
+\]
 
 **dipendenza lineare**: $ \lambda v_1 + \lambda_2 v_2 + \ldots + \lambda_n v_n = 0 $ con almeno un $\lambda_i \neq 0$
 
@@ -307,9 +307,9 @@ $F(v_1), F(v_2), \ldots, F(v_p)$ L.I. $\iff v_1, v_2, \ldots, v_p$ L.I.
 
 **matrice associata a una applicazione lineare**:
 
-```math
+\[
 A = [A^1 \; A^2 \; \ldots \; A^n] = \begin{bmatrix} \begin{bmatrix} \; \\ F(v_1) \\ \; \end{bmatrix}_{B'} & \begin{bmatrix} \; \\ F(v_2) \\ \; \end{bmatrix}_{B'} & \ldots & \begin{bmatrix} \; \\ F(v_n) \\ \; \end{bmatrix}_{B'} \\ \end{bmatrix}
-```
+\]
 
 **matrice di cambiamento di base**: matrice associata all'identità $I_V$ tra due basi $B$ e $B'$
 
@@ -317,49 +317,49 @@ $B = (b_1, b_2, b_3)$, $B' = (b'_1, b'_2, b'_3)$
 
 $B \rightarrow B'$
 
-```math
+\[
 M[id, B, B'] = \begin{bmatrix} \begin{bmatrix} \; \\ b_1 \\ \; \end{bmatrix}_{B'} \begin{bmatrix} \; \\ b_2 \\ \; \end{bmatrix}_{B'} \begin{bmatrix} \; \\ b_3 \\ \; \end{bmatrix}_{B'} \end{bmatrix}
-```
+\]
 
-```math
+\[
 \begin{array}{c} [b_1]_{B'} = (x_1, x_2, x_3) \ | \ x_1 b_1' + x_2 b_2' + x_3 b_3' = b_1 \\ [b_2]_{B'} = (x_1, x_2, x_3) \ | \ x_1 b_1' + x_2 b_2' + x_3 b_3' = b_2 \\ [b_3]_{B'} = (x_1, x_2, x_3) \ | \ x_1 b_1' + x_2 b_2' + x_3 b_3' = b_3 \end{array}
-```
+\]
 
 $B' \rightarrow B$
 
-```math
+\[
 M[id, B', B] = \begin{bmatrix} \begin{bmatrix} \; \\ b'_1 \\ \; \end{bmatrix}_{B} \begin{bmatrix} \; \\ b'_2 \\ \; \end{bmatrix}_{B} \begin{bmatrix} \; \\ b'_3 \\ \; \end{bmatrix}_{B} \end{bmatrix}
-```
+\]
 
-```math
+\[
 \begin{array}{c} [b'_1]_{B} = (x_1, x_2, x_3) \ | \ x_1 b_1 + x_2 b_2 + x_3 b_3 = b'_1 \\ [b'_2]_{B} = (x_1, x_2, x_3) \ | \ x_1 b_1 + x_2 b_2 + x_3 b_3 = b'_2 \\ [b'_3]_{B} = (x_1, x_2, x_3) \ | \ x_1 b_1 + x_2 b_2 + x_3 b_3 = b'_3 \end{array}
-```
+\]
 
 **caso di applicazioni lineari**:
 
 $B' \rightarrow B \rightarrow \hat{B} \rightarrow \hat{B}'$
 
-```math
+\[
 M[id, B', \hat{B}'] = M[id, \hat{B}, \hat{B}'] \cdot M[id, B, \hat{B}] \cdot M[id, B', B]
-```
+\]
 
 ## Sistemi lineari
 
-```math
+\[
 AX = B
-```
+\]
 
-```math
+\[
 \begin{bmatrix} \begin{bmatrix} \; \\ A^1 \\ \; \end{bmatrix} & \ldots & \begin{bmatrix} \; \\ A^n \\ \; \end{bmatrix} \end{bmatrix} \cdot \begin{bmatrix} x_1 \\ \ldots \\ x_n \end{bmatrix} = \begin{bmatrix} b_1 \\ \ldots \\ b_m \end{bmatrix}
-```
+\]
 
-```math
+\[
 x_1 \cdot A^1 + \ldots + x_n \cdot A^n = \begin{bmatrix} b_1 \\ \ldots \\ b_m \end{bmatrix}
-```
+\]
 
-```math
+\[
 \begin{cases} x_1 \cdot a_{11} + \ldots + x_n \cdot a_{n1} = b_1 \\ \vdots \\ x_1 \cdot a_{1m} + \ldots + x_n \cdot a_{nm} = b_m \end{cases}
-```
+\]
 
 Il sistema può avere 3 tipi di soluzioni:
 
@@ -369,9 +369,9 @@ Il sistema può avere 3 tipi di soluzioni:
 
 ### Metodo di Gauss
 
-```math
+\[
 \begin{array}{c} \; \\ Ri \\ \; \\ Rj \\ \; \end{array} \begin{bmatrix} \ldots &\ldots & \ldots & \ldots \\ a_{i1} & a_{i2} & \ldots & a_{in} \\ \ldots &\ldots & \ldots & \ldots \\ a_{j1} & a_{j2} & \ldots & a_{jm} \\ \ldots &\ldots & \ldots & \ldots \end{bmatrix}
-```
+\]
 
 VI sono 3 regole per operare sulle matrici, che siano righe o colonne:
 
@@ -387,9 +387,9 @@ Ovviamente queste regole possono essere combinate
 
 - trasformo la matrice in **matrice in forma echelon** con le regole di Gauss
 
-  ```math
-  \begin{bmatrix} 0 & p_1 & * & * & * & * \\ 0 & 0 & 0 & p_2 & * & * \\ 0 & 0 & 0 & 0 & p_3 & * \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} \begin{array}{c} \; \\ \text{numero di pivot = rango} \\ \text{pivot in ultima colonna : sol. impossibile} \\ \; \end{array} 
-  ```
+  \[
+  \begin{bmatrix} 0 & p_1 & * & * & * & * \\ 0 & 0 & 0 & p_2 & * & * \\ 0 & 0 & 0 & 0 & p_3 & * \\ 0 & 0 & 0 & 0 & 0 & 0 \end{bmatrix} \begin{array}{c} \; \\ \text{numero di pivot = rango} \\ \text{pivot in ultima colonna : sol. impossibile} \\ \; \end{array}
+  \]
 
 - riscrivo il sistema con la matrice a gradini
 
@@ -397,9 +397,9 @@ Ovviamente queste regole possono essere combinate
 
 **matrice inversa con metodo di Gauss**:
 
-```math
+\[
 \begin{bmatrix} A & | & I_n \end{bmatrix} \rightarrow \begin{bmatrix} I_n & | & A^{-1} \end{bmatrix}
-```
+\]
 
 **Teorema di Rouché-Capelli**:
 
@@ -417,15 +417,15 @@ Dati $v_1, v_2, \ldots, v_n \mathbb{R}^n \; LI \implies det(v_1, v_2, \ldots, v_
 
 **determinante matrice 2x2**:
 
-```math
+\[
 det \begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{bmatrix} = a_{11} a_{22} - a_{12} a_{21}
-```
+\]
 
 **Regola di Sarrus**:
 
-```math
+\[
  \begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{vmatrix} \begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \\ a_{31} & a_{32} \end{array} = \begin{array}{c} a_{11} a_{22} a_{33} + a_{12} a_{23} a_{31} + a_{13} a_{21} a_{32} \\ - (a_{13} a_{22} a_{31} + a_{11} a_{23} a_{32} + a_{12} a_{21} a_{33})\end{array}
- ```
+ \]
 
 **complemento algebrico**: $\bar a_{ij} = (-1)^{i+j} det(A_{ij}) = (-1)^{i+j} \cdot det M_{ij}$
 $M_{ij}$ matrice ottenuta da $A$ eliminando riga $i$ e colonna $j$
@@ -433,17 +433,17 @@ $M_{ij}$ matrice ottenuta da $A$ eliminando riga $i$ e colonna $j$
 **Sviluppo di Laplace**:
 scelgo una riga o colonna e sviluppo il determinante rispetto a quella riga o colonna
 
-```math
+\[
 det(A) = \sum_{j=1}^n [(-1)^{i+j} \cdot a_{ij} \cdot det(M_{ij})]
-```
+\]
 
 con $M_{ij}$ matrice ottenuta da $A$ eliminando riga $i$ e colonna $j$
 
 - esempio con matrice 3x3 scegliendo la prima riga:
 
-```math
+\[
 \begin{vmatrix} a_{11} & a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33} \end{vmatrix} = a_{11} \begin{vmatrix} a_{22} & a_{23} \\ a_{32} & a_{33} \end{vmatrix} - a_{12} \begin{vmatrix} a_{21} & a_{23} \\ a_{31} & a_{33} \end{vmatrix} + a_{13} \begin{vmatrix} a_{21} & a_{22} \\ a_{31} & a_{32} \end{vmatrix}
-```
+\]
 
 **calcolo dell'inversa mediante determinante**:
 
@@ -453,19 +453,19 @@ con $M_{ij}$ matrice ottenuta da $A$ eliminando riga $i$ e colonna $j$
 
 in generale:
 
-```math
-b_{ij} = \frac{\bar{a}_{ji}}{\det(A)} 
-```
+\[
+b_{ij} = \frac{\bar{a}_{ji}}{\det(A)}
+\]
 
 **regola di Cramer**: $Ax = b$ con $A$ matrice quadrata invertibile, $x$ vettore incognito, $b$ vettore noto
 
-```math
+\[
 x_i = \frac{det(A_i)}{det(A)}
-```
+\]
 
-```math
+\[
 \bar{x_i} = \frac{det \begin{bmatrix} A^1 & & \ldots & A^{i-1} & \begin{bmatrix} \; \\ b \\ \; \end{bmatrix} & A^{i+1} & \ldots & A^n \end{bmatrix}}{det(A)}
-```
+\]
 
 sostituisco la colonna $i$ di $A$ con il vettore $b$ e calcolo il determinante, poi divido per il determinante di $A$
 
@@ -473,9 +473,9 @@ sostituisco la colonna $i$ di $A$ con il vettore $b$ e calcolo il determinante, 
 
 $A - \lambda I$ matrice ottenuta sottraendo $\lambda$ alla diagonale principale di $A$
 
-```math
+\[
  \begin{vmatrix} a_{11} - \lambda & \ldots & \ldots & \ldots \\ \ldots & a_{22} - \lambda & \ldots & \ldots \\ \vdots & \vdots & \ddots & \vdots \\ \ldots & \ldots & \ldots & a_{nn} - \lambda \end{vmatrix}
- ```
+ \]
 
 1. **polinomio caratteristico $\mathcal{P}(A)$**: $det (A - \lambda I) = 0$
 2. **autovalori**: $\bar{\lambda}$ che rendono $\mathcal{P}(A) = 0$
