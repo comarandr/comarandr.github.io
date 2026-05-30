@@ -92,6 +92,53 @@ Derivata di una funzione composta:
 1. derivo la funzione esterna mantenendo invariata la funzione interna
 2. moltiplico per la derivata della funzione interna
 
+### Derivate di funzioni elementari
+
+- derivata di una costante
+$$
+k' = 0
+$$
+- derivata di una funzione lineare
+$$
+(ax + b)' = a
+$$
+- derivata di una potenza
+$$
+(x^n)' = n \cdot x^{n-1}
+$$
+- derivata di una radice
+$$
+(\sqrt[n]{x})' = \frac{1}{n} \cdot x^{\frac{1}{n} - 1}
+$$
+- derivata di un'esponenziale
+$$
+(e^x)' = e^x
+$$
+- derivata di un logaritmo
+$$
+(\ln(x))' = \frac{1}{x}
+$$
+- derivata di una reciproca
+$$
+\left(\frac{1}{x}\right)' = -\frac{1}{x^2}
+$$
+- derivata del seno
+$$
+\sin^{'}(x) = \cos(x)
+$$
+- derivata del coseno
+$$
+\cos^{'}(x) = -\sin(x)
+$$
+- derivata della tangente
+$$
+\tan^{'}(x) = \sec^2(x)
+$$
+- derivata della cotangente
+$$
+\cot^{'}(x) = -\csc^2(x)
+$$
+
 ## Trigonometria
 
 Definizione di **angolo $\alpha$**:
@@ -100,4 +147,46 @@ $$
 \text{angolo }\alpha = \frac{\text{arco}}{\text{raggio}}
 $$
 
+### Circonferenza goniometrica
+
+Circonferenza di raggio unitario ($r=1$) con origine in $(0,0)$, in questo caso la misura dell'angolo coincide a quella dell'arco.
+
+radiante: $x \text{ rad} = x \cdot \frac{2 \Pi}{360°}$
+
+| radiante : gradi |  |
+|---|---|
+|$$\frac{\pi}{6} : 30°$$ | $$\frac{\pi}{3} : 60°$$|
+|$$\frac{\pi}{4} : 45°$$| $$\frac{\pi}{2} : 90°$$|
+|$$\pi : 180°$$| $$2\pi : 360°$$|
+
+Tuttavia è necessario anche introdurre un **verso di rotazione**: antiorario (positivo) e orario (negativo)
+
+$$
+\alpha \text{ valore }= \begin{cases}
+\vert \hat{AP} \vert \text{ se rotazione antioraria} \\\\
+-\vert \hat{AP} \vert \text{ se rotazione oraria}
+\end{cases}
+$$
+
+I complementari rimangono uguali anche introducendo il verso di rotazione.
+
+### Funzioni trigonometriche
+
+[immagine con seno, coseno e tangente]
+
+#### Funzione coseno
+
+associa a ogni angolo $\alpha$ la coordinata x del punto P sulla circonferenza goniometrica
+
+#### Funzione seno
+
+associa a ogni angolo $\alpha$ la coordinata y del punto P sulla circonferenza goniometrica
+
+#### Funzione tangente
+
+associa a ogni angolo $\alpha$ il rapporto tra la coordinata y e la coordinata x del punto P sulla circonferenza goniometrica
+
+### Proprietà fondamentale dell'algebra 
+
+## Vettori e algebra lineare
 
