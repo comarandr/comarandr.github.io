@@ -6,6 +6,8 @@ permalink: /
 
 ## Appunti caricati
 
+[Matematica di base](./matematica.md)
+
 [Matematica Discreta](./MatematicaDiscreta.md)
 
 [Algebra lineare](./algebraSchemi.md)

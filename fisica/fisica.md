@@ -287,3 +287,31 @@ in un moto essenzialmente unidimensionale, con
 - posizione angolare $\Theta$ che varia linearmente con il tempo
 
 ##### Moto circolare uniforme
+
+Moto nel quale la velocità angolare è costante
+
+$$
+\Theta = \omega_0 t + \theta_0
+$$
+
+con velocità angolare $ \omega = \omega_0 $ e accelerazione angolare $ \alpha = 0 $.
+
+Nel piano cartesiano pertanto le due componenti risultano essere:
+
+$$
+\begin{cases}
+x(t) = R \cos(\omega_0 t + \theta_0) \\\\
+y(t) = R \sin(\omega_0 t + \theta_0)
+\end{cases}
+$$
+
+Derivando il sistema per ottenere la velocità delle componenti, otteniamo:
+
+$$
+\begin{cases}
+v_x(t) = -R \omega_0 \sin(\omega_0 t + \theta_0) \\\\
+v_y(t) = R \omega_0 \cos(\omega_0 t + \theta_0)
+\end{cases}
+$$
+
+##### Moto circolare vario

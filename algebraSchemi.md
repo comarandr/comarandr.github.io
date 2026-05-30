@@ -4,15 +4,6 @@ title: Algebra lineare
 permalink: /algebraLineare/
 ---
 
-
-## Indice Algebra lineare
-
-1. [Spazi vettoriali](#spazi-vettoriali)
-2. [Basi e dimensione](#basi-e-dimensione)
-3. [Applicazioni lineari](#applicazioni-lineari)
-4. [Sistemi lineari](#sistemi-lineari)
-5. [Autovettori e autovalori](#autovettori-e-autovalori)
-
 ## operazioni
 
 - n-pla: $ (a_1, \ldots, a_n) $

@@ -4,24 +4,6 @@ title: Matematica Discreta
 permalink: /MatematicaDiscreta/
 ---
 
-## Indice di Matematica Discreta
-
-1. [Contare](#contare)
-2. [Insiemi](#insiemi)
-3. [Relazioni](#relazioni)
-4. [Funzioni](#funzioni)
-5. [Induzione](#induzione)
-6. [Sommatorie](#sommatorie)
-7. [Probabilità](#probabilità)
-8. [Matematica degli interi](#matematica-degli-interi)
-9. [Segno permutazioni (parità e disparità)](#segno-permutazioni-parità-e-disparità)
-10. [Principio della piccionaia](#principio-della-piccionaia)
-11. [Principio di somma e del prodotto](#principio-di-somma-e-del-prodotto)
-12. [Principio di inclusione-esclusione](#principio-di-inclusione-esclusione)
-13. [Teoria dei Grafi](#teoria-dei-grafi)
-
-## Contare
-
 ## Insiemi
 
 **Insieme**: concetto primitivo, collezione di oggetti detti elementi
