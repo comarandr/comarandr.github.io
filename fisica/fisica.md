@@ -158,9 +158,9 @@ $v(t) = a_m t + v_0$
 
 #### INTERLUDIO MATEMATICO
 
-#### MOTO RETTILINEO UNIFORMEMENTE ACCELERATO
+basi di matematica
 
-**1 dimensione**:
+#### MOTO UNIFORMEMENTE ACCELERATO
 
 | 1 dimensione | |
 | --- | --- |
@@ -168,13 +168,11 @@ $v(t) = a_m t + v_0$
 | velocità: | $$ v(t) = a_0 t + v_0 $$ |
 | accelerazione: | $$ a(t) = a_0 $$ |
 
-**2 dimensioni**:
-
 | 2 dimensioni | |
 | --- | --- |
 | legge oraria: | $$ \vec{r}(t) = \frac{1}{2} \vec{a_0} t^2 + \vec{v_0} t + \vec{r_0} $$ |
 | velocità: | $$ \vec{v}(t) = \vec{a_0} t + \vec{v_0}$$ |
 | accelerazione: | $$ \vec{a}(t) = \vec{a} $$ |
 
-
 scegliamo asse y parallelo ad $a_0$
+
