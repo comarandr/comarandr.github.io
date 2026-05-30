@@ -102,13 +102,13 @@ $ x \text{ posizione} \begin{cases} \vert \vec{OP} \vert \text{ se } \vec{OP}  \
 
 **DUE DIMENSIONI**:
 
-#### LEGGE ORARIA DEL MOTO
+#### Legge oraria del moto
 
 descrive la posizione in un dato istante
 
 <img src="leggeOraria.jpeg" alt="Legge Oraria" width="400"/>
 
-#### MOTO RETTILINEO UNIFORME
+#### Moto rettilineo uniforme
 
 intervalli di tempo uguali = spostamenti uguali
 
@@ -130,7 +130,7 @@ VELOCITÀ ISTANTANEA: $$v = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t}$$
 
 <img src="rettilineoUniforme.jpeg" alt="Rettilineo Uniforme" width="500"/>
 
-#### MOTO RETTILINEO UNIFORMEMENTE ACCELERATO
+#### Moto rettilineo uniformemente accelerato
 
 accelerazione costante, velocità aumenta linearmente
 
@@ -156,11 +156,11 @@ $v(t) = a_m t + v_0$
 
 **ACCELERAZIONE**: derivata della velocità $a = \frac{dv}{dt} = \frac{d^2x}{dt}$
 
-#### INTERLUDIO MATEMATICO
+#### Interludio matematico
 
 basi di matematica
 
-#### MOTO UNIFORMEMENTE ACCELERATO
+#### Moto uniformemente accelerato
 
 | 1 dimensione | |
 | --- | --- |
@@ -174,5 +174,102 @@ basi di matematica
 | velocità: | $$ \vec{v}(t) = \vec{a_0} t + \vec{v_0}$$ |
 | accelerazione: | $$ \vec{a}(t) = \vec{a} $$ |
 
-scegliamo asse y parallelo ad $a_0$
+Scegliamo asse y parallelo ad $a_0$
+
+In questo modo scomponiamo il moto in due moti indipendenti:
+
+- componente $ P_y $: moto uniformemente accelerato
+- componente $ P_x $: moto rettilineo uniforme
+
+Ottenendo quindi 
+
+$$
+\begin{cases}
+x(t) = v_{0x} t + x_0 \\\\
+y(t) = \frac{1}{2} a_0 t^2 + v_{0y} t + y_0
+\end{cases}
+$$
+
+#### Moto armonico
+
+La legge oraria del moto armonico è:
+
+$$
+x(t) = x_0 \cos(\omega t + \varphi_0)
+$$
+
+ed è caratterizzata dai 3 parametri:
+
+- $x_0$: ampiezza del moto
+- $\omega$: frequenza angolare o pulsazione
+- $\varphi_0$: fase iniziale
+
+##### $\omega_0$: pulsazione
+
+La posizione in $ t $ e in $ t+T $ deve essere la stessa, per definizione di periodo $T$.
+Poichè $\cos$ ha periodo $2\pi$, si ricava la seguente relazione:
+
+$$
+\omega_0 T = 2\pi \qquad T = \frac{2\pi}{\omega_0} \qquad \omega_0 =\frac{2\pi}{T}
+$$
+
+##### $x_0$: ampiezza
+
+$x(t)$ oscilla tra $-x_0$ e $x_0$. Questo si può facilmente dimostrare considerando $ x = x_0 \cos(\omega t + \varphi_0) $, in quanto la funzione $\cos$ oscilla tra -1 e 1 indipendentemente dall'argomento.
+
+$$
+x_{\max} = x_0 \cdot \cos_{\max} = x_0 \cdot 1 = x_0 \\\\
+x_{\min} = x_0 \cdot \cos_{\min} = x_0 \cdot (-1) = -x_0
+$$
+
+##### $\varphi_0$: fase iniziale
+
+disallineamento della funzione rispetto all'origine degli istanti di tempo. Poichè la funzione è
+$$
+x(t) = x_0 \cos(\omega_0 t + \varphi_0) \\\\ x = x_0 \cos(\alpha + k)
+$$
+possiamo facilmente osservare che $\varphi_0 = k$ indica il disallineamento rispetto allo zero del coseno ponendo $t=0$.
+
+##### Velocità del moto armonico
+
+Poichè abbiamo $x(t) = x_0 \cos(\omega_0 t + \varphi_0)$, possiamo ricavare la velocità derivando la legge oraria:
+$$
+v(t) = \frac{dx}{dt} = -\omega_0 x_0 \sin(\omega_0 t + \varphi_0)
+$$
+
+Osservo attentamente che:
+
+- ampiezza dipende dalla pulsazione: $-x_0 \omega_0, +x_0 \omega_0$
+- fase invariata: $\varphi_0$
+- periodo invariato: $T = \frac{2\pi}{\omega_0}$
+
+##### Accelerazione del moto armonico
+
+Analogamente, ricaviamo l'accelerazione derivando la velocità:
+
+$$
+a(t) = -\omega_0^2 \cdot x_0 \cos(\omega_0 t + \varphi_0) = -\omega_0^2 \cdot x(t)
+$$
+
+Noto : $x_0 \cos(\omega_0 t + \varphi_0) = x(t)$
+
+Osserviamo che:
+
+- ampiezza dipende dalla pulsazione: $-x_0 \omega_0^2, +x_0 \omega_0^2$
+- fase invariata: $\varphi_0$
+- periodo invariato: $T = \frac{2\pi}{\omega_0}$
+
+L'accelerazione è **proporzionale** alla posizione del corpo.
+
+##### Relazione $ x^2 \omega_0^2 + v^2 $
+
+Considerando la quantità $ x^2 \omega_0^2 + v^2 $, sostituiamo $x$ e $v$ con le rispettive leggi orarie:
+
+$$
+x^2 \omega_0^2 + v^2 = x_0^2 \omega_0^2
+$$
+
+ovvero una quantità che rimane costante nel moto, conservandosi.
+
+#### Moto circolare
 
