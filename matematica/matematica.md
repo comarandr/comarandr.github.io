@@ -95,46 +95,67 @@ Derivata di una funzione composta:
 ### Derivate di funzioni elementari
 
 - derivata di una costante
+
 $$
 k' = 0
 $$
+
 - derivata di una funzione lineare
+
 $$
 (ax + b)' = a
 $$
+
 - derivata di una potenza
+
 $$
 (x^n)' = n \cdot x^{n-1}
 $$
+
 - derivata di una radice
+
 $$
 (\sqrt[n]{x})' = \frac{1}{n} \cdot x^{\frac{1}{n} - 1}
 $$
+
 - derivata di un'esponenziale
+
 $$
 (e^x)' = e^x
 $$
+
 - derivata di un logaritmo
+
 $$
 (\ln(x))' = \frac{1}{x}
 $$
+
 - derivata di una reciproca
+
 $$
 \left(\frac{1}{x}\right)' = -\frac{1}{x^2}
 $$
+
 - derivata del seno
+
 $$
 \sin^{'}(x) = \cos(x)
 $$
+
 - derivata del coseno
+
 $$
 \cos^{'}(x) = -\sin(x)
 $$
+
 - derivata della tangente
+
 $$
 \tan^{'}(x) = \sec^2(x)
 $$
+
 - derivata della cotangente
+
 $$
 \cot^{'}(x) = -\csc^2(x)
 $$
@@ -154,7 +175,7 @@ Circonferenza di raggio unitario ($r=1$) con origine in $(0,0)$, in questo caso 
 radiante: $x \text{ rad} = x \cdot \frac{2 \Pi}{360°}$
 
 | radiante : gradi |  |
-|---|---|
+| --- | --- |
 |$$\frac{\pi}{6} : 30°$$ | $$\frac{\pi}{3} : 60°$$|
 |$$\frac{\pi}{4} : 45°$$| $$\frac{\pi}{2} : 90°$$|
 |$$\pi : 180°$$| $$2\pi : 360°$$|
