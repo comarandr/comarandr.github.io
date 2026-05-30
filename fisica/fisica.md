@@ -4,7 +4,7 @@ title: Fisica
 permalink: /fisica/
 ---
 
-## Fisica parte 1 - CINEMATICA
+## Fisica parte 1 - Cinematica
 
 **RISULTATO DI MISURA**: $ x + \Delta x $
 
@@ -273,3 +273,17 @@ ovvero una quantità che rimane costante nel moto, conservandosi.
 
 #### Moto circolare
 
+moto che avviene lungo una circonferenza di raggio $R$ con centro in $O$.
+
+La legge oraria risulta pertanto essere:
+
+$$
+\Theta = \theta t
+$$
+
+in un moto essenzialmente unidimensionale, con
+
+- velocità angolare $\theta$ costante
+- posizione angolare $\Theta$ che varia linearmente con il tempo
+
+##### Moto circolare uniforme
