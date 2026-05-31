@@ -23,3 +23,5 @@ permalink: /
 [YAML](./yaml.md)
 
 [Json](./json.md)
+
+[StupidGames](./stupidgames/index.html)

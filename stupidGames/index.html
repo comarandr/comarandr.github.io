@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where is Aldo Moro?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #e8dfc8;
+      --paper-dark: #d4c9a8;
+      --ink: #1a1208;
+      --red: #8b1a1a;
+      --red-light: #c0392b;
+      --stamp-red: rgba(180, 30, 30, 0.85);
+      --typewriter: #2c2416;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Courier Prime', monospace;
+      overflow: hidden;
+    }
+
+    .scanlines {
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.15) 2px,
+        rgba(0,0,0,0.15) 4px
+      );
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .vignette {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 50%, rgba(0,0,0,0.8) 100%);
+      pointer-events: none;
+      z-index: 99;
+    }
+
+    .document {
+      width: 700px;
+      max-width: 95vw;
+      background: var(--paper);
+      padding: 50px 60px;
+      position: relative;
+      box-shadow: 0 0 60px rgba(0,0,0,0.9), inset 0 0 120px rgba(0,0,0,0.05);
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .document::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+    }
+
+    .hole-punch {
+      position: absolute;
+      left: 18px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #111;
+      border: 1px solid #333;
+    }
+    .hole-punch:nth-child(1) { top: 80px; }
+    .hole-punch:nth-child(2) { top: 50%; }
+    .hole-punch:nth-child(3) { bottom: 80px; }
+
+    .header-bar {
+      border-top: 3px solid var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding: 6px 0;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-bar span {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--typewriter);
+      font-family: 'Courier Prime', monospace;
+    }
+
+    .classified-stamp {
+      position: absolute;
+      top: 40px;
+      right: 50px;
+      border: 4px solid var(--stamp-red);
+      color: var(--stamp-red);
+      font-family: 'Special Elite', cursive;
+      font-size: 22px;
+      letter-spacing: 4px;
+      padding: 6px 14px;
+      transform: rotate(-12deg);
+      opacity: 0.85;
+      text-transform: uppercase;
+    }
+
+    .doc-number {
+      font-size: 10px;
+      letter-spacing: 2px;
+      color: #888;
+      margin-bottom: 30px;
+      font-family: 'Courier Prime', monospace;
+    }
+
+    h1 {
+      font-family: 'Special Elite', cursive;
+      font-size: 38px;
+      color: var(--ink);
+      line-height: 1.1;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    h1 span {
+      color: var(--red);
+    }
+
+    .subtitle {
+      font-size: 11px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #666;
+      margin-bottom: 30px;
+      font-family: 'Courier Prime', monospace;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--ink);
+      margin: 20px 0;
+      opacity: 0.3;
+    }
+
+    .body-text {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--typewriter);
+      margin-bottom: 20px;
+    }
+
+    .body-text em {
+      font-style: italic;
+      color: var(--red);
+    }
+
+    .typed-line {
+      font-family: 'Courier Prime', monospace;
+      font-size: 13px;
+      color: var(--typewriter);
+      border-left: 3px solid var(--red);
+      padding-left: 14px;
+      margin: 20px 0;
+      font-style: italic;
+      opacity: 0.8;
+    }
+
+    .intel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0;
+      border: 1px solid rgba(0,0,0,0.2);
+      padding: 14px;
+      background: rgba(0,0,0,0.03);
+    }
+
+    .intel-item {
+      font-size: 11px;
+      font-family: 'Courier Prime', monospace;
+      color: var(--typewriter);
+    }
+
+    .intel-item strong {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 3px;
+    }
+
+    .start-btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      font-family: 'Special Elite', cursive;
+      font-size: 18px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      cursor: pointer;
+      margin-top: 28px;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s, letter-spacing 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .start-btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--red);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+      z-index: 0;
+    }
+
+    .start-btn:hover::after { transform: scaleX(1); }
+    .start-btn span { position: relative; z-index: 1; }
+    .start-btn:hover { letter-spacing: 8px; }
+
+    .footer-note {
+      margin-top: 20px;
+      font-size: 10px;
+      color: #aaa;
+      letter-spacing: 1px;
+      text-align: center;
+      font-family: 'Courier Prime', monospace;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .blink {
+      animation: blink 1.2s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+
+  <div class="document">
+    <div class="hole-punch"></div>
+    <div class="hole-punch"></div>
+    <div class="hole-punch"></div>
+
+    <div class="classified-stamp">RISERVATO</div>
+
+    <div class="header-bar">
+      <span>Ministero dell'Interno — DIGOS</span>
+      <span>Roma, 16 marzo 1978</span>
+    </div>
+
+    <div class="doc-number">REF: DOC/BR/78-0316/A &nbsp;&nbsp;|&nbsp;&nbsp; PAGINE: 1 di 1 &nbsp;&nbsp;|&nbsp;&nbsp; COPIA N° 003</div>
+
+    <h1>Where is<br><span>Aldo Moro?</span></h1>
+    <div class="subtitle">Operazione Ricerca — Intelligence Operativa</div>
+
+    <hr class="divider">
+
+    <p class="body-text">
+      L'Onorevole <em>Aldo Moro</em>, Presidente della Democrazia Cristiana, è stato rapito stamattina
+      in Via Fani da un commando delle <em>Brigate Rosse</em>. La sua scorta è stata eliminata.
+      Nessuna traccia.
+    </p>
+
+    <div class="typed-line">
+      "Sappiamo che è vivo. Sappiamo che è nascosto. Non sappiamo dove." <br>— Fonte confidenziale Z
+    </div>
+
+    <div class="intel-grid">
+      <div class="intel-item">
+        <strong>Stato del soggetto</strong>
+        Tenuto prigioniero
+      </div>
+      <div class="intel-item">
+        <strong>Tempo rimanente</strong>
+        55 giorni <span class="blink">█</span>
+      </div>
+      <div class="intel-item">
+        <strong>Livello di minaccia</strong>
+        <span style="color:var(--red)">CRITICO</span>
+      </div>
+      <div class="intel-item">
+        <strong>Missione</strong>
+        Localizza il prigioniero
+      </div>
+    </div>
+
+    <p class="body-text">
+      Hai accesso a una fotografia dell'ultimo luogo conosciuto. 
+      <strong>Trova Moro</strong> — clicca esattamente dove è nascosto.
+      Una sola possibilità. Scegli con cura.
+    </p>
+
+    <hr class="divider">
+
+    <a href="game.html" class="start-btn"><span>→ Avvia Indagine ←</span></a>
+
+    <div class="footer-note">
+      Gioco a carattere storico-educativo &nbsp;·&nbsp; Tutti i diritti riservati
+    </div>
+  </div>
+</body>
+</html>
