@@ -24,4 +24,4 @@ permalink: /
 
 [Json](./json.md)
 
-[StupidGames](./stupidgames/index.html)
+[StupidGames](./stupidGames/index.html)
