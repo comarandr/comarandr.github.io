@@ -278,13 +278,13 @@ moto che avviene lungo una circonferenza di raggio $R$ con centro in $O$.
 La legge oraria risulta pertanto essere:
 
 $$
-\Theta = \theta t
+\theta = \theta t
 $$
 
 in un moto essenzialmente unidimensionale, con
 
-- velocità angolare $\theta$ costante
-- posizione angolare $\Theta$ che varia linearmente con il tempo
+- velocità angolare $\omega = \frac{d\Theta}{dt}$
+- accelerazione angolare $\alpha = \frac{d\omega}{dt}$
 
 ##### Moto circolare uniforme
 
@@ -314,4 +314,86 @@ v_y(t) = R \omega_0 \cos(\omega_0 t + \theta_0)
 \end{cases}
 $$
 
+Il vettore velocità $\vec{v}$ risulta ortogonale a $\vec{r}$, con modulo $$v = R \vert \omega_0 \vert$$
+
+Mentre l'accelerazione risulta essere:
+
+$$
+\vert \vec{a} \vert = R \omega_0^2
+$$
+
+Nel caso del moto circolare uniforme, l'accelerazione centripeta rivolta verso $O$ è l'unica componente non nulla dell'accelerazione.
+
 ##### Moto circolare vario
+
+Nel caso considerassimo un moto circolare con legge oraria $\vartheta(t)$ qualsiasi funzione, otteniamo:
+
+$$
+\text{legge oraria:} \quad
+\begin{cases}
+x(t) = R \cos(\vartheta(t)) \\\\
+y(t) = R \sin(\vartheta(t))
+\end{cases}
+$$
+
+In questo caso, la velocità è una derivata di una composta, ricordando che $\vartheta ' = \omega(t)$:
+
+$$
+\text{velocità:} \quad
+\begin{cases}
+v_x(t) = -R \sin(\vartheta(t)) \cdot \omega(t) \\\\
+v_y(t) = R \cos(\vartheta(t)) \cdot \omega(t)
+\end{cases}
+$$
+
+Derivando ulteriormente, otteniamo l'accelerazione:
+
+$$
+\text{accelerazione:} \quad
+\begin{cases}
+a_x(t) = -R \cos(\vartheta(t)) \cdot \omega (t)^2 - R \sin(\vartheta(t)) \cdot \alpha(t) \\\\
+a_y(t) = -R \sin(\vartheta(t)) \cdot \omega (t)^2 + R \cos(\vartheta(t)) \cdot \alpha(t) 
+\end{cases}
+$$
+
+Ne deduciamo che:
+
+$$
+\vec{a}(t) = R \alpha(t) \hat{t} -R \omega(t)^2 \hat{r} = \alpha_{tang} \hat{t} + \alpha_{centr} \hat{r}
+$$
+
+L'accelerazione tiene conto di:
+
+-componente centripeta (verso $O$): $-R \omega(t)^2\hat{r}$
+-componente tangenziale (verso il senso di rotazione): $R \alpha(t) \hat{\theta}$
+
+## parte 2 - Dinamica
+
+Un corpo tende a conservare proprio moto (velocità si conserva, accelerazione nulla) finché non avviene un'interazione con l'ambiente esterno
+
+### Sistemi di riferimento inerziali
+
+**Principio di inerzia**: esiste classe di sistemi di riferimento inerziali per i quali un corpo non sottoposto a interazioni con l'ambiente esterno permane nel suo stato di moto.
+
+### Massa e quantità di moto
+
+- due corpi $A$ e $B$ si scontrano, la loro velocità varia: $\vec{v_A} \rightarrow \vec{v_A '}$ e $\vec{v_B} \rightarrow \vec{v_B '}$
+- in particolare consideriamo $\vec{v_A} = - \vec{v_B}$ e lo scontro frontale di due oggetti identici su una traiettoria retta
+
+<img src="./scontro1.jpeg" alt="Testo alternativo" width="300" />
+
+- ne segue che la variazione della velocità risulta: $\Delta \vec{v_A} = -\Delta \vec{v_B}$ indipendentemente dall'osservatore e anche indipendentemente da un termine di trascinamento.
+-  aggiungendo un oggetto $X$ al corpo $B$ (ad esempio una massa) e ripetendo l'esperimento, osserviamo che $\Delta \vec{v_A} < -\Delta \vec{v_B}$, ovvero la variazione di velocità di $A$ è minore in modulo rispetto a quella di $B$. In questo caso la relazione è $\Delta \vec{v_A} = - K(A,B+X) \cdot \Delta \vec{v_B}$.
+- tale $K$ costante di proporzionalità è definita **massa inerziale**
+- pertanto possiamo riscrivere la relazione precedente come $m_A \Delta \vec{v_A} = - m_B \Delta \vec{v_B}$
+- possiamo quindi definire la **quantita di moto** come $\vec{p} = m \vec{v}$, con $m$ massa inerziale e $\vec{v}$ velocità del corpo
+
+**quantita di moto $p$**: prodotto tra massa e velocità $p = m \cdot v$
+**impulso $I$**: variazione della quantità di moto $I = \Delta \vec{p}$
+**forza $F$**: variazione della quantità di moto per unità di tempo $$F = \lim_{\Delta t \to 0} \frac{\vec{I}}{\Delta t}$$
+
+Da cui conseguono le 3 leggi della Dinamica così formulate:
+
+- principio di inerzia
+- legge del moto
+- principio di azione e reazione
