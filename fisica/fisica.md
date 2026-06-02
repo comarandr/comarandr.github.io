@@ -389,7 +389,9 @@ Un corpo tende a conservare proprio moto (velocità si conserva, accelerazione n
 - possiamo quindi definire la **quantita di moto** come $\vec{p} = m \vec{v}$, con $m$ massa inerziale e $\vec{v}$ velocità del corpo
 
 **quantita di moto $p$**: prodotto tra massa e velocità $p = m \cdot v$
+
 **impulso $I$**: variazione della quantità di moto $I = \Delta \vec{p}$
+
 **forza $F$**: variazione della quantità di moto per unità di tempo $$F = \lim_{\Delta t \to 0} \frac{\vec{I}}{\Delta t}$$
 
 Da cui conseguono le 3 leggi della Dinamica così formulate:
@@ -443,8 +445,6 @@ $$
 F_{attr} = \mu_{din} \cdot N
 $$
 
-#### Attrito statico
-
 Immaginiamo due spazzole con le rispettive setole incastrate. Supponiamo di applicare due forze uguali e contrarie ai corpi. Se le due forze non sono abbastanza intense, le setole si deformeranno ma le spazzole non si muoveranno, dinamicamente i corpi risulteranno fermi.
 
 Questo fenomeno lo spieghiamo con due forze vincolari $\vec{F}_{stat}$ dette **forze di attrito statico**
@@ -453,13 +453,66 @@ Non hanno una direzione prefissata, ma la direzione è contenuta nel piano della
 
 Ha un valore massimo $F^{stat}_{max}$. Superato questo valore, i corpi iniziano a muoversi.
 
-$ F_{stat} \leq F^{stat}_{max} = \mu_{stat} \cdot N $
+$F_{stat} \leq F^{stat} _{max} = \mu _{stat} \cdot N$
 
 Ne consgue anche che $ \mu_{din} < \mu_{stat} $, entrambi non negativi (e nei nostri casi minori di 1)
 
-#### Attrito dinamico
-
 ### Pendolo
+
+Il pendolo è un sistema è costituito da una massa $M$ di dimensioni trascurabili, sospesa a un filo inestensibile di lunghezza $L$ privo di massa.
+
+<img src="./pendolo1.jpeg" height="250px">
+
+- la posizione del corpo è descritta da $\theta$: è sufficiente in quanto la distanza da $O$ è sempre $L$
+
+Le forze agenti sono:
+
+la forza peso $F_P = M \vec{g}$
+
+la tensione della fune $T$
+
+Equazione del moto diventa:
+
+$$
+\begin{cases}
+M a_{\text{tang}} =  - Mg \sin(\theta) \\\\
+M a_{\text{centr}} = T - Mg \cos(\theta)
+\end{cases}
+$$
+
+$Y'$ determina unicamente la tensione della fune
+
+Invece $a_{\text{tang}} = L \cdot \theta ''$, da cui otteniamo $ M L \theta '' = - Mg \sin(\theta) $
+
+Riconduciamo tutto a:
+
+$$
+\theta '' = - \frac{g}{L} \sin(\theta)
+$$
+
+$\sin(\theta) \approx \theta$ per $\theta$ piccoli, da cui otteniamo $\theta '' = - \frac{g}{L} \theta$
+
+#### Formule essenziali moto del pendolo
+
+Pertanto in un moto armonico con pulsazione:
+
+$$
+\omega = \sqrt{\frac{g}{L}}
+$$
+
+l'equazione del moto diventa:
+
+$$
+\theta(t) = \theta_0 \cos(\omega t + \varphi_0)
+$$
+
+con periodo:
+
+$$
+T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{L}{g}}
+$$
+
+Il moto pertanto risulta indipendente dalla massa $M$ e dall'ampiezza $\theta_0$ (in questa approssimazione).
 
 ### Energia
 
