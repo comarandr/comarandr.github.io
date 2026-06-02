@@ -395,5 +395,72 @@ Un corpo tende a conservare proprio moto (velocità si conserva, accelerazione n
 Da cui conseguono le 3 leggi della Dinamica così formulate:
 
 - principio di inerzia
-- legge del moto
-- principio di azione e reazione
+- legge del moto: data $R = \sum_i F_i$ risultante di tutte le forze che agiscono su un corpo, si ha $$R = \frac{d\vec{p}}{dt} \implies \vec{R} = m\vec{a}$$ in quanto la massa inerziale si conserva
+- principio di azione e reazione: l'interazione tra due coppie di forze $\vec{F_A}$ e $\vec{F_B}$ è tale che $\vec{F_A} = -\vec{F_B}$
+
+### Forze elastiche
+
+Analizziamo la relazione tra l'allungamento $\Delta L$ e l'intensità della forza applicata $F$
+
+Considerando deformazioni abbastanza piccole da essere considerate elastiche, otteniamo:
+
+$$
+F = K \cdot \Delta L
+$$
+
+Con $K$ **costante elastica**: a valori più alti corrispondono oggetti più rigidi
+
+Esiste però anche una quantità chiamata **tensione**. Dalla legge di Hooke, possiamo ricavare la seguente relazione:
+
+$$
+\vec{T}= -K \vec{\Delta L}
+$$
+
+#### Fune inestensibile
+
+Prendiamo due esempi:
+
+<img src="./FuneInestens1.jpeg"  style="height: 200px;">
+
+Consideriamo di una massa $m$ sospesa al soffitto tramite cavo in condizioni statiche.
+La situazione di equilibrio è data dalla relazione $T + mg = 0$
+
+  <img src="./FuneInest2.jpeg"  style="height: 200px;">
+
+Consideriamo una massa che ruota su un piano, in cui la massa è collaga al cavo di lunghezza $L$ il quale è fissato a un punto del piano.
+Se in un dato istante la massa $m$ ha velocità $v$, la sua $a_{\text{centr}} = \frac{v^2}{L}$, per cui $T = m \cdot a_{\text{centr}} = m \frac{v^2}{L}$
+
+La tensione deriva dalla cinematica della forza del corpo in entrambi i casi.
+
+### Attrito
+
+Forza generata dal contatto tra due corpi, che si oppone al moto relativo tra di essi.
+
+- proporzionale alla forza normale $N$ che agisce tra i corpi
+- non contiene riferimenti all'area di contatto tra i corpi
+
+$$
+F_{attr} = \mu_{din} \cdot N
+$$
+
+#### Attrito statico
+
+Immaginiamo due spazzole con le rispettive setole incastrate. Supponiamo di applicare due forze uguali e contrarie ai corpi. Se le due forze non sono abbastanza intense, le setole si deformeranno ma le spazzole non si muoveranno, dinamicamente i corpi risulteranno fermi.
+
+Questo fenomeno lo spieghiamo con due forze vincolari $\vec{F}_{stat}$ dette **forze di attrito statico**
+
+Non hanno una direzione prefissata, ma la direzione è contenuta nel piano della superficie di contatto tra i corpi, opponendosi al relativo moto.
+
+Ha un valore massimo $F^{stat}_{max}$. Superato questo valore, i corpi iniziano a muoversi.
+
+$ F_{stat} \leq F^{stat}_{max} = \mu_{stat} \cdot N $
+
+Ne consgue anche che $ \mu_{din} < \mu_{stat} $, entrambi non negativi (e nei nostri casi minori di 1)
+
+#### Attrito dinamico
+
+### Pendolo
+
+### Energia
+
+### Lavoro
