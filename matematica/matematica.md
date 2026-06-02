@@ -160,6 +160,28 @@ $$
 \cot^{'}(x) = -\csc^2(x)
 $$
 
+## Integrali
+
+Determinare area sottesa a una curva. Operazione inversa alla derivazione.
+
+$$
+\int f(x) dx = F(x) + k
+$$
+
+Tuttavia non definisce un'unica funzione, ma una famiglia di funzioni che differiscono per una costante $k$.
+
+### Integrazione definita
+
+Il problema non si pone per gli integrali definiti, ovvero per l'integrazione di una funzione in un intervallo $[x_1,x_2]$:
+
+$$
+\int_{x_1}^{x_2} f(x) dx = F(x_2) - F(x_1)
+$$
+
+### Proprietà fondamentali dell'integrazione
+
+### Integrazione di linea 
+
 ## Trigonometria
 
 Definizione di **angolo $\alpha$**:

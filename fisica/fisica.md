@@ -516,4 +516,34 @@ Il moto pertanto risulta indipendente dalla massa $M$ e dall'ampiezza $\theta_0$
 
 ### Energia
 
+definizione approssimativa di energia:
+
+**energia**: se è possibile prevedere con esattezza l'evoluzione dello stato di un sistema fisico, allora esiste una grandezza calcolata sulle grandezze che definiscono questo stato, che si conserva nel tempo.
+
+esempi con **macchine virtuali**.
+
+#### Energia cinetica
+
+Consideriamo il moto di un grave che cade da un'altezza $h$, partendo da una situazione di quiete.
+
+<img src="./cinetica01.jpeg" height="250px" >
+
+La sua variazione di energia potenziale è la seguente:
+
+$$
+\Delta U_{peso} = \Delta (ymg) = - Hmg
+$$
+
+L'energia dunque non si è conservata.  Questo perché dobbiamo considerare anche il suo stato di moto:
+
+$$
+K = \frac{1}{2} m v^2
+$$
+
+da completare
+
+#### Principio di conservazione dell'energia meccanica
+
+Per un sistema isolato, l'energia totale del sistema si conserva nella evoluzione di quest'ultimo
+
 ### Lavoro
