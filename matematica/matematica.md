@@ -180,7 +180,69 @@ $$
 
 ### Proprietà fondamentali dell'integrazione
 
-### Integrazione di linea 
+#### Integrale di una somma
+
+$$
+\int (f(x) + g(x)) dx = \int f(x) dx + \int g(x) dx
+$$
+
+#### Integrale di funzione con costante moltiplicativa
+
+$$
+\int k \cdot f(x) dx = k \cdot \int f(x) dx
+$$
+
+#### Potenza (per $\alpha \neq -1$)
+
+$$
+\int x^{\alpha} dx = \frac{1}{\alpha + 1} x^{\alpha + 1}
+$$
+
+#### Integrazione per parti
+
+$$
+\int f(x) \cdot g(x) dx = f(x) \cdot \int g(x) dx - \int \left( f'(x) \cdot \int g(x) dx \right) dx
+$$
+
+#### Integrazioni con sostituzione di variabile
+
+$$
+\int f(x) dx = \int f(x(y)) \cdot \frac{dx}{dy} dy
+$$
+
+#### Integrazione delle funzioni principali
+
+- integrale di una costante
+
+$$
+\int k dx = k \cdot x
+$$
+
+- integrale del coseno
+
+$$
+\int \cos(x) dx = \sin(x)
+$$
+
+- integrale del seno
+
+$$
+\int \sin(x) dx = -\cos(x)
+$$
+
+### Integrazione di linea
+
+Consideriamo una curva in 2 dimensioni
+
+<img src="./IntegraliLinea.jpeg" height="250px">
+
+Definiamo integrale di linea:
+
+$$
+\int \vec{F}(\vec{r}) \cdot d\vec{r} = \int (F_x dx + F_y dy) = \int F_x dx + \int F_y dy
+$$
+
+Equivale alla somma degli integrali calcolati lungo le direzioni degli assi x e y.
 
 ## Trigonometria
 

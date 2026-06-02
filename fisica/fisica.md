@@ -547,3 +547,22 @@ da completare
 Per un sistema isolato, l'energia totale del sistema si conserva nella evoluzione di quest'ultimo
 
 ### Lavoro
+
+Data una forza $\vec{F}$ supponiamo che il suo punto di applicazione si sposti da $\vec{r_1}$ a $\vec{r_2}$ lungo una traiettoria $C$. Definiamo lavoro:
+
+$$
+L = \int_{\vec{r_1}}^{\vec{r_2}} \vec{F} \cdot d\vec{r}
+$$
+
+Nel caso di una forza costante, otteniamo:
+
+$$
+L = \vert \vec{F} \vert \cdot \vert \Delta \vec{r} \vert \cdot \cos(\theta)
+$$
+
+Con l'angolo $\theta$ compreso tra direzione della forza e quello dello spostamento.
+
+Non vale per le forze non costanti, ad esempio per la forza elastica (formula)
+
+#### Teorema dell'energia cinetica
+
