@@ -6,6 +6,8 @@ permalink: /
 
 ## Appunti caricati
 
+[Fisica_2026](./fisica_2026/fisica26.md)
+
 [Matematica di base](./matematica/matematica.md)
 
 [Matematica Discreta](./MatematicaDiscreta.md)
