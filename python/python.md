@@ -6,7 +6,6 @@ permalink: /python/
 
 ## Introduzione a Python
 
-
 ### gestione script python
 
 - modulo: file che contiene definizioni e istruzioni python (.py)
@@ -220,4 +219,38 @@ Operazioni vettorializzate:
 
 ## Pandas
 
+### Serie
+
+**serie**: combina valori e indici, accessibili mediante `values`e `index`
+
+**forma normale**:
+
+![forma normale](./formaNormale.png)
+
+- `serie.values(numpy_array)`
+- `serie.index`
+
+### Dizionario
+
+### DataFrame
+
+### Operazioni su pandas
+
+### Import Export dati
+
+### FIle CSV
+
 ## Matplotlib
+
+- stile: `plt.style.use('stile')` per esempio `plt.style.use('ggplot')`
+
+**Mostrare grafico**: `plt.show()`
+
+  - `%matplotlib inline`: immagini statiche dei grafici
+  - `%matplotlib notebook`: grafici interattivi
+
+**FIGURA**: `plt.figure(figsize=(width, height))` per specificare dimensioni della figura
+
+fig,ax = plt.subplots(2, figsize=(width, height)) per creare più grafici in una figura
+ax[0].plot(x, y) per disegnare grafico su ax[0]
+ax[1].plot(x, y) per disegnare grafico su ax[1]
