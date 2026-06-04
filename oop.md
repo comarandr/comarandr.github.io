@@ -9,8 +9,11 @@ permalink: /oop/
 ### CLASSE
 
 **NORMALE**: definizione e implementazione di un tipo
+
 **INTERFACCIA**: solo definizione e metodi astratti (no body)
+
 **ASTRATTA**: definizione + implementazione parziale (presenza metodi astratti)
+
 **CLASSE GENERICA**: parametrizzata su più tipi (riutilizzabile con più tipi)
 
 ACCESSIBILITÀ DI UNA CLASSE:
@@ -118,10 +121,15 @@ Usare un'**interfaccia** quando
 **RIFERIMENTO**: rappresentano oggetti mutabili (cambiano stato) o immutabili (stato non cambia). Possono essere shared se sono condivisi in 2 o più variabili.
 
 **CONCRETO** (classe concreta): può essere istanziato, implementazione completa
+
 **ASTRATTO** (classe astratta o interfaccia): non può essere istanziato, funge da contratto o base per altri tipi
+
 **REALE**: classe concreta a cui appartiene l'oggetto
+
 **APPARENTE**: tipo dichiarato di variabile, definisce i metodi e campi visibili al compilatore. Deve essere uguale o **supertipo** del tipo reale.
+
 **SUPERTIPO**: classe generale, include operazioni comuni ai sottotipi
+
 **SOTTOTIPO**: estende o implementa il supertipo,deve rispettare contratto del supertipo
 
 Quando si fa una dichiarazione il compilatore guarda solo il lato sinistro per
