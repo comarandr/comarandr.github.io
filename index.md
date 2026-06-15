@@ -6,24 +6,24 @@ permalink: /
 
 ## Appunti caricati
 
-[Fisica_2026](./fisica_2026/fisica26.md)
+[Fisica_2026](./universita/fisica_2026/fisica26.md)
 
-[Matematica di base](./matematica/matematica.md)
+[Matematica di base](./universita/matematica/matematica.md)
 
-[Matematica Discreta](./MatematicaDiscreta.md)
+[Matematica Discreta](./universita/matematica/matematicaDiscreta.md)
 
-[Algebra lineare](./algebraSchemi.md)
+[Algebra lineare](./universita/matematica/algebraSchemi.md)
 
-[Fisica](./fisica/fisica.md)
+[Fisica](./universita/fisica/fisica.md)
 
-[Git](./git.md)
+[Git](./linguaggi/git.md)
 
-[LaTeX](./latex.md)
+[LaTeX](./linguaggi/latex.md)
 
-[Programmazione a oggetti](./oop.md)
+[Programmazione a oggetti](./universita/oop.md)
 
-[YAML](./yaml.md)
+[YAML](./linguaggi/yaml.md)
 
-[Json](./json.md)
+[Json](./linguaggi/json.md)
 
-[StupidGames](./stupidGames/index.html)
+[StupidGames](./personali/stupidGames/stupidGames/index.html)
