@@ -220,7 +220,7 @@ stesso **endomorfismo** rappresentato in basi diverse
 
 **proprietà spazio vettoriale**:
 
-1. $ \exist \mathbf{0} \in V : v + \mathbf{0} = v \quad \forall v \in V$ ed è _unico_
+1. $ \exists \mathbf{0} \in V : v + \mathbf{0} = v \quad \forall v \in V$ ed è _unico_
 2. $\mathbf{0} \cdot v = \mathbf{0} \quad \forall v \in V$
 3. $\alpha \cdot v \iff \alpha = 0 \lor v = \mathbf{0} $
 4. $ v + u = v + w \iff u = w$
