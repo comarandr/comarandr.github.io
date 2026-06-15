@@ -249,7 +249,7 @@ $w$ generato da $v_1, v_2, \ldots, v_n$
 **inviluppo lineare**: insieme di tutte le combinazioni lineari di un insieme di vettori $S = \{v_1, v_2, \ldots, v_n\}$. È un sottospazio vettoriale
 
 $$
- \mathcal{L}\<W\> = \mathcal{L}< v_1, v_2, \ldots, v_n > \ = \ \{ \lambda_1 v_1, \ldots, \lambda_n v_n \} : \lambda_i \in \mathbb{R}
+ \mathcal{L} <W\> = \mathcal{L}< v_1, v_2, \ldots, v_n > \ = \ \{ \lambda_1 v_1, \ldots, \lambda_n v_n \} : \lambda_i \in \mathbb{R}
 $$
 
 **dipendenza lineare**: $ \lambda v_1 + \lambda_2 v_2 + \ldots + \lambda_n v_n = 0 $ con almeno un $\lambda_i \neq 0$
