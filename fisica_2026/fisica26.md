@@ -174,12 +174,73 @@ $$
 T = \frac{1}{f} = \frac{2 \pi}{\omega}
 $$
 
-
-
 ### Dinamica
+
+#### Forze e leggi di Newton
+
+studio del moto in relazione alle cause che lo generano, ovvero le **forze** (grandezze vettoriali)
+
+Posso causare:
+
+- variazione dello stato di moto (corpo non vincolato), misurata con metodo dinamico
+- deformazione (corpo vincolato), misurata con metodo statico
+
+**principio di relatività galileiana**: le leggi fisiche sono invarianti nei sistemi di riferimento inerziali
+
+1. **principio di inerzia**: ogni corpo persiste nel suo stato di quiete o di moto rettilineo uniforme a meno che non sia costretto a cambiare stato da forze applicate
+2. **principio fondamentale della dinamica**: la forza agente imprime al moto un'accelerazione proporzionale ad essa, con costante di proporzionalità pari alla massa del corpo
+
+$$
+\vec{F} = m \vec{a}
+$$
+
+3. **principio di azione e reazione**: a ogni forza di azione corrisponde una forza di reazione uguale in modulo, opposta in direzione e applicata su un corpo diverso
+
+**Newton (N)**: unità di misura statica di forza, 1 Newton è la forza che imprime a un corpo di massa 1 kg un'accelerazione di 1 $m/s^2$
+
+**Diagramma corpo libero**: rappresentazione grafica delle forze che agiscono su un corpo
+
+### Quantità di moto
+
+**quantità di moto**: prodotto tra massa e velocità di un corpo
+
+$$
+\vec{p} = m \vec{v}
+$$
+
+**Teorema della conservazione della quantità di moto**: in un sistema isolato, la quantità di moto totale è costante
+
+Dato che $ p = m \cdot v$, possiamo riscrivere il secondo principio della dinamica come:
+
+$$
+\vec{F} = \frac{d\vec{p}}{dt}
+$$
+
+Quando agiscono forze esterne la variazione della quantità di moto nel tempo è uguale alla risultante delle forze esterne
 
 ### Termodinamica
 
 ### Elettromagnetismo
+
+#### Elettrostatica
+
+I fenomeni elettrici dipendono dalla propietà della materia di possedere **carica elettrica**, che può essere **positiva** o **negativa**.
+
+- attrazione tra cariche di segno opposto
+- repulsione tra cariche di segno uguale
+
+**Principio di conservazione della carica elettrica**: carica elettrica di una quantità di materia è uguale alla somma algebrica delle cariche elementari che la costituiscono
+
+#### Legge di Coulomb
+
+(copilot) La forza elettrostatica tra due cariche puntiformi è direttamente proporzionale al prodotto delle cariche e inversamente proporzionale al quadrato della distanza che le separa:
+
+$$
+\vec{F} = K \frac{q_1 q_2}{r^2} \frac{\vec{r}}{r}
+$$
+
+**Coulomb (C)**: carica posta nel vuoto a distanza di 1 metro da una carica uguale ad essa 
+
+$$ K = 8.99 \times 10^9 \frac{N \cdot m^2}{C^2} $$
 
 ### Entropia
