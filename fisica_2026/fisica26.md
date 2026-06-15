@@ -239,8 +239,64 @@ $$
 \vec{F} = K \frac{q_1 q_2}{r^2} \frac{\vec{r}}{r}
 $$
 
-**Coulomb (C)**: carica posta nel vuoto a distanza di 1 metro da una carica uguale ad essa 
+**Coulomb (C)**: carica posta nel vuoto a distanza di 1 metro da una carica uguale ad essa
 
 $$ K = 8.99 \times 10^9 \frac{N \cdot m^2}{C^2} $$
+
+Si può anche riscrivere analogamente come:
+
+$$
+K = \frac{1}{4 \pi \epsilon_0} \qquad \epsilon_0 = 8.85 \times 10^{-12} \frac{C^2}{N \cdot m^2}
+$$
+
+#### Legge di Coulomb nei mezzi materiali
+
+Le interazioni sono attenuate dalla **costante dialettrica relativa** che dipende dal materiale del mezzo dialettrico
+
+$$
+\vec{F} = \frac{K}{\epsilon_r} \frac{q_1 q_2}{r^2} \frac{\vec{r}}{r}
+$$
+
+Nel vuoto vale $\epsilon_r = 1$, mentre nei materiali $\epsilon_r > 1$.
+
+#### Unità di misura dell'elettrostatica
+
+**Ampere (A)**: unità di misura della corrente
+
+**Coulomb (C)**: unità di misura della carica elettrica. 
+
+1 Coulomb = quantità di carica trasportata in 1 secondo da una corrente di 1 Ampere
+
+**carica elementare**: $1.6 \times 10^{-19} C$
+
+**costante dialettrica del vuoto**: $\epsilon_0 = 8.85 \times 10^{-12} \frac{C^2}{N \cdot m^2}$
+
+#### Elettrostatica e corpi
+
+forze elettriche sono più intense tra cariche elementari, in quanto le masse macroscopiche sono tendenzialmente elettricamente neutre
+
+#### Campo elettrico
+
+**campo di forze**: regione dello spazio dove agiscono forze note in ogni punto
+
+campo di forze elettrico è esprimibile come prodotto della carica q per un campo vettoriale detto **campo elettrico**.
+
+Il **vettore intensità del campo elettrico** :
+
+$$
+\vec{E} = \frac{\vec{F}}{q}
+$$
+
+con
+
+- $E$: intensità del campo elettrico
+  - direzione coincide con quella della forza
+  - verso coincide solo se $q$ è positiva
+- $\vec{F}$: forza elettrica che agisce su una carica di prova
+- $q$: carica di prova
+
+Nel caso che il campo elettrico sia generato da una moltitudine di cariche, il vettore $E$ è dato dalla somma vettoriale dei campi elettrici generati da ciascuna carica
+
+**campo elettrostatico**: campo che non varia nel tempo. È conservativo (il lavoro compiuto per spostare una carica tra due punti è indipendente dal percorso seguito)
 
 ### Entropia
