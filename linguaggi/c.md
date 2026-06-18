@@ -126,7 +126,7 @@ particolarità:
 
 - costrutti di controllo e cicli (if,for,while, switch)
 - operatori aritmetici: +, -, *, / (parte intera), % (modulo), ++, --
-- operatori di confronto: < > <= >= == != 
+- operatori di confronto: < > <= >= == !=
 - operatori logici: && (and), || (or), ! (not)
 - costanti
 
@@ -205,7 +205,7 @@ void fill(int *begin, int size, int value) {
 è possibile anche dichiarare array multidimensionali:
 
 ```c
-float matrix[4][3] = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
+float matrix[4][3] = \{{1,2,3},{4,5,6},{7,8,9},{10,11,12}\};
 matrix[1][1] = 2;
 ```
 
