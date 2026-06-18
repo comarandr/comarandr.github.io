@@ -4,6 +4,14 @@ title: Home
 permalink: /
 ---
 
+Link alla pagina principale del sito, dove sono raccolti tutti gli appunti e i progetti personali.
+
+[Appunti universitari informatica]
+
+[Linguaggi di programmazione]
+
+[Progetti personali]
+
 ## Appunti caricati
 
 [Fisica_2026](./universita/fisica_2026/fisica26.md)
