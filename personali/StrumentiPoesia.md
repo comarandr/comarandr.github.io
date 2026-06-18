@@ -1,4 +1,8 @@
-# STRUMENTI PER LA POESIA
+---
+layout: default
+title: Strumenti di poesia
+permalink: /personali/StrumentiPoesia/
+---
 
 ## INTRODUZIONE METRICA
 

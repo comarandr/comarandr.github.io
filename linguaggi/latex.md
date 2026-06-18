@@ -1,7 +1,7 @@
 ---
 layout: default
 title: LaTeX
-permalink: /latex/
+permalink: /linguaggi/LaTeX/
 ---
 
 ## Creare un documento

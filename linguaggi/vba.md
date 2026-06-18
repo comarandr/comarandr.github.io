@@ -1,7 +1,7 @@
 ---
 layout: default
 title: VBA
-permalink: /vba/
+permalink: /linguaggi/VBA/
 ---
 
 ## Introduzione a VBA

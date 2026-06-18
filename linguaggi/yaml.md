@@ -1,7 +1,7 @@
 ---
 layout: default
 title: YAML
-permalink: /yaml/
+permalink: /linguaggi/YAML/
 ---
 
 ## Introduzione

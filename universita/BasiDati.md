@@ -1,4 +1,8 @@
-# Basi di Dati
+---
+layout: default
+title: Basi di dati
+permalink: /universita/basiDati/
+---
 
 ## Introduzione
 

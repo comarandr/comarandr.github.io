@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Programmazione a oggetti
-permalink: /oop/
+permalink: /universita/oop/
 ---
 
 ## Concetti di base

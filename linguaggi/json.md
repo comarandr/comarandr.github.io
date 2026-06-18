@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Json
-permalink: /json/
+permalink: /linguaggi/Json/
 ---
 
 ## Introduzione

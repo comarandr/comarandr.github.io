@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Python
-permalink: /python/
+permalink: /linguaggi/python/
 ---
 
 ## Introduzione a Python

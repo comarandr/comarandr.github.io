@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Fisica 2026
-permalink: /fisica_2026/
+permalink: /universita/fisica_2026/
 ---
 
 ## Introduzione

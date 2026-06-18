@@ -1,4 +1,8 @@
-# SCHEMI BASH
+---
+layout: default
+title: Bash
+permalink: /linguaggi/bash/
+---
 
 ## Indice
 
