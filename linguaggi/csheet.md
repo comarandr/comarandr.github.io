@@ -2,6 +2,7 @@
 layout: default
 title: C Sheet
 permalink: /linguaggi/CSheet/
+render_with_liquid: false
 ---
 
 ## indice
