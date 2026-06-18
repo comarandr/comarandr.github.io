@@ -195,6 +195,8 @@ printf("%d", *pa); //stampa 1
 printf("%d", *(pa+1)); //stampa 2
 ```
 
+{% start raw %}
+
 ```c
 void fill(int *begin, int size, int value) {
  for(int *p=begin;p<begin+size;++p)
@@ -202,12 +204,20 @@ void fill(int *begin, int size, int value) {
  }
 ```
 
+{% endraw %}
+
+{% start raw %}
+
+```c
+
 è possibile anche dichiarare array multidimensionali:
 
 ```c
-float matrix[4][3] = \{{1,2,3},{4,5,6},{7,8,9},{10,11,12}\};
+float matrix[4][3] = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
 matrix[1][1] = 2;
 ```
+
+{% endraw %}
 
 ## puntatori
 
