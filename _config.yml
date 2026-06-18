@@ -9,8 +9,8 @@ kramdown:
   syntax_highlighter: rouge 
   syntax_highlighter_opts: 
     disable: false
-
-
+exclude:
+  - ./linguaggi/c.md
   
 
 
