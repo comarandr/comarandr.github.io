@@ -2,6 +2,7 @@
 layout: default
 title: C
 permalink: /linguaggi/C/
+render_with_liquid: false
 ---
 
 ## compilazione semplice
@@ -195,18 +196,12 @@ printf("%d", *pa); //stampa 1
 printf("%d", *(pa+1)); //stampa 2
 ```
 
-{% start raw %}
-
 ```c
 void fill(int *begin, int size, int value) {
  for(int *p=begin;p<begin+size;++p)
  *p=value;
  }
 ```
-
-{% endraw %}
-
-{% start raw %}
 
 ```c
 
