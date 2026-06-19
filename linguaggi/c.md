@@ -25,7 +25,7 @@ visualizzare il codice assembly (post compilazione):
 visualizzare file oggetto (post assembklaggio):
 
 `$ clang -c file.c`
-si genera un file `file.o`, non apribile con un editor di testo 
+si genera un file `file.o`, non apribile con un editor di testo
 
 posso compilare per stadi, per esempio:
 
@@ -172,7 +172,7 @@ Le funzioni vengono prima dichiarate e poi definite tramite l'implementazione
 - dichiarazione: "intestazione", tipo nome(argomenti)
 - implementazione: corpo
 
-dichiarazione deve precedere la chiamata, se 
+dichiarazione deve precedere la chiamata, se
 
 ## variabili e passaggio per valore
 
