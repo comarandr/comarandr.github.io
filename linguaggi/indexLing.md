@@ -10,7 +10,6 @@ permalink: /linguaggi/
 [yaml](./yaml.md)
 [json](./json.md)
 [vba](./vba.md)
-[c](./c.md)
 [bash](./bash.md)
 [html](./schemi_html/html.md)
 [python](./python/python.md)
