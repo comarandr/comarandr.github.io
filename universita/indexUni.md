@@ -6,7 +6,7 @@ permalink: /universita/
 
 - [Fisica_2026](./fisica_2026/fisica26.md)
 - [Matematica di base](./matematica/matematica.md)
-- [Matematica Discreta](./matematicaDiscreta.md)
+- [Matematica Discreta](./MatematicaDiscreta.md)
 - [Algebra lineare](./algebraSchemi.md)
 - [Fisica](./fisica/fisica.md)
 - [Programmazione a oggetti](./oop.md)
