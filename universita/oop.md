@@ -565,31 +565,41 @@ Fornisce un'interfaccia per creare oggetti in una superclasse, ma permette alle 
 - interfaccia factory con metodo statico per creare oggetti in base a argomenti
 
 ```mermaid
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
 classDiagram
-    class InterfacciaProdotto{
-        metodo1()
-    }
+    note for Factory " public class Main: 
+     Prodotto p = creaProdotto(arg) "
+
     class ClasseConcreta-A{
-        @Override metodo1()
+        @Override metodoComune()
+        CostruttoreConcreto() A
     }
     class ClasseConcreta-B{
-        @Override metodo1()
+        @Override metodoComune()
+        CostruttoreConcreto() B
     }
-    class InterfacciaFactory{ 
+    class Factory{ 
         public static Prodotto creaProdotto(String tipo)
-        creaProdotto("A") `new ClasseConcreta-A()`
-        - se tipo == "B" ritorna new ClasseConcreta-B()
+        creaProdotto("A") new ClasseConcreta-A
+        creaProdotto("B") new ClasseConcreta-B
     }
 
-    class Main{
-        prodotto x = InterfacciaFactory.creaProdotto()
+    class Prodotto{
+        + metodoComune()
     }
 
+    Factory <|-- Prodotto
+    Prodotto <|-- ClasseConcreta-A
+    Prodotto <|-- ClasseConcreta-B
+    Factory --> `oggetto A`
+    Factory --> `oggetto B`
 
-    InterfacciaProdotto <|-- ClasseConcreta-A
-    InterfacciaProdotto <|-- ClasseConcreta-B
-    InterfacciaFactory --> InterfacciaProdotto
-    Main --> InterfacciaFactory
+    class `oggetto A`
+    class `oggetto B`
 ```
 
 ```java
@@ -637,6 +647,9 @@ provvede flessibilità quando inizializzi un tipo con molti attributi
   - metodi per attributi opzionali che ritornano `this`
 
 ```mermaid
+---
+title: Builder classe interna
+---
 classDiagram
     direction LR
     class `Tipo principale`{
@@ -719,17 +732,22 @@ Serve a disaccoppiare il soggetto osservato dagli osservatori
 
 ```mermaid
 classDiagram
-    class Observer{
-        + update(Object data)
-    }
     class Observable{
-        + addObserver(Observer o)
-        + removeObserver(Observer o)
-        + notifyObservers(Object data)
+        <<Interfaccia>>
+        + void addObserver(Observer o)
+        + void removeObserver(Observer o)
+        + void notifyObservers(Object data)
     }
     class ConcreteObservable{
-        - List<Observer> observers
-        + setMsg(String msg)
+        - Lista observers
+        @Override addObserver(Observer o)
+        @Override removeObserver(Observer o)
+        @Override notifyObservers(Object data)
+        metodo1(include notifyObservers())
+    }
+    class Observer{
+        <<Interfaccia>>
+        + void update(Object data)
     }
     class ConcreteObserver{
         - String nome
@@ -814,6 +832,48 @@ Aggiunge responsabilità/comportamenti dinamicamente mediante classi
 - classe astratta decorator che implementa interfaccia e contiene attributo `protected` a tipo I
 - classi concrete decorator con attributo super e override metodi per aggiungere funzionalità
 
+```mermaid
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+classDiagram
+    class OggettoDaDecorare{
+        <<Interfaccia>>
+        + metodo1()
+        + metodo2()
+    }
+
+    class OggettoConcreto{
+        + metodo1()
+        + metodo2()
+    }
+
+    class `Decoratore implements Oggetto`{
+        <<Classe astratta>>
+        - Oggetto oggetto
+        Costrruttore(Oggetto oggetto) this
+    }
+
+    class `A extends Decoratore`{
+        <<decoratore concreto>>
+        + metodo1()
+        + metodo2()
+    }
+
+    class `B extends Decoratore`{
+        <<decoratore concreto>>
+        + metodo1()
+        + metodo2()
+    }
+
+    OggettoDaDecorare <|-- OggettoConcreto
+    OggettoDaDecorare <|-- `Decoratore implements Oggetto`
+    `Decoratore implements Oggetto` <|-- `A extends Decoratore`
+    `Decoratore implements Oggetto` <|-- `B extends Decoratore`
+```
+
 ```java
 //interfaccia componente I
 public interface Drink {
@@ -868,6 +928,39 @@ Compone oggetti in strutture ad albero per rappresentare gerarchie parte-tutto
 - interfaccia componente comune a foglie e compositi
 - classe foglia: oggetti finali senza figli
 - classe composita: contiene una variabile d'istanza lista di componenti (foglie o altre compositi)
+
+```mermaid
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+classDiagram
+    class Elemento{
+        <<Interfaccia>>
+        + metodo1()
+        + metodo2()
+    }
+
+    class `Foglia implements Elemento`{
+        - variabili d'istanza
+        + Costruttore(variabili)
+        @Override metodo1()
+        @Override metodo2()
+    }
+
+    class `Composita implements Elemento`{
+        - variabili d'istanza
+        - Lista< Elemento >
+        + void add(Elemento)
+        + void remove(Elemento)
+        @Override metodo1()
+        @Override metodo2()
+    }
+
+    Elemento <|-- `Foglia implements Elemento` 
+    Elemento <|-- `Composita implements Elemento`
+```
 
 ```java
 //interfaccia componente
@@ -930,13 +1023,16 @@ classDiagram
         + operazione()
     }
     class Implementor{
-        + operazioneImplementor()
+        <<Interfaccia>>
+        + metodo1()
+        + metodo2()
     }
     class RefinedAbstraction extends Abstraction{
         + operazione()
     }
     class ConcreteImplementor implements Implementor{
-        + operazioneImplementor()
+        + metodo1()
+        + metodo2()
     }
     Abstraction --> Implementor
     Abstraction <|-- RefinedAbstraction
@@ -1078,30 +1174,35 @@ definisce famiglia di algoritmi incapsulati in classi separate e intercambiali i
 classDiagram
     direction LR
 
-    class Main{
-        + main(String[] args)
+    class Contesto{
+        private Strategy opzione;
+        + setStrategy(Strategy opzione)
     }
 
-    class C{
-        private S opzione;
-        + setOpzione(S opzione)
-    }
-
-    class S {
+    class Strategy {
+    <<Interfaccia>>
     + metodo1()
     }
 
-    class A1{
+    class Opzione1{
+        <<Classe concreta>>
         + metodo1()
     }
 
-    class A2{
+    class Opzione2{
+        <<Classe concreta>>
         + metodo1()
     }
 
-    C --> S
-    S <|-- A1
-    S <|-- A2
+    class Opzione3{
+        <<Classe concreta>>
+        + metodo1()
+    }
+
+    Contesto --> Strategy
+    Strategy <|-- Opzione1
+    Strategy <|-- Opzione2
+    Strategy <|-- Opzione3
 ```
 
 ```java
