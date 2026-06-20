@@ -4,6 +4,8 @@ title: Programmazione a oggetti
 permalink: /universita/oop/
 ---
 
+<!-- css: stile.css -->
+
 ## Concetti di base
 
 ### CLASSE
