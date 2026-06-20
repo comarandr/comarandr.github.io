@@ -263,7 +263,7 @@ Nel vuoto vale $\epsilon_r = 1$, mentre nei materiali $\epsilon_r > 1$.
 
 **Ampere (A)**: unità di misura della corrente
 
-**Coulomb (C)**: unità di misura della carica elettrica. 
+**Coulomb (C)**: unità di misura della carica elettrica.
 
 1 Coulomb = quantità di carica trasportata in 1 secondo da una corrente di 1 Ampere
 
@@ -284,7 +284,7 @@ campo di forze elettrico è esprimibile come prodotto della carica q per un camp
 Il **vettore intensità del campo elettrico** :
 
 $$
-\vec{E} = \frac{\vec{F}}{q}
+\vec{E} = \frac{\vec{F}}{q} = \frac{1}{4 \pi \epsilon_0 \epsilon} \frac{Q}{r^2} ( \frac{\vec{r}}{r} )
 $$
 
 con
@@ -297,6 +297,56 @@ con
 
 Nel caso che il campo elettrico sia generato da una moltitudine di cariche, il vettore $E$ è dato dalla somma vettoriale dei campi elettrici generati da ciascuna carica
 
+#### Campo elettrostatico e energia potenziale
+
 **campo elettrostatico**: campo che non varia nel tempo. È conservativo (il lavoro compiuto per spostare una carica tra due punti è indipendente dal percorso seguito)
+
+Essendo conservativo, è possibile definire una funzione **energia potenziale $U(r)$** che caratterizza il campo.
+
+$$
+U(\vec{r}) = \frac{Qq}{4 \pi \epsilon_0 \epsilon} \frac{1}{r}
+$$
+
+Dividendo per la carica di prova $q$ otteniamo il **potenziale elettrico**:
+
+$$
+V(\vec{r}) = \frac{U(\vec{r})}{q} = \frac{Q}{4 \pi \epsilon_0 \epsilon} \frac{1}{r}
+$$
+
+Se il campo è generato da una sola carica lo definiamo monopolo
+
+#### Tabella riassuntiva per una carica q
+
+$$
+\begin{matrix}
+\vec{F} = \frac{1}{4 \pi \epsilon_0 \epsilon} \frac{Qq}{r^2} ( \frac{\vec{r}}{r} ) &
+\vec{E} = \frac{1}{4 \pi \epsilon_0 \epsilon} \frac{Q}{r^2} (\frac{\vec{r}}{r} ) \\
+U(\vec{r}) = \frac{Qq}{4 \pi \epsilon_0 \epsilon} \frac{1}{r} &
+V(\vec{r}) = \frac{Q}{4 \pi \epsilon_0 \epsilon} \frac{1}{r}
+\end{matrix}
+$$
+
+#### Differenza potenziale elettrico
+
+**potenziale elettrico**: due definizioni
+
+- grandezza intensiva corrispondente all'energia potenziale elettrostatica
+- grandezza scalare collegata al campo elettrostatico
+
+**differenza di potenziale elettrico $\Delta V$**: lavoro compiuto per spostare una carica di prova $q$ tra due punti A e B del campo elettrostatico
+
+$$
+\Delta V = V(B) - V(A) = \frac{U(B)-U(A)}{q} = \frac{L_{AB}}{q}
+$$
+
+L'unità di misura del potenziale elettrico è il **Volt (V)**
+
+**elettron-volt (eV)**: energia cinetica acquisita da un elettrone accelerato da una differenza di potenziale di 1 Volt. Corrisponde a $1.6 \times 10^{-19} J$
+
+#### Teorema di Gauss
+
+Il flusso elettrico totale attraverso una superficie chiusa è uguale al prodotto della carica totale all’interno della superficie per la costante $\frac{1}{4\pi\epsilon_0\epsilon}$
+
+**flusso elettrico**: grandezza scalare che rappresenta numericamente il flusso del vettore $\vec{E}$ per una superficie attraversata da linee di forza del campo elettrico
 
 ### Entropia

@@ -10,7 +10,7 @@ Caratteristiche distintive di un database:
 
 - **persistenza**
 - **mole**
--**globalità**
+- **globalità**
 
 Caratteristiche generali di un sistema informatico:
 

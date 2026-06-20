@@ -1021,6 +1021,94 @@ System.out.println(spedizione.costo(5));
 >> 10.0
 ```
 
+#### GRAFICI DESIGN PATTERN
+
+##### FACTORY
+
+```mermaid
+classDiagram
+    class InterfacciaProdotto{
+        metodo1()
+    }
+    class ClasseConcreta-A{
+        @Override metodo1()
+    }
+    class ClasseConcreta-B{
+        @Override metodo1()
+    }
+    class InterfacciaFactory{ 
+        public static Prodotto creaProdotto(String tipo)
+        - se tipo == "A" ritorna new ClasseConcreta-A()
+        - se tipo == "B" ritorna new ClasseConcreta-B()
+    }
+
+    class Main{
+        prodotto x = InterfacciaFactory.creaProdotto()
+    }
+
+
+    InterfacciaProdotto <|-- ClasseConcreta-A
+    InterfacciaProdotto <|-- ClasseConcreta-B
+    InterfacciaFactory --> InterfacciaProdotto
+    Main --> InterfacciaFactory
+```
+
+##### BUILDER
+
+```mermaid
+classDiagram
+    class Tipo{
+        variabili d'istanza 
+        + Costruttore: Tipo (TipoBuilder b)
+        ~ Static class TipoBuilder interna
+    }
+
+    class TipoBuilder{
+        variabili d'istanza
+        + Costruttore: TipoBuilder (variabili obbligatorie)
+        + metodi per variabili opzionali che ritornano this
+        + build(): Tipo
+    }
+
+    Tipo --> TipoBuilder
+```
+
+##### OBSERVER
+
+```mermaid
+classDiagram
+    class Observer{
+        + update(Object data)
+    }
+    class Observable{
+        + addObserver(Observer o)
+        + removeObserver(Observer o)
+        + notifyObservers(Object data)
+    }
+    class ConcreteObservable{
+        - List<Observer> observers
+        + setMsg(String msg)
+    }
+    class ConcreteObserver{
+        - String nome
+        + update(Object news)
+    }
+
+    Observable <|-- ConcreteObservable
+    Observer <|-- ConcreteObserver
+    ConcreteObservable --> Observer : notifyObservers()
+```
+
+##### DECORATOR
+
+##### COMPOSITE
+
+##### BRIDGE
+
+##### VISITOR
+
+##### STRATEGY
+
 ### TIPI, METODI E COSE UTILI
 
 #### DTO
