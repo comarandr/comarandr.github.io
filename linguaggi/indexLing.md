@@ -12,3 +12,4 @@ permalink: /linguaggi/
 - [vba](./vba.md)
 - [html](./schemi_html/html.md)
 - [python](./python/python.md)
+- [arm](./arm.html)
