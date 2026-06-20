@@ -1,0 +1,239 @@
+/* ===================================================================
+   Java Syntax Highlighting - Light Theme
+   Ispirato a IntelliJ IDEA Light / VS Code Light+ / GitHub Light
+   Da usare con markdown renderer che generano classi tipo:
+   <span class="token keyword">...</span> (es. Prism.js, highlight.js)
+   =================================================================== */
+
+/* --- Blocco di codice base --- */
+pre[class*="language-java"],
+code[class*="language-java"] {
+  background-color: #fafafa;
+  color: #1e1e1e;
+  font-family: "JetBrains Mono", "Fira Code", Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  tab-size: 4;
+  hyphens: none;
+}
+
+pre[class*="language-java"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 6px;
+  border: 1px solid #e1e4e8;
+}
+
+:not(pre) > code[class*="language-java"] {
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+}
+
+/* --- Numeri di riga (opzionale, se il renderer le supporta) --- */
+.line-numbers .line-numbers-rows {
+  border-right: 1px solid #e1e4e8;
+  color: #a9b0bc;
+}
+
+/* ===================================================================
+   TOKEN COLORS - stile IntelliJ IDEA Light
+   =================================================================== */
+
+/* Commenti — verde/grigio, corsivo */
+.token.comment,
+.token.block-comment,
+.token.doc-comment,
+.token.line-comment {
+  color: #8c8c8c;
+  font-style: italic;
+}
+
+/* Javadoc tags (@param, @return, ecc.) */
+.token.javadoc-tag,
+.token.javadoc-keyword {
+  color: #67a37c;
+  font-weight: 600;
+}
+
+/* Parole chiave (public, class, static, if, for, ecc.) — blu/arancio scuro */
+.token.keyword {
+  color: #0033b3;
+  font-weight: 600;
+}
+
+/* Modificatori di accesso e keyword speciali (extends, implements, this, super) */
+.token.keyword.modifier,
+.token.this,
+.token.super {
+  color: #0033b3;
+  font-weight: 600;
+}
+
+/* Stringhe — verde */
+.token.string,
+.token.char {
+  color: #067d17;
+}
+
+/* Numeri — blu */
+.token.number {
+  color: #1750eb;
+}
+
+/* Operatori (+, -, =, &&, ecc.) */
+.token.operator {
+  color: #1e1e1e;
+}
+
+/* Punteggiatura ({}, (), ;, ,) */
+.token.punctuation {
+  color: #1e1e1e;
+}
+
+/* Nomi di classi e interfacce — verde-azzurro / teal */
+.token.class-name,
+.token.interface-name,
+.token.type-name {
+  color: #00696b;
+  font-weight: 500;
+}
+
+/* Annotazioni (@Override, @Deprecated, ecc.) — giallo/oro scuro */
+.token.annotation,
+.token.annotation-name {
+  color: #9e880d;
+}
+
+/* Nomi di metodi — giallo/marrone scuro (stile IntelliJ) */
+.token.function,
+.token.method-name {
+  color: #7a7a17;
+}
+
+/* Variabili e identificatori generici */
+.token.variable,
+.token.identifier {
+  color: #1e1e1e;
+}
+
+/* Parametri di metodo */
+.token.parameter {
+  color: #1e1e1e;
+  font-style: italic;
+}
+
+/* Campi statici / costanti (UPPER_CASE) */
+.token.constant {
+  color: #871094;
+}
+
+/* Tipi primitivi (int, boolean, void, ecc.) */
+.token.builtin,
+.token.primitive-type {
+  color: #0033b3;
+  font-weight: 600;
+}
+
+/* Generics (<T>, <String>) */
+.token.generic {
+  color: #00696b;
+}
+
+/* null, true, false */
+.token.boolean,
+.token.null {
+  color: #0033b3;
+  font-weight: 600;
+}
+
+/* Package e import */
+.token.package,
+.token.namespace {
+  color: #1e1e1e;
+}
+
+/* Lambda e operatori freccia (->) */
+.token.arrow {
+  color: #0033b3;
+}
+
+/* Testo selezionato dentro il blocco */
+pre[class*="language-java"] ::selection {
+  background-color: #c9e6ff;
+}
+
+/* ===================================================================
+   Variante alternativa: classi semplificate
+   Utile se il tuo renderer markdown (es. marked + highlight.js)
+   usa nomi di classe diversi
+   =================================================================== */
+
+.hljs {
+  background: #fafafa;
+  color: #1e1e1e;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #8c8c8c;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal {
+  color: #0033b3;
+  font-weight: 600;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #067d17;
+}
+
+.hljs-number {
+  color: #1750eb;
+}
+
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__ {
+  color: #00696b;
+  font-weight: 500;
+}
+
+.hljs-title.function_ {
+  color: #7a7a17;
+}
+
+.hljs-meta,
+.hljs-meta .hljs-keyword {
+  color: #9e880d;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+  color: #1e1e1e;
+}
+
+.hljs-params {
+  color: #1e1e1e;
+  font-style: italic;
+}
+
+.hljs-built_in,
+.hljs-type {
+  color: #0033b3;
+  font-weight: 600;
+}
+
+.hljs-punctuation {
+  color: #1e1e1e;
+}
