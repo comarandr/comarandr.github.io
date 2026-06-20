@@ -564,6 +564,34 @@ Fornisce un'interfaccia per creare oggetti in una superclasse, ma permette alle 
 - classi concrete che implementano l'interfaccia
 - interfaccia factory con metodo statico per creare oggetti in base a argomenti
 
+```mermaid
+classDiagram
+    class InterfacciaProdotto{
+        metodo1()
+    }
+    class ClasseConcreta-A{
+        @Override metodo1()
+    }
+    class ClasseConcreta-B{
+        @Override metodo1()
+    }
+    class InterfacciaFactory{ 
+        public static Prodotto creaProdotto(String tipo)
+        creaProdotto("A") `new ClasseConcreta-A()`
+        - se tipo == "B" ritorna new ClasseConcreta-B()
+    }
+
+    class Main{
+        prodotto x = InterfacciaFactory.creaProdotto()
+    }
+
+
+    InterfacciaProdotto <|-- ClasseConcreta-A
+    InterfacciaProdotto <|-- ClasseConcreta-B
+    InterfacciaFactory --> InterfacciaProdotto
+    Main --> InterfacciaFactory
+```
+
 ```java
 
 //interfaccia prodotto
@@ -607,6 +635,24 @@ provvede flessibilità quando inizializzi un tipo con molti attributi
 - classe interna builder statica con attributi pubblici corrispondenti
   - costruttore con attributi obbligatori
   - metodi per attributi opzionali che ritornano `this`
+
+```mermaid
+classDiagram
+    direction LR
+    class `Tipo principale`{
+        variabili d'istanza
+        static class Builder
+        + costruttore(Builder b) tipo
+    }
+
+    class `Static class Builder`{
+        variabili d'istanza
+        + Builder (variabili obbligatorie)
+        + build(variabile opzionale) this
+    }
+
+    `Tipo principale` -- `Static class Builder`
+```
 
 ```java
 //classe prodotto
@@ -670,6 +716,30 @@ Serve a disaccoppiare il soggetto osservato dagli osservatori
 - classe concreta osservabile con
   - lista di osservatori
   - metodo con notifyObservers che chiama update() su tutti gli osservatori
+
+```mermaid
+classDiagram
+    class Observer{
+        + update(Object data)
+    }
+    class Observable{
+        + addObserver(Observer o)
+        + removeObserver(Observer o)
+        + notifyObservers(Object data)
+    }
+    class ConcreteObservable{
+        - List<Observer> observers
+        + setMsg(String msg)
+    }
+    class ConcreteObserver{
+        - String nome
+        + update(Object news)
+    }
+
+    Observable <|-- ConcreteObservable
+    Observer <|-- ConcreteObserver
+    ConcreteObservable --> Observer : notifyObservers()
+```
 
 ```java
 //interfaccia osservatore
@@ -851,6 +921,28 @@ Serve a disaccoppiare astrazione da implementazione, nei casi in cui rischio di 
 
 - astrazione: tipo apparente lato client
 
+```mermaid
+classDiagram
+    direction LR
+    class Abstraction{
+        protected Implementor implementor;
+        + Abstraction(Implementor implementor)
+        + operazione()
+    }
+    class Implementor{
+        + operazioneImplementor()
+    }
+    class RefinedAbstraction extends Abstraction{
+        + operazione()
+    }
+    class ConcreteImplementor implements Implementor{
+        + operazioneImplementor()
+    }
+    Abstraction --> Implementor
+    Abstraction <|-- RefinedAbstraction
+    Implementor <|-- ConcreteImplementor
+```
+
 ```java
 Abstraction a = new RefinedAbstraction(new ConcreteImplementor());
 ```
@@ -982,6 +1074,36 @@ definisce famiglia di algoritmi incapsulati in classi separate e intercambiali i
 - classi concrete che implementano algoritmi
 - classe selettore con attributo `private` Strategy, metodi per settare strategia e usare algoritmo
 
+```mermaid
+classDiagram
+    direction LR
+
+    class Main{
+        + main(String[] args)
+    }
+
+    class C{
+        private S opzione;
+        + setOpzione(S opzione)
+    }
+
+    class S {
+    + metodo1()
+    }
+
+    class A1{
+        + metodo1()
+    }
+
+    class A2{
+        + metodo1()
+    }
+
+    C --> S
+    S <|-- A1
+    S <|-- A2
+```
+
 ```java
 //interfaccia
 public interface SpedizioneStrategy {
@@ -1022,94 +1144,6 @@ spedizione.setTipologia(new Standard());
 System.out.println(spedizione.costo(5));
 >> 10.0
 ```
-
-#### GRAFICI DESIGN PATTERN
-
-##### FACTORY
-
-```mermaid
-classDiagram
-    class InterfacciaProdotto{
-        metodo1()
-    }
-    class ClasseConcreta-A{
-        @Override metodo1()
-    }
-    class ClasseConcreta-B{
-        @Override metodo1()
-    }
-    class InterfacciaFactory{ 
-        public static Prodotto creaProdotto(String tipo)
-        - se tipo == "A" ritorna new ClasseConcreta-A()
-        - se tipo == "B" ritorna new ClasseConcreta-B()
-    }
-
-    class Main{
-        prodotto x = InterfacciaFactory.creaProdotto()
-    }
-
-
-    InterfacciaProdotto <|-- ClasseConcreta-A
-    InterfacciaProdotto <|-- ClasseConcreta-B
-    InterfacciaFactory --> InterfacciaProdotto
-    Main --> InterfacciaFactory
-```
-
-##### BUILDER
-
-```mermaid
-classDiagram
-    class Tipo{
-        variabili d'istanza 
-        + Costruttore: Tipo (TipoBuilder b)
-        ~ Static class TipoBuilder interna
-    }
-
-    class TipoBuilder{
-        variabili d'istanza
-        + Costruttore: TipoBuilder (variabili obbligatorie)
-        + metodi per variabili opzionali che ritornano this
-        + build(): Tipo
-    }
-
-    Tipo --> TipoBuilder
-```
-
-##### OBSERVER
-
-```mermaid
-classDiagram
-    class Observer{
-        + update(Object data)
-    }
-    class Observable{
-        + addObserver(Observer o)
-        + removeObserver(Observer o)
-        + notifyObservers(Object data)
-    }
-    class ConcreteObservable{
-        - List<Observer> observers
-        + setMsg(String msg)
-    }
-    class ConcreteObserver{
-        - String nome
-        + update(Object news)
-    }
-
-    Observable <|-- ConcreteObservable
-    Observer <|-- ConcreteObserver
-    ConcreteObservable --> Observer : notifyObservers()
-```
-
-##### DECORATOR
-
-##### COMPOSITE
-
-##### BRIDGE
-
-##### VISITOR
-
-##### STRATEGY
 
 ### TIPI, METODI E COSE UTILI
 
