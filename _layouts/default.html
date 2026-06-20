@@ -8,6 +8,10 @@
 
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 
+  {% if page.custom_css %}
+  <link rel="stylesheet" href="{{ page.custom_css | relative_url }}">
+  {% endif %}
+
   <!-- MathJax -->
   <script>
     window.MathJax = {
