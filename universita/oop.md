@@ -2,7 +2,7 @@
 layout: default
 title: Programmazione a oggetti
 permalink: /universita/oop/
-css: /assets/css/oop.css
+css: /assets/oop.css
 ---
 
 ## Concetti di base
