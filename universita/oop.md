@@ -1014,31 +1014,6 @@ Serve a disaccoppiare astrazione da implementazione, nei casi in cui rischio di 
 
 - astrazione: tipo apparente lato client
 
-```mermaid
-classDiagram
-    direction LR
-    class Abstraction{
-        protected Implementor implementor;
-        + Abstraction(Implementor implementor)
-        + operazione()
-    }
-    class Implementor{
-        <<Interfaccia>>
-        + metodo1()
-        + metodo2()
-    }
-    class RefinedAbstraction extends Abstraction{
-        + operazione()
-    }
-    class ConcreteImplementor implements Implementor{
-        + metodo1()
-        + metodo2()
-    }
-    Abstraction --> Implementor
-    Abstraction <|-- RefinedAbstraction
-    Implementor <|-- ConcreteImplementor
-```
-
 ```java
 Abstraction a = new RefinedAbstraction(new ConcreteImplementor());
 ```
@@ -1046,6 +1021,42 @@ Abstraction a = new RefinedAbstraction(new ConcreteImplementor());
 - interfaccia implementazioni concrete e relative classi concrete
 - classe astratta con riferimento a interfaccia con attributo `protected`
 - classi concrete astrazione che estendono
+
+```mermaid
+---
+    config:
+        class:
+            hideEmptyMembersBox: true
+---
+classDiagram
+    class Abstraction{
+        <<Classe astratta>>
+        protected Implementation i;
+        Costruttore(Implementation i) this
+        + abstract void metodo1()
+        + abstract void metodo2()
+
+    }
+    class Implementation{
+        <<Interfaccia>>
+        + metodo1()
+        + metodo2()
+    }
+    class `RefinedAbstraction extends Abstraction`{
+        <<Classe concreta>>
+        + RefinedAbstraction(Implementor i)( super() )
+        + @Override metodo1( Implementor.metodo1())
+        + @Override metodo2( Implementor.metodo2())
+    }
+    class `Implementor implements Implementation`{
+        <<Classe concreta>> 
+        + @Override metodo1()
+        + @Override metodo2()
+    }
+    Abstraction -- Implementation
+    Abstraction <|-- `RefinedAbstraction extends Abstraction`
+    Implementation <|-- `Implementor implements Implementation`
+```
 
 ```java
 //interfaccia implementazione
@@ -1093,6 +1104,70 @@ due interfacce:
 - per elementi (element), con metodo `accept(visitor v)`
 
 Poi classi concrete per implementare elementi e operazioni
+
+```mermaid
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+classDiagram
+    note for Visitor "interfaccia per operazioni"
+
+    note for Element "interfaccia per elementi"
+
+    class Main{
+        E x = new Tipo1()
+        E y = new Tipo2()
+        Visitor v1 = new Operazione1()
+        Visitor v2 = new Operazione2()
+
+        x.accept(v1)
+        y.accept(v2)
+    }
+
+    class Visitor{
+        <<Interfaccia>>
+        + visit(Tipo1 t)
+        + visit(Tipo2 t)
+    }
+
+    class Element{
+        <<Interfaccia>>
+        + void accept(Visitor v)
+    }
+
+    class `Tipo1 implements Element`{
+        <<classe concreta>>
+        variabili d'istanza
+        getter()
+        @Override accept(Visitor v)
+    }
+
+    class `Tipo2 implements Element`{
+        <<classe concreta>>
+        variabili d'istanza
+        getter()
+        @Override accept(Visitor v)
+    }
+
+    class `Operazione1 implements Visitor`{
+        <<classe concreta>>
+        + visit(Tipo1 t) per tipo1
+        + visit(Tipo2 t) per tipo2
+    }
+
+    class `Operazione2 implements Visitor`{
+        <<classe concreta>>
+        + visit(Tipo1 t) per tipo1
+        + visit(Tipo2 t) per tipo2
+    }
+
+    Visitor <|-- `Operazione1 implements Visitor`
+    Visitor <|-- `Operazione2 implements Visitor`
+    Element <|-- `Tipo1 implements Element`
+    Element <|-- `Tipo2 implements Element`
+```
 
 ```java
 //interfaccia visitor, implementa metodo visit per ogni tipo
