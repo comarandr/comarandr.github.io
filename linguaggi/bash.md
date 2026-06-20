@@ -4,19 +4,7 @@ title: Bash
 permalink: /linguaggi/bash/
 ---
 
-## Indice
-
-1) [Shell & sessione](#shell--sessione)
-2) [History](#history)
-3) [Metacaratteri](#metacaratteri)
-4) [Quoting](#quoting)
-5) [Caratteri speciali](#caratteri-speciali)
-6) [Comandi per manipolare file e directory](#comandi-per-manipolare-file-e-directory)
-7) [Visualizzazione](#visualizzazione)
-8) [Inode e link](#inode-e-link)
-9) [Filtro](#filtro)
-10) [Scripting](#scripting)
-11) [Controllo di flusso](#controllo-di-flusso)
+## Schemi bash linux
 
 I file sono riferiti con il PATHNAME:  
 
