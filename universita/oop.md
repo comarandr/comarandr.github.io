@@ -133,6 +133,31 @@ Usare un'**interfaccia** quando
 
 **SOTTOTIPO**: estende o implementa il supertipo,deve rispettare contratto del supertipo
 
+```mermaid
+---
+    config:
+        class:
+            hideEmptyMembersBox: true
+---
+classDiagram
+    direction LR
+    class `Tipo apparente`{
+        <<supertipo>>
+        cosa posso fare
+        + metodo1()
+        + metodo2()
+    }
+    class `Tipo reale`{
+        <<sottotipo>>
+        come viene fatto
+        + metodo1()
+        + metodo2()
+        + metodo3()
+    }
+
+    `Tipo apparente` <|-- `Tipo reale`
+```
+
 Quando si fa una dichiarazione il compilatore guarda solo il lato sinistro per
 
 - verificare quali metodi sono accessibili
@@ -431,6 +456,28 @@ public class MyUncheckedException extends RuntimeException{
     public MyUncheckedException(String message){
         super(message);
     }
+}
+```
+
+#### TRY - CATCH - FINALLY
+
+Il costrutto `try-catch-finally` permette di gestire le eccezioni in modo strutturato
+
+L'esecuzione avviene nel seguente ordine:
+
+- `try`: eseguito, eventualmente non completato
+- `catch`: eseguito se viene sollevata un'eccezione del tipo specificato
+- `finally`: eseguito sempre e per ultimo, indipendentemente dalle eccezioni
+
+```java
+try {
+    // codice che può generare eccezioni
+} catch (TipoEccezione1 e1) {
+    // gestione eccezione di tipo TipoEccezione1
+} catch (TipoEccezione2 e2) {
+    // gestione eccezione di tipo TipoEccezione2
+} finally {
+    // codice che viene eseguito sempre, indipendentemente dalle eccezioni
 }
 ```
 
