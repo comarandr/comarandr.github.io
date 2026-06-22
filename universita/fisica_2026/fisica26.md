@@ -349,4 +349,41 @@ Il flusso elettrico totale attraverso una superficie chiusa è uguale al prodott
 
 **flusso elettrico**: grandezza scalare che rappresenta numericamente il flusso del vettore $\vec{E}$ per una superficie attraversata da linee di forza del campo elettrico
 
+(... slide 30 elettricità)
+
+#### Capacità di un conduttore e condensatori
+
+**materiali conduttori**: materiali con cariche libere che propagano una perturbazione elettrica
+
+**materiali isolanti o dialettrici**: materiali che non contengono cariche libere
+
+**materiali semiconduttori**: materiali che hanno un comportamento intermedio, se drogati forniscono cariche di un solo segno
+
+Il punto con minor potenziale in un conduttore è la superficie esterna, dove agiscono due componenti:
+
+- componente nella direzione della superficie, che è nulla (o le cariche si sposterebbero lungo la superficie)
+- componente ortogonale, generalmente diversa da zero
+
+Pertanto il flusso corrisponde a
+
+$$
+\Phi (\vec{E})= E_{out} \Delta S 
+$$
+
+mentre il teorema di Gauss ci dice che
+
+$$
+\Phi (\vec{E}) = \frac{Q}{\epsilon_0 \epsilon} = \frac{1}{\epsilon_0 \epsilon} \sigma \Delta S
+$$
+
+in cui $Q$ è espresso in funzione della densità superficiale di carica $\sigma$.
+
+Ne consegue
+
+$$
+E_{out} = \frac{\sigma}{\epsilon_0 \epsilon}
+$$
+
+Il potenziale raggiunto dal conduttore
+
 ### Entropia
