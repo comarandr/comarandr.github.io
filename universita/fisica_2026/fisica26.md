@@ -351,7 +351,7 @@ Il flusso elettrico totale attraverso una superficie chiusa è uguale al prodott
 
 (... slide 30 elettricità)
 
-#### Capacità di un conduttore e condensatori
+#### Capacità di un conduttore
 
 **materiali conduttori**: materiali con cariche libere che propagano una perturbazione elettrica
 
@@ -384,6 +384,32 @@ $$
 E_{out} = \frac{\sigma}{\epsilon_0 \epsilon}
 $$
 
-Il potenziale raggiunto dal conduttore
+Il potenziale raggiunto dal conduttore rappresenta lavoro svolto per portare una carica dall'infinito alla superficie del conduttore. Indichiamo pertanto la **capacità del conduttore $C$**:
+
+$$
+C = \frac{Q}{V}
+$$
+
+Il **farad** è l'unità di misura della capacità. 1 farad è la capacità di un conduttore che, portato a una differenza di potenziale di 1 Volt, accumula una carica di 1 Coulomb.
+
+#### Condensatori
+
+un condensatore è un insieme formato da due armature conduttrici affacciate a distanza $d$ e separate da un materiale isolante
+
+In caso di presenza di due cariche uguali e opposte sulle armature, si genera una differenza di potenziale $\Delta v$
+
+La **capacità elettrica** di un condensatore è data da
+
+$$
+C = \frac{Q}{\Delta V}
+$$
+
+La densità di carica $\sigma$ dipende ovviamente dalla superficie $S$ delle armature:
+
+$$
+\sigma = \frac{Q}{S}
+$$
+
+Dal teorema di 
 
 ### Entropia
