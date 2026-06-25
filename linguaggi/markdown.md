@@ -11,18 +11,25 @@ permalink: /linguaggi/markdown/
 6 livelli di gerarchia, dal più grande al più piccolo, rappresentati da `#`:
 
 \# Heading level 1
+
 \## Heading level 2
+
 \### Heading level 3
+
 \#### Heading level 4
+
 \##### Heading level 5
+
 \###### Heading level 6
 
 In alternativa, per i primi due livelli, è possibile usare `=` e `-`:
 
 Titolo di primo livello
+
 \==========
 
 Titolo di secondo livello
+
 \----------
 
 ## Paragraph (paragrafi)
@@ -38,6 +45,7 @@ Paragraph 2
 Per forzare un'interruzione di linea, basta terminare la riga con due spazi e premere invio.
 
 Ciao io.
+
 Ciao tu.
 
 ## Bold (grassetto)
@@ -45,6 +53,7 @@ Ciao tu.
 Racchiudere il testo tra due coppie di asterischi `**` o due coppie di underscore `__`.
 
 \*\*ciao\*\*
+
 \_\_ciao\_\_
 
 ## Italic (corsivo)
@@ -59,6 +68,7 @@ Racchiudere il testo tra una coppia di asterischi `*` o una coppia di underscore
 Racchiudere il testo tra tre coppie di asterischi `***` o tre coppie di underscore `___`.
 
 \*\*\*ciao\*\*\*
+
 \_\_\_ciao\_\_\_
 
 ## Blockquote (citazioni)
@@ -72,6 +82,7 @@ Basta usare il simbolo `>` all'inizio della riga.
 Posso anche annidare le citazioni:
 
 \> Questa è una citazione.
+
 \>\> Questa è una citazione annidata.
 
 > Citazione
@@ -84,6 +95,7 @@ Posso anche annidare le citazioni:
 Basta aggiungere `-`, `*` o `+` all'inizio della riga.
 
 \- Elemento 1
+
 \- Elemento 2
 
 - Elemento 1
@@ -106,6 +118,7 @@ Per annidare, basta aggiungere due spazi prima del simbolo della lista.
 Aggiungere un numero seguito da un punto all'inizio della riga.
 
 \1. Elemento 1
+
 \2. Elemento 2
 
 1. Elemento 1
@@ -217,6 +230,7 @@ Ulteriori formattazioni possono essere:
 Entrambi i link puntano a Google
 
 [Google][1]
+
 [Sito web][1]
 
 [1]: https://www.google.com
@@ -300,4 +314,3 @@ Per barrare il testo, basta racchiuderlo tra due tilde `~`
 - [x] Attività completata
 - [ ] Attività non completata
 - [ ] Attività non completata
-
