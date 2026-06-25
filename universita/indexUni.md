@@ -9,6 +9,7 @@ permalink: /universita/
 - [Matematica Discreta](./MatematicaDiscreta.md)
 - [Algebra lineare](./algebraSchemi.md)
 - [Fisica](./fisica/fisica.md)
-- [Programmazione a oggetti](./oop.md)
+- [Programmazione a oggetti](./oop.md) 
+- [Terra esempio oop](./Terra.md)
 - [Ingegneria del software](./IngegneriaDelSoftware.md)
 - [Basi di dati](./BasiDati.md)
