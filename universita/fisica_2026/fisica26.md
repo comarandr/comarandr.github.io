@@ -410,6 +410,50 @@ $$
 \sigma = \frac{Q}{S}
 $$
 
-Dal teorema di 
+Dal teorema di Gauss
+
+$$
+ES = \frac{\sigma S}{\epsilon_0 \epsilon} \implies E = \frac{\sigma}{\epsilon_0 \epsilon}
+$$
+
+Differenza di potenziale tra le armature è il lavoro per unità di carica per spostare una carica da un'armatura all'altra:
+
+$$
+\Delta V = \frac{L}{q} = \frac{qEd}{q} = \frac{\sigma d}{\epsilon_0 \epsilon_r} = Q \frac{d}{S} \frac{1}{\epsilon_0 \epsilon_r S}
+$$
+
+Da cui segue la **capacità del condensatore**:
+
+$$
+C = \epsilon_0 \epsilon_r \frac{S}{d}
+$$
+
+**condensatore cilindrico**: due cilindri conduttori di lunghezza $l$ e raggi $r+d$ e $r-d$ con $d << r$ la capacità si esprime:
+
+$$
+C = \epsilon_0 \epsilon_r \frac{2 \pi r l}{d}
+$$
+
+### Condensatori in serie e in parallelo
+
+Collegamento in serie:
+
+$$
+V_A - V_B = \Delta V_1 + \Delta V_2 = \frac{Q}{C_1} + \frac{Q}{C_2} = Q \left( \frac{1}{C_1} + \frac{1}{C_2} \right)
+$$
+
+$$
+\frac{1}{C_{eq}} = \frac{1}{C_1} + \frac{1}{C_2}
+$$
+
+Collegamento in parallelo:
+
+$$
+Q = Q_1 + Q_2 = C_1 \Delta V + C_2 \Delta V = (C_1 + C_2) \Delta V
+$$
+
+$$
+C_{eq} = C_1 + C_2
+$$
 
 ### Entropia

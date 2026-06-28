@@ -1516,3 +1516,10 @@ class ServizioOrdini {
 // Uso:
 ServizioOrdini servizio = new ServizioOrdini(new EmailNotifica());
 ```
+
+## Da implementari
+
+- set in java
+- ereditarietà multipla
+- rivedere meglio polimorfismo
+- stilare lista di tipi utili (list, map, set, queue, stack, arraylist, linkedlist, hashset, hashmap, treemap, priorityqueue)

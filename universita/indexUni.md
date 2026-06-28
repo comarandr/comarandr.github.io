@@ -8,7 +8,7 @@ permalink: /universita/
 
 - [Analisi matematica]
 - [Programmazione]
-- [Architettura degli elaboratori]
+- [Architettura degli elaboratori](./architettura.md)
 - [Matematica di base](./matematica/matematica.md)
 - [Matematica Discreta](./MatematicaDiscreta.md)
 - [Algebra lineare](./algebraSchemi.md)
