@@ -22,8 +22,8 @@ permalink: /universita/architettura/
 
 **Byte**: giustapposizione di 8 bit.
 
-| Tabella Byte |
-| --- |
+| Tabella Byte                                  |
+| :-------------------------------------------: |
 |**KB** (Kilobyte) = $2^{10}$ Byte ~ $10^3$ Byte|
 |**MB** (Megabyte) = $2^{20}$ Byte ~ $10^6$ Byte|
 |**GB** (Gigabyte) = $2^{30}$ Byte ~ $10^9$ Byte|
@@ -82,3 +82,137 @@ Data una tabella di verità, posso procedere in 2 modi:
 - metodo algoritmico
 - metodo duale
 
+### Metodo algoritmico
+
+tabella di $k$ colonne e $2^k$ righe
+
+- considero le righe con output = 1
+- ogni riga è una porta AND (prodotto input) in cui neghi gli input che valgono 0
+- unisco tutto in una porta OR (sommo i prodotti)
+
+### Metodo duale
+
+tabella di $k$ colonne e $2^k$ righe
+
+- considero le righe con output = 0
+- ogni riga è una porta OR (somma input) in cui neghi gli input che valgono 1
+- unisco tutto in una porta AND (moltiplico le somme)
+
+### Operazioni dell'algebra
+
+Posso ulteriormente semplificare le espressioni ottenute con i metodi precedenti, adoperando le seguenti proprietà:
+
+| Proprietà | Or | And |
+|:---:|:---:|:---:|
+| Elemento nullo | $A + 0 = A$ | $A \cdot 0 = 0$ |
+| Identità | $A + 1 = 1$ | $A \cdot 1 = A$ |
+| Idempotenza | $A + A = A$ | $A \cdot A = A$ |
+| Inverso | $A + \bar{A} = 1$ | $A \cdot \bar{A} = 0$ |
+| Commutativa | $A + B = B + A$ | $A \cdot B = B \cdot A$ |
+| Associativa | $A + (B + C) = (A + B) + C$ | $A \cdot (B \cdot C) = (A \cdot B) \cdot C$ |
+| Distributiva | $A \cdot (B + C) = A \cdot B + A \cdot C$ | $A + (B \cdot C) = (A + B) \cdot (A + C)$ |
+| Assorbimento | $A + (A \cdot B) = A$ | $A \cdot (A + B) = A$ |
+| De Morgan | $\overline{A + B} = \bar{A} \cdot \bar{B}$ | $\overline{A \cdot B} = \bar{A} + \bar{B}$ |
+|Negazione doppia| $\overline{\bar{A}} = A$ |
+| $ \overline{ABC} \neq $ $\bar{A}\bar{B}\bar{C}$ |
+
+### Porte NAND e NOR
+
+**NAND**: $\overline{A \cdot B}$
+
+|A|B|$\overline{A \cdot B}$|
+|:---:|:---:|:---:|
+|0|0|1|
+|0|1|1|
+|1|0|1|
+|1|1|0|
+
+**NOR**: $\overline{A + B} = \bar{A} \cdot \bar{B}$
+
+|A|B|$\overline{A + B}$|
+|:---:|:---:|:---:|
+|0|0|1|
+|0|1|0|
+|1|0|0|
+|1|1|0|
+
+Nota bene: 
+$\overline{AB}$ = NAND
+$\overline{A} \cdot \overline{B}$ = NOR
+
+### Porte OR esclusivo (XOR e NXOR)
+
+$A \overline{B} + \overline{A}B = (A+B)(\overline{A}+\overline{B})$
+
+|A|B|XOR|
+|:---:|:---:|:---:|
+|0|0|0|
+|0|1|1|
+|1|0|1|
+|1|1|0|
+
+$AB + \overline{A}\overline{B} = \overline{(A+B)(\overline{A}+\overline{B})}$
+
+|A|B|NXOR|
+|:---:|:---:|:---:|
+|0|0|1|
+|0|1|0|
+|1|0|0| 
+|1|1|1|
+
+### Mappe di Karnaugh
+
+(...)
+
+## Circuiti combinatori
+
+### Circuiti logici di base
+
+## Numeri binari
+
+**Notazione posizionale**: ogni cifra ha un peso che dipende dalla sua posizione
+
+$$
+\sum_{i=0}^{n-1} d_i \cdot B^i \qquad 0 \leq d_i < B
+$$
+
+binario: 
+
+| 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+
+**Alfabeto esadecimale**:
+
+$$
+0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+$$
+
+### Conversione da base B a base 10
+
+**Notazione posizionale**:
+
+$$
+\sum_{k=-m}^{q} d_k \cdot B^k = d_q \cdot B^q + ... + d_{-m} \cdot B^{-m}
+$$
+
+es:
+$$
+1011_2 = 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 = 8 + 0 + 2 + 1 = 11
+$$
+
+**Accumulazione parte intera**: accumulo progressivamente il peso delle cifre nella sequenza
+
+[immagine]
+
+**Accumulazione parte frazionaria**: accumulo progressivamente il peso delle cifre nella sequenza
+
+[immagine]
+
+$B \rarr 10$ = Accumulazione parte intera + Accumulazione parte frazionaria
+
+### Conversione da base 10 a base B
+
+(...)
+
+### Codifiche $\mathbb{Z}$
