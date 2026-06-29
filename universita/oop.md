@@ -270,6 +270,10 @@ public class Sottotipo extends Supertipo{
 }
 ```
 
+##### Ereditarietà multipla
+
+In java una classe può estendere una sola classe concreta o astratta, ma può implementare più interfacce.
+
 #### POLIMORFISMO
 
 - metodi: posso instradare verso metodi diversi in una classe in base alle firme
@@ -279,6 +283,44 @@ principio liskov
 
 - rispettato: uso gerarchia + ereditarietà
 - non rispettato: delega o associazione
+
+```mermaid
+classDiagram
+    class Supertipo{
+        + metodo1()
+        + metodo2()
+    }
+    class Sottotipo1{
+        @Override metodo1()
+        @Override metodo2()
+    }
+    class Sottotipo2{
+        @Override metodo1()
+        @Override metodo2()
+    }
+
+    Supertipo <|-- Sottotipo1
+    Supertipo <|-- Sottotipo2
+```
+
+```java
+class Animale{
+    public void faiVerso(){System.out.println("Verso generico");}
+}
+
+class Cane extends Animale{
+    @Override
+    public void faiVerso(){System.out.println("Bau Bau");}
+}
+
+class Gatto extends Animale{
+    @Override
+    public void faiVerso(){System.out.println("Miao Miao");}
+}
+
+Animale a = new Cane(); // Polimorfismo
+a.faiVerso(); // Stampa: Bau Bau
+```
 
 #### TIPI DATI ASTRATTI (adt)
 
@@ -293,7 +335,7 @@ Viene definito dal suo comportamento
 
 variabili d'istanza (private) e metodi **non** devono essere **statici**
 
-SPECIFICAZIONE:
+**SPECIFICAZIONE**:
 
 - STATO ASTRATTO: valori possibili adt (es. matrice bidimensionale di float)
 - PROTOCOLLO: operazioni su valori, vale anche sequenza di chiamate di operazioni, con contratti riferiti allo stato astratto
@@ -348,6 +390,20 @@ public class Utils {
     }
 }
 ```
+
+#### WILDCARD
+
+Indicata dal simbolo `?`, rende metodi e classi più flessibili, permette di usare sottotipi senza specificare il tipo esatto
+
+- `<?>`: qualsiasi tipo
+- `<? extends T>`: qualsiasi sottotipo di T
+- `<? super T>`: qualsiasi tipo genitore di T
+
+Attenzione: esempio `List<?>` non indica che la lista può contenere qualsiasi tipo, ma è una lista di cui non conosci a priori la parametrizzazione concreta.
+
+`List<? extends Number>` qualunque lista assegnata sarà di tipo \<Number\> o un suo sottotipo (Integer, Double, Float...)
+
+`List<? super Integer>` indica una lista di oggetti che sono supertipi di Integer (Number, Object). Di conseguenza sarà sicuramente in grado di contenere Integer.
 
 ### METODI
 
@@ -405,8 +461,8 @@ class Calcolatrice{
 
 #### CONTRATTO
 
-- pre-condizioni: cosa deve essere vero prima di chiamare il metodo
-- post-condizioni: cosa deve essere vero dopo l'esecuzione del metodo
+- pre-condizioni: cosa deve essere vero prima di chiamare il metodo affinché i risultati siano ben definiti, si riferiscono agli argomenti o allo stato dell'oggetto
+- post-condizioni: cosa deve essere vero dopo l'esecuzione del metodo, si riferiscono all'output
 
 ### ECCEZIONI
 
@@ -414,10 +470,10 @@ Stato di un programma: combinazione di variabili d'istanza e stack di chiamate a
 
 tipi di errori di programazione:
 
-- fault: bug nel codice (es. divisione per 0)
-- failure: comportamento anomalo in fase di esecuzione (es. file non trovato)
-- error: problema grave che impedisce l'esecuzione (es. memoria insufficiente)
-- design mistake: errore concettuale nel design (es. violazione del principio di sostituibilità di Liskov)
+- **fault**: bug nel codice (es. divisione per 0)
+- **failure**: comportamento anomalo in fase di esecuzione (es. file non trovato)
+- **error**: problema grave che impedisce l'esecuzione (es. memoria insufficiente)
+- **design mistake**: errore concettuale nel design (es. violazione del principio di sostituibilità di Liskov)
 
 Eccezioni: servono a gestire situazioni eccezionali
 
@@ -576,6 +632,60 @@ public enum MyEnum{
     private MyEnum(String valore){this.valore = valore;}
     public String getValore(){return valore;}
 }
+```
+
+### SET
+
+- collezione di oggetti unici, senza ordine
+
+```java
+Set<String> set = new HashSet<>();
+set.add("elemento1");
+set.add("elemento2");
+
+set.contains("elemento1"); // true
+set.remove("elemento2"); // rimuove elemento2
+
+set.size(); // 1
+```
+
+### MAP
+
+- collezione di coppie chiave-valore
+- la chiave è unica, ogni chiave può mappare al massimo un solo valore
+- l'eventuale ordine dipende dal tipo di mappa (HashMap = non ordinata, TreeMap = ordinata per chiave)
+
+```java
+
+Map<String, Integer> map = new HashMap<>();
+map.put("chiave1", 100);
+map.put("chiave2", 200);
+
+map.get("chiave1"); // 100
+
+map.containsKey("chiave2"); // true
+
+map.remove("chiave1"); // rimuove la coppia chiave1-100
+
+map.size(); // 1
+```
+
+### LIST
+
+- collezione ordinata di oggetti, può contenere duplicati
+- List è un'interfaccia, le implementazioni più comuni sono ArrayList e LinkedList
+
+```java
+List<String> list = new ArrayList<>();
+list.add("elemento1");
+list.add("elemento2");
+
+list.get(0); // "elemento1"
+list.remove(1); // rimuove elemento2
+
+list.contains("elemento1"); // true
+
+list.size(); // 1
 ```
 
 ### DESIGN PATTERN
@@ -1449,7 +1559,9 @@ class SMSNotifica implements Notifica {
 - i sottotipi devono essere sostituibili ai loro supertipi senza alterare il comportamento del programma
 
 ```java
-//errato, un Rettangolo con concreto Q non potrebbe settare b,h diversi
+/*errato, un Rettangolo con concreto Q 
+non potrebbe settare b,h diversi */
+
 class Rettangolo{
     int b, h; 
     int area(){return b*h;}
@@ -1516,10 +1628,3 @@ class ServizioOrdini {
 // Uso:
 ServizioOrdini servizio = new ServizioOrdini(new EmailNotifica());
 ```
-
-## Da implementari
-
-- set in java
-- ereditarietà multipla
-- rivedere meglio polimorfismo
-- stilare lista di tipi utili (list, map, set, queue, stack, arraylist, linkedlist, hashset, hashmap, treemap, priorityqueue)
