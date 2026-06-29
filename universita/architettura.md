@@ -216,3 +216,40 @@ $B \rarr 10$ = Accumulazione parte intera + Accumulazione parte frazionaria
 (...)
 
 ### Codifiche $\mathbb{Z}$
+
+- **Segno e valore assoluto**: 1 bit per segno + valore binario
+
+  $+9 = 00001001_2$
+  $-9 = 10001001_2$
+
+- **Complemento a 1**: cambio di segno negando (complementando) i bit
+
+  $+9 = 00001001_2$
+  $-9 = 11110110_2$
+
+- **Complemento a 2**: cambio di segno complementando i bit e sommando 1
+
+  $+9 = 00001001_2$
+  $-9 = 11110111_2 \quad (11110110 + 00000001)$
+
+- **Eccesso N**: zero puntato su N
+  
+  es: N = 128 &rarr; $10000000_2$
+  +1 = $10000001_2$
+  +0 = $10000000_2$
+  -1 = $01111111_2$
+
+- **Complemento a 2 a N bit**:
+
+  - $[0, 2^N - 1]$ notazione binaria
+  - $[-1, 2^N - 2]$ nego bit valore assoluto e aggiungo 1
+  - $-i = 2^N - i \;$ -(i-esimo) in notazione binaria
+
+  es N = 8
+  $-1 = 11111111_2$ (11111110 + 00000001, complemento 1 + 1)
+  $-2 = 11111110_2$ (11111101 + 00000001)
+  $-2^{N-1} = -2^7 = 10000000_2$ (01111111 + 00000001)
+
+  passo da $N$ a $M$ bit aggiungendo $M-N$ bit
+
+### Operazioni
