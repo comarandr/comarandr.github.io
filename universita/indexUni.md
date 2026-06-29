@@ -21,6 +21,7 @@ permalink: /universita/
 - [Sistemi operativi](./sistemiOperativi.md)
 - [Programmazione a oggetti](./oop.md)
 - [Terra esempio oop](./Terra.md)
+- [Barche esempio oop](./barcheoop.md)
 
 ## 3 anno informatica
 
