@@ -18,8 +18,12 @@ Inizialmente pubblicato su Blogger, poi trasferito su Substack, ora per la terza
 
 ## Indice Articoli
 
+[Introduzione al vecchio Blogger](./blogger.md)
+
 ### Pensieri Sparsi
 
-Raccolta di pensieri scritti durante il liceo 
+Raccolta di pensieri scritti durante il liceo
 
-[Pensieri Sparsi 1]
+[Pensieri Sparsi 1](./Pensieri1.md)
+[Pensieri Sparsi 2](./DelirioCoppia.md)
+[Pensieri Sparsi 3](./Pensieri3.md)
