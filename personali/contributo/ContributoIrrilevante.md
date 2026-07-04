@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Il liberalismo etico
+title: Contributo Irrilevante
 permalink: /personali/ContributoIrrilevante
 ---
 
