@@ -24,6 +24,6 @@ Inizialmente pubblicato su Blogger, poi trasferito su Substack, ora per la terza
 
 Raccolta di pensieri scritti durante il liceo
 
-[Pensieri Sparsi 1](./Pensieri1.md)
-[Pensieri Sparsi 2](./DelirioCoppia.md)
-[Pensieri Sparsi 3](./Pensieri3.md)
+- [Pensieri Sparsi 1](./Pensieri1.md)
+- [Pensieri Sparsi 2](./DelirioCoppia.md)
+- [Pensieri Sparsi 3](./Pensieri3.md)
