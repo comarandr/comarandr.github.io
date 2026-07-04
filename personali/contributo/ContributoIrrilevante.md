@@ -1,0 +1,25 @@
+---
+layout: default
+title: Il liberalismo etico
+permalink: /personali/ContributoIrrilevante
+---
+
+## Cos'è
+
+Contributo Irrilevante nasce come spazio di riflessione ed espressione personale, dove potermi esercitare nella scrittura senza nessuna pretesa di dover dire qualcosa di degno di nota.
+
+Si tratta di un contenitore di pensieri di una persona mediocre, senza studi agli spalle, il cui contributo è per l'appunto, irrilevante. Da qui il nome.
+
+Il blog fa parte di una serie di progetti personali premeditati ma mai realmente avviati, come il podcast "Pecora Bianca" o il canale YouTube.
+
+Inizialmente pubblicato su Blogger, poi trasferito su Substack, ora per la terza volta viene migrato qua, nel mio sito personale, in quanto più comodo da gestire.
+
+[Da riscrivere pensavo di esser ispirato ma mi son dimenticato il testo come me l'ero immaginato].
+
+## Indice Articoli
+
+### Pensieri Sparsi
+
+Raccolta di pensieri scritti durante il liceo 
+
+[Pensieri Sparsi 1]
