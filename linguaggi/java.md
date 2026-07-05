@@ -2,6 +2,7 @@
 layout: default
 title: Java
 permalink: /linguaggi/java
+custom_css: /assets/oop.css
 ---
 
 ## Basi di java
