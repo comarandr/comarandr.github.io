@@ -8,10 +8,7 @@ permalink: /linguaggi/mermaid/
 
 ### Creare una classe
 
-
-
-
-```
+```mermaid
 ---
 title: Titolo
 ---
@@ -30,3 +27,4 @@ classDiagram
     NomeClasse : +attributo1
     NomeClasse : +attributo2
 ```
+

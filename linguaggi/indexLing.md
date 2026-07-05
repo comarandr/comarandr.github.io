@@ -15,3 +15,5 @@ permalink: /linguaggi/
 - [arm](./arm.html)
 - [markdown](./markdown.md)
 - [java](./java.md)
+- [scheme](./scheme.md)
+- [javascript](./javascript.md)

@@ -100,6 +100,8 @@ variabili d'istanza: variabili che appartengono all'oggetto, rappresentate in ci
 
 #### Costrutto IF
 
+esegue la parte di codice se la condizione è vera, altrimenti esegue la parte di codice dell'else (opzionale)
+
 ```java
 
 if (boolean){
@@ -110,6 +112,8 @@ if (boolean){
 ```
 
 #### Costrutto IF-ELSE IF
+
+esegue la parte di codice se la condizione1 è vera, altrimenti esegue la parte di codice della condizione2 se è vera, altrimenti esegue la parte di codice dell'else (opzionale)
 
 ```java
 if (boolean1){
@@ -160,6 +164,8 @@ return //esce dal metodo e restituisce il valore
 
 #### Costrutto SWITCH
 
+
+
 ```java
 switch (variabile) {
     case valore1:
@@ -174,6 +180,8 @@ switch (variabile) {
 ```
 
 #### Costrutto THROW
+
+nella firma del metodo, permette di dichiarare che il metodo può generare un'eccezione
 
 ```java
 throw new Exception("messaggio di errore"); //genera un'eccezione e interrompe l'esecuzione del programma
@@ -279,6 +287,13 @@ Array in più dimensioni:
 - `tipo[][] nomeArray = new tipo[dimensione1][dimensione2];`
 - `a = { {el11, el12}, {el21, el22} }`
 
+```java
+int[] array = new int[5]; // array di 5 interi
+array[0] = 1; // assegna 1 alla prima posizione
+int[] array2 = {1, 2, 3, 4, 5}; // array di 5 interi con valori iniziali
+int[][] array3 = { {1, 2}, {3, 4} }; // matrice 2x2
+```
+
 ##### List
 
 Collezione di oggetti ordinata, può contenere duplicati (es. `ArrayList`, `LinkedList`)
@@ -295,9 +310,25 @@ Collezione di oggetti ordinata, può contenere duplicati (es. `ArrayList`, `Link
 
 `.size()`: restituisce il numero di elementi nella collezione
 
+```java
+List<Integer> lista = new ArrayList<>();
+
+lista.add(1);
+lista.add(2);
+lista.get(1); // restituisce 2
+lista.set(1, 3); // sostituisce 2 con 3
+lista.remove(0); // rimuove 1
+lista.contains(3); // restituisce true
+lista.size(); // restituisce 1
+```
+
 ##### Set
 
-Collezione di oggetti senza duplicati
+Collezione di oggetti senza duplicati. Interfaccia, solitamente le implementazioni più comuni sono `HashSet` e `TreeSet`.
+
+**HashSet** &rarr; non garantisce l'ordine degli elementi
+
+**TreeSet** &rarr; garantisce l'ordine degli elementi
 
 `.add(E e)`: aggiunge un elemento alla collezione
 
@@ -306,6 +337,10 @@ Collezione di oggetti senza duplicati
 `.contains(E e)`: verifica se un elemento è presente nella collezione
 
 `.size()`: restituisce il numero di elementi nella collezione
+
+```java
+Set<Integer> insieme = new HashSet<>();
+```
 
 ##### Map
 
@@ -322,6 +357,17 @@ Collezione di coppie chiave-valore, le chiavi sono univoche
 `.containsValue(V value)`: verifica se un valore è presente nella collezione
 
 `.size()`: restituisce il numero di coppie chiave-valore nella collezione
+
+```java
+Map<String, Integer> mappa = new HashMap<>();
+mappa.put("uno", 1);
+mappa.get("uno"); // restituisce 1
+mappa.remove("uno"); // rimuove la coppia chiave-valore "uno
+", 1
+mappa.containsKey("uno"); // restituisce false
+mappa.containsValue(1); // restituisce false
+mappa.size(); // restituisce 0
+```
 
 ##### Predicate (BiPredicate)
 
@@ -364,6 +410,16 @@ Interfaccia, solitamente le implementazioni più comuni sono `LinkedList` e `Pri
 
 `.isEmpty()`: verifica se la coda è vuota
 
+```java
+Queue<Integer> coda = new PriorityQueue<>();
+coda.add(1);
+coda.offer(2);
+coda.remove(); // rimuove 1
+coda.poll(); // rimuove 2
+coda.peek(); // restituisce null
+coda.isEmpty(); // restituisce true
+```
+
 ##### Stream
 
 Collezione di oggetti che permette di eseguire operazioni in sequenza (pipeline) su di essi, senza modificarli.
@@ -403,6 +459,15 @@ Collezione di oggetti con accesso LIFO (Last In First Out)
 `.peek()`: restituisce l'elemento in cima alla collezione senza rimuoverlo
 
 `.empty()`: verifica se la collezione è vuota
+
+```java
+Stack<Integer> pila = new Stack<>();
+pila.push(1);
+pila.push(2);
+pila.pop(); // rimuove 2
+pila.peek(); // restituisce 1
+pila.empty(); // restituisce false
+```
 
 #### Confronto == e .equals()
 
