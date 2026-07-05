@@ -22,8 +22,16 @@ Inizialmente pubblicato su Blogger, poi trasferito su Substack, ora per la terza
 
 ### Pensieri Sparsi
 
-Raccolta di pensieri scritti durante il liceo
+Raccolta di pensieri scritti durante il liceo. Il titolo della rubrica è lo stesso che diedi all'epoca.
 
 - [Pensieri Sparsi 1](./Pensieri1.md)
-- [Pensieri Sparsi 2](./DelirioCoppia.md)
+- [Pensieri Sparsi 2](./Pensieri2.md)
 - [Pensieri Sparsi 3](./Pensieri3.md)
+- [Pensieri Sparsi 4](./Pensieri4.md)
+
+### Note Sparse & i taccuini verdi
+
+Serie di note successive alle precedenti.
+
+- [Note Sparse](./noteSparse.md)
+- [Il Taccuino Verde](./taccuinoVerde.md)

@@ -106,6 +106,7 @@ Usare una **classe astratta** quando:
 - famiglia di tipi che condividono comportamento
 - sottoclassi condividono parte dello stato
 - variabili non statiche o final
+- non può essere istanziata
 
 Usare un'**interfaccia** quando
 
@@ -552,6 +553,7 @@ assert x > 0 : "x deve essere positivo";
 
 - oggetti che permettono di attraversare una collezione senza esporre la sua rappresentazione interna
 - possono essere definiti anche all'interno di una classe come classi interne
+- hanno come metodi principali `hasNext()`, `next()` e `remove()`
 
 #### ITERATORE INTERNO
 

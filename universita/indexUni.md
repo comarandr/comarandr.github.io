@@ -22,6 +22,7 @@ permalink: /universita/
 - [Programmazione a oggetti](./oop.md)
 - [Terra esempio oop](./Terra.md)
 - [Barche esempio oop](./barcheoop.md)
+- [voli esempio oop](./voli.md)
 
 ## 3 anno informatica
 

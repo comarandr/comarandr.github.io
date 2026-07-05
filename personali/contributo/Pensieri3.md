@@ -14,7 +14,7 @@ Uno degli errori tipici, a mio avviso, è la confusione legata a individualismo,
 
 L’economia è la scienza che studia l’allocazione delle risorse scarse, è un’analisi quantitativa e ben lungi dall’essere una disciplina con l’idea di regolare e indirizzare la società secondo norme etiche. Essendo tuttavia una disciplina che studia un aspetto assai importante della vita sociale, spesso siamo portati a sovrapporla all’attività politica, e spesso le attribuiamo giudizi etico-filosofici che non le appartengono.
 
-## TESTO ORIGINARIO
+## TESTO ORIGINALE
 
 Temo che per noi i tempi della serenità stiano per finire. Tempi della serenità, perché dal secondo dopoguerra in Europa si è vissuto tutto sommato un periodo di calma. Anzi, specificando meglio, tutti quelli nati tra gli anni Sessanta e Settanta si son goduti un periodo di relativa calma, malgrado la guerra fredda e i numerosi tentativi di colpi di Stato dell’Italia repubblicana. C’è stato il boom economico, la classe media viveva bene, prospettive di crescita e possibilità per tutti non erano illusioni.
 

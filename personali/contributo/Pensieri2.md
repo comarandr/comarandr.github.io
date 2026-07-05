@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Delirio sulle relazioni di coppia
-permalink: /personali/Delirio
+title: Pensieri Sparsi 2 - 03/04/2017
+permalink: /personali/Pensieri2
 ---
 
 Questo è il secondo testo del taccuino, scritto il 3 aprile 2017. Si tratta dello scritto più complicato da trattare in quanto lo trovo estremamente confusionario e di conseguenza l’ho intitolato “Delirio sulle relazioni di coppia”. Rispetto al precedente post ho dovuto intervenire maggiormente sul testo originario per renderlo più comprensibile, arrivando a cambiare interi periodi senza però alterare il significato. Il contenuto è decisamente di basso livello, con pochissime argomentazioni e molteplici assunzioni di opinioni a fatti oggettivi, dimostrandosi a tutti gli effetti un prodotto tardo-adolescenziale. La lacuna principale è l’impostazione decisamente poco concreta di tutto il ragionamento, basato soprattutto su riflessioni astratte che non tengono conto dell’effettiva realtà delle cose e che attribuiscono una “patina ideologica" alle relazioni. D’altronde il mio innamoramento per una visione “cruda e fisica” dei fenomeni è piuttosto recente, nonché probabilmente ancora acerba.
