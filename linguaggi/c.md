@@ -204,10 +204,12 @@ void fill(int *begin, int size, int value) {
 
 è possibile anche dichiarare array multidimensionali:
 
+{% raw %}
 ```c
-float matrix[4][3] = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
+float matrix[4][3] = { {1,2,3},{4,5,6},{7,8,9},{10,11,12} };
 matrix[1][1] = 2;
 ```
+{% endraw %}
 
 ## puntatori
 
@@ -285,7 +287,7 @@ un programma C può ricevere argomenti da riga di comando, tramite la funzione  
 argc: numero di argomenti passati (il primo è la chiamata, non serve contarli)
 argv: array di puntatori a carattere, che puntano alle stringhe degli argomenti
 primo parametro: nome programma
-ultimo elemento (argv[argc]) è NULL
+ultimo elemento `(argv[argc])` è NULL
 
 ## scanf e sscanf
 

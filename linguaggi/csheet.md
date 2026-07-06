@@ -4,34 +4,11 @@ title: Linguaggio C secondo sCagnetto
 permalink: /linguaggi/csheet/
 ---
 
-## indice
+## concetti basilari (tipi, sintassi, ecc...)
 
-1. [Concetti basilari](#concetti-basilari-tipi-sintassi-ecc)
-    1. [Compilazione](#compilazione)
-    2. [Pre-processing](#pre-processing)
-    3. [Sintassi di base e costrutti](#sintassi-di-base-e-costrutti)
-    4. [Tipi semplici e strutture](#tipi-semplici-e-strutture)
-2. [Funzioni](#funzioni)
-3. [Array](#array)
-4. [Puntatori](#puntatori)
-5. [Input/Output standard](#inputoutput-standard)
-    1. [Operazioni su stringhe](#operazioni-su-stringhe)
-    2. [Stampa](#stampa)
-6. [Memoria dinamica](#memoria-dinamica)
-7. [Accesso ai file](#accesso-ai-file)
-8. [Chiamate POSIX](#chiamate-posix)
-9. [Processi e fork](#processi-e-fork)
-10. [Pipe](#pipe)
-11. [Segnali](#segnali)
-12. [Socket](#socket)
-13. [Multithreading](#multithreading)
-14. [Mutex e condition variables](#mutex-e-condition-variables)
+### compilazione
 
-### concetti basilari (tipi, sintassi, ecc...)
-
-#### compilazione
-
-```py
+```c
 $clang programma.c #genera a.out
 $ ./a.out #esegue
 $clang file.c -o nome #rinomica a.out in nome
@@ -41,7 +18,7 @@ $clang -c file.c #genera il file binario file.o
 $clang file.o -o file #genera eseguibile
 ```
 
-#### pre-processing
+### pre-processing
 
 ```c
 //precedute da # 
@@ -64,7 +41,7 @@ int add(int, int);
 #endif
 ```
 
-##### sintassi di base e costrutti
+#### sintassi di base e costrutti
 
 ```c
 costrutti(if, for, while, switch);
@@ -74,7 +51,7 @@ confronti: < > <= >= ==
 speciali: += *=
 ```
 
-##### tipi semplici e strutture
+#### tipi semplici e strutture
 
 ```c
 char, short, int, long , float, double // in ordine di promozione, (tipo) val casting
@@ -132,7 +109,7 @@ printf("%f %f\n", (*pp).x, (*pp).y);
 
 ```
 
-##### funzioni
+#### funzioni
 
 ```c
 //dichiarazione obbligatoria per ogni funzione
@@ -143,7 +120,7 @@ int factorial (int); //esempio
 //scope variabili locali è dentro funzione
 ```
 
-##### array
+#### array
 
 ```c
 //passati per RIFERIMENTO e non valore
@@ -173,7 +150,7 @@ float matrix[4][3] = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
 matrix[1][1] = 2;
 ```
 
-##### puntatori
+#### puntatori
 
 ```c
 tipo *nome_puntatore = valore iniziale;
@@ -206,7 +183,7 @@ printf("%d", p); -> ritorna un errato
 printf("%d", &p); -> ritorna un valore errato
 ```
 
-##### **input/output standard**
+#### **input/output standard**
 
 ```c
 #include <stdio.h>
@@ -215,7 +192,7 @@ char getchar(); // legge carattere dallo standard input
 void putchar(c); // stampa carattere nello standard output
 ```
 
-##### operazioni su stringhe
+#### operazioni su stringhe
 
 ```c
 #include <string.h>
@@ -244,7 +221,7 @@ extern char *strchr(const char *formato, int __c);
 NON FARE: char *stringa = "testo della stringa";
 ```
 
-##### stampa
+#### stampa
 
 ```c
 // Stampa su standard input/outpt, rito
@@ -271,7 +248,7 @@ snprintf(char *dest, size_t maxlen, const char *formato, var1, var2, ...);
 // ulteriore argomento lunghezza massima stringa (consigliata)
 ```
 
-##### memoria dinamica
+#### memoria dinamica
 
 ```c
 void *malloc(unsigned n); // alloca n byte contigui, void * puntatore qualsiasi tipo
@@ -294,7 +271,7 @@ while (scanf()==1){
 }
 ```
 
-##### accesso ai file
+#### accesso ai file
 
 ```c
 FILE *stdout; // standard output (FILE in scrittura)
@@ -336,7 +313,7 @@ int fseek(FILE *fp, long offset, int whence);
 int ftell(FILE *file); // restituisce posizione attuale
 ```
 
-##### chiamate POSIX
+#### chiamate POSIX
 
 ```c
 #include <unistd.h>
@@ -398,7 +375,7 @@ struct stat {
 };
 ```
 
-##### processi e fork
+#### processi e fork
 
 ```c
 #include <sys/types.h>
@@ -469,7 +446,7 @@ setgid();
 
 ```
 
-##### pipe
+#### pipe
 
 ```c
 //un capo scrive e uno legge mediante FIFO
@@ -501,7 +478,7 @@ pipe(fds); //stdin in lettura, stdin in scrittura
 dup2(fds[1],1); //ridirigo in scrittura sdout
 ```
 
-##### segnali
+#### segnali
 
 ```c
 #include <signal.h>
@@ -536,7 +513,7 @@ void ahahha (int x){
 }
 ```
 
-##### socket
+#### socket
 
 ```c
 #include <sys/socket.h>
@@ -591,7 +568,7 @@ struct sockaddr_un{
 };
 ```
 
-##### multithreading
+#### multithreading
 
 ```py
 $ clang -lpthread programma.c -o programma #bisogna linkare nella shell
@@ -642,7 +619,7 @@ pthread_create(&thread, &attr, func, arg); //creo poi il thread
 pthread_attr_destroy(&attr); //dismettere attributes object
 ```
 
-##### Mutex e condition variables
+#### Mutex e condition variables
 
 ```c
 //dichiaro variabile mutex
