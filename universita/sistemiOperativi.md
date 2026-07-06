@@ -8,44 +8,45 @@ DEVO SISTEMARE TUTTA QUESTA ROBACCIA (SONO APPUNTI INCOLLATI DA WORD)
 
 ## Definizione
 
-SISTEMA OPERATIVO: 
--	Intermediario: programma che agisce come intermediario tra utente e hardware del calcolatore
--	Assegnatore di risorse: gestisce e alloca efficiente le risorse finite della macchina
--	Programma di controllo: controlla esecuzione dei programmi e le operazioni sulle risorse del sistema di calcolo, condivisione corretta rispetto tempo e spazio.
+Il Sistema Operativo ha il ruolo di
 
-LIVELLI DEL SISTEMA OPERATIVO:
-hardware: risorse del calcolatore, periferiche I/O, controller, CPU, bus di memoria
-kernel: parte del sistema operativo dedito a gestire correttamente l’hardware fornendo servizi agli strati superiori
-programmi di sistemi: programmi che forniscono servizi generali, basati su quelli del kernel, attraverso le chiamate di sistema
-programmi applicativi: programmi utilizzati dagli utenti che si appoggiano ai programmi di sistema ed al kernel
-utente: utilizzatore del pc, programmatore/altro calcolatore
+- **Intermediario**: programma che agisce come intermediario tra utente e hardware del calcolatore
+- **Assegnatore di risorse**: gestisce e alloca efficiente le risorse finite della macchina
+- **Programma di controllo**: controlla esecuzione dei programmi e le operazioni sulle risorse del sistema di calcolo, condivisione corretta rispetto tempo e spazio.
 
-OBBIETTIVI SISTEMA OPERATIVO:
--	Realizzare una macchina astratta, implementando funzionalità di alto livello e nascondendo i dettagli di basso livello
--	Eseguire programmi utente e rendere più facile la soluzione dei problemi dell’utente
--	Rendere il sistema di calcolo più facile da utilizzare e programmare
--	Utilizzare l’hardware del calcolatore in modo sicuro ed efficiente
+## LIVELLI DEL SISTEMA OPERATIVO:
+
+**hardware**: risorse del calcolatore, periferiche I/O, controller, CPU, bus di memoria
+**kernel**: parte del sistema operativo dedito a gestire correttamente l’hardware fornendo servizi agli strati superiori
+**programmi di sistemi**: programmi che forniscono servizi generali, basati su quelli del kernel, attraverso le chiamate di sistema
+**programmi applicativi**: programmi utilizzati dagli utenti che si appoggiano ai programmi di sistema ed al kernel
+**utente**: utilizzatore del pc, programmatore/altro calcolatore
+
+**OBBIETTIVI SISTEMA OPERATIVO**:
+
+- Realizzare una macchina astratta, implementando funzionalità di alto livello e nascondendo i dettagli di basso livello
+- Eseguire programmi utente e rendere più facile la soluzione dei problemi dell’utente
+- Rendere il sistema di calcolo più facile da utilizzare e programmare
+- Utilizzare l’hardware del calcolatore in modo sicuro ed efficiente
 
 SERVIZI SISTEMA OPERATIVO: 
 
-SISTEMA BATCH: sistema che riduce il tempo di setup raggruppando job simili, che siano I/O e CPU bound, oppure fortran/assembler (schede di controllo nei primi sistemi)
+**SISTEMA BATCH**: sistema che riduce il tempo di setup raggruppando job simili, che siano I/O e CPU bound, oppure fortran/assembler (schede di controllo nei primi sistemi)
 
-SPOOLING: tecnica di gestione dell’I\O che permette di sovrapporre operazione di I/O di un job con la computazione di un altro job, migliorando l’efficienza del sistema, tramite l’utilizzo di un buffer intermedio e uno spooler che si occupa di trasferire i dati alla periferica. I processi mandano i dati allo spool, daemon spooler trasferisce alla periferica. SI basa sulla job pool, ovvero coda di job dal quale il SO scegli il successivo job da mandare in esecuzione
+**SPOOLING**: tecnica di gestione dell’I\O che permette di sovrapporre operazione di I/O di un job con la computazione di un altro job, migliorando l’efficienza del sistema, tramite l’utilizzo di un buffer intermedio e uno spooler che si occupa di trasferire i dati alla periferica. I processi mandano i dati allo spool, daemon spooler trasferisce alla periferica. SI basa sulla job pool, ovvero coda di job dal quale il SO scegli il successivo job da mandare in esecuzione
 
-MULTIPROGRAMMAZIONE: consente l’esecuzione di più processi (tipicamente batch) contemporaneamente in modo da aumentare l’utilizzo delle CPU che può essere assegnata ad un altro processo mentre quello corrente inizia un’operazione di input/output. Più processi in memoria per tenere occupate le cpu.
+**MULTIPROGRAMMAZIONE**: consente l’esecuzione di più processi (tipicamente batch) contemporaneamente in modo da aumentare l’utilizzo delle CPU che può essere assegnata ad un altro processo mentre quello corrente inizia un’operazione di input/output. Più processi in memoria per tenere occupate le cpu.
 
-TIME-SHARING: sistema operativo multiprogrammato che sfrutta la condivisione del tempo, assegnando ciclicamente un quanto di tempo ad ogni processo. In questo caso la natura dei processi è interattiva e più utenti contemporaneamente accedono al sistema direttamente attraverso dei terminali: il sistema operativo commuta rapidamente l’assegnamento della CPU da un processo all’altro per un breve periodo di tempo (detto quanto), abbassando i tempi di risposta in modo da dare l’illusione ad ogni utente di avere la macchina a propria totale disposizione, (tramite una comunicazione on-line tra l’utente e il sistema, attende il prossimo “statement di controllo” dalla tastiera. Computazione interattiva)
+**TIME-SHARING**: sistema operativo multiprogrammato che sfrutta la condivisione del tempo, assegnando ciclicamente un quanto di tempo ad ogni processo. In questo caso la natura dei processi è interattiva e più utenti contemporaneamente accedono al sistema direttamente attraverso dei terminali: il sistema operativo commuta rapidamente l’assegnamento della CPU da un processo all’altro per un breve periodo di tempo (detto quanto), abbassando i tempi di risposta in modo da dare l’illusione ad ogni utente di avere la macchina a propria totale disposizione, (tramite una comunicazione on-line tra l’utente e il sistema, attende il prossimo “statement di controllo” dalla tastiera. Computazione interattiva)
 
-SISTEMA OPERATIVI DI RETE: la computazione viene distribuita tra più processori “isolati”, in quanto ognuno ha la propria memoria, i nodi sono separati.
+**SISTEMA OPERATIVI DI RETE**: la computazione viene distribuita tra più processori “isolati”, in quanto ognuno ha la propria memoria, i nodi sono separati.
 
-
-
-SISTEMA OPERATIVO DISTRIBUITO: utente ha visione unitaria del sistema, le risorse (dati e computazionali) sono condivisi.
+**SISTEMA OPERATIVO DISTRIBUITO**: utente ha visione unitaria del sistema, le risorse (dati e computazionali) sono condivisi.
 Vantaggi: velocità, bilanciamento carico e tolleranza ai guasti
 
-SISTEMI REAL-TIME: sistemi con vincoli temporali fissati e ben definiti (hard rt, soft rt) 
+**SISTEMI REAL-TIME**: sistemi con vincoli temporali fissati e ben definiti (hard rt, soft rt) 
 
-HARDWARE
+## HARDWARE
 
 REGISTRI	< 1 ns	<1kb
 CACHE	< 2,3 ns	64kb ~ 64MB
@@ -55,13 +56,14 @@ DISCHI MAGNETICI	5 – 20 ms	100GB ~ 4TB
 MEMORIE OTTICHE	200 ms	700MB ~ 50GB
 NASTRI MAGNETICI	100 s	20GB ~ 1TB
 
-CACHING: metodo che prevede di duplicare i dati usati più frequentemente in una memoria più veloce
+**CACHING**: metodo che prevede di duplicare i dati usati più frequentemente in una memoria più veloce
 
-OPERAZIONI DEI SISTEMI DI CALCOLO:
--	I/O possono funzionare concorrentemente
--	Ogni tipo di dispositivo è gestito da un controller con un buffer locale, che comunica con la CPU la quale a sua volte funge da intermediario tra controller e memoria principale
--	I\O avviene tra il dispositivo il buffer locale
--	Controller genera un interrupt quando termina
+## OPERAZIONI DEI SISTEMI DI CALCOLO:
+
+- I/O possono funzionare concorrentemente
+- Ogni tipo di dispositivo è gestito da un controller con un buffer locale, che comunica con la CPU la quale a sua volte funge da intermediario tra controller e memoria principale
+- I\O avviene tra il dispositivo il buffer locale
+- Controller genera un interrupt quando termina
 
 INTERRUPT: segnali hardware che indicano la necessità di attenzione da parte della cpu. Servono a gestire eventi hardware asincroni. Trasferiscono il controllo alla routine di servizio dell’interrupt, tramite
 -	Polling: è la cpu a controllare attivamente lo stato di un dispositivo o componente
