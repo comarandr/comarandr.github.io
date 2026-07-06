@@ -144,11 +144,13 @@ void fill(int *begin, int size, int value) {
  }
 ```
 
+{% raw %}
 ```c
 //è possibile anche dichiarare array multidimensionali:
 float matrix[4][3] = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}};
 matrix[1][1] = 2;
 ```
+{% endraw %}
 
 #### puntatori
 
