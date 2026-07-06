@@ -2,6 +2,7 @@
 layout: default
 title: Linguaggio C
 permalink: /linguaggi/c/
+custom_css: /assets/c.css
 ---
 
 ## compilazione semplice

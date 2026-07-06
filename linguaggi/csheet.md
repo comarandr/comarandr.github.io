@@ -2,6 +2,7 @@
 layout: default
 title: Linguaggio C secondo sCagnetto
 permalink: /linguaggi/csheet/
+custom_css: /assets/c.css
 ---
 
 ## concetti basilari (tipi, sintassi, ecc...)
