@@ -14,7 +14,7 @@ Il Sistema Operativo ha il ruolo di
 - **Assegnatore di risorse**: gestisce e alloca efficiente le risorse finite della macchina
 - **Programma di controllo**: controlla esecuzione dei programmi e le operazioni sulle risorse del sistema di calcolo, condivisione corretta rispetto tempo e spazio.
 
-## LIVELLI DEL SISTEMA OPERATIVO:
+## Livelli del sistema operativo
 
 **hardware**: risorse del calcolatore, periferiche I/O, controller, CPU, bus di memoria
 **kernel**: parte del sistema operativo dedito a gestire correttamente l’hardware fornendo servizi agli strati superiori
@@ -22,14 +22,14 @@ Il Sistema Operativo ha il ruolo di
 **programmi applicativi**: programmi utilizzati dagli utenti che si appoggiano ai programmi di sistema ed al kernel
 **utente**: utilizzatore del pc, programmatore/altro calcolatore
 
-**OBBIETTIVI SISTEMA OPERATIVO**:
+**Obiettivi del sistema operativo**:
 
 - Realizzare una macchina astratta, implementando funzionalità di alto livello e nascondendo i dettagli di basso livello
 - Eseguire programmi utente e rendere più facile la soluzione dei problemi dell’utente
 - Rendere il sistema di calcolo più facile da utilizzare e programmare
 - Utilizzare l’hardware del calcolatore in modo sicuro ed efficiente
 
-SERVIZI SISTEMA OPERATIVO: 
+## Servizi del sistema operativo
 
 **SISTEMA BATCH**: sistema che riduce il tempo di setup raggruppando job simili, che siano I/O e CPU bound, oppure fortran/assembler (schede di controllo nei primi sistemi)
 
@@ -46,7 +46,7 @@ Vantaggi: velocità, bilanciamento carico e tolleranza ai guasti
 
 **SISTEMI REAL-TIME**: sistemi con vincoli temporali fissati e ben definiti (hard rt, soft rt) 
 
-## HARDWARE
+## Hardware
 
 REGISTRI	< 1 ns	<1kb
 CACHE	< 2,3 ns	64kb ~ 64MB
@@ -58,7 +58,7 @@ NASTRI MAGNETICI	100 s	20GB ~ 1TB
 
 **CACHING**: metodo che prevede di duplicare i dati usati più frequentemente in una memoria più veloce
 
-## OPERAZIONI DEI SISTEMI DI CALCOLO:
+## Operazioni dei sistemi di calcolo
 
 - I/O possono funzionare concorrentemente
 - Ogni tipo di dispositivo è gestito da un controller con un buffer locale, che comunica con la CPU la quale a sua volte funge da intermediario tra controller e memoria principale
@@ -66,8 +66,9 @@ NASTRI MAGNETICI	100 s	20GB ~ 1TB
 - Controller genera un interrupt quando termina
 
 INTERRUPT: segnali hardware che indicano la necessità di attenzione da parte della cpu. Servono a gestire eventi hardware asincroni. Trasferiscono il controllo alla routine di servizio dell’interrupt, tramite
--	Polling: è la cpu a controllare attivamente lo stato di un dispositivo o componente
--	vettore degli interrupt: contiene gli indirizzi delle routine di servizio
+
+- Polling: è la cpu a controllare attivamente lo stato di un dispositivo o componente
+- vettore degli interrupt: contiene gli indirizzi delle routine di servizio
 
 GESTIONE INTERRUPT: hardware salva indirizzo istruzione interrotta, mentre il SO salva lo stato della cpu, ovvero program counter e registri. La gestione poi passa a una sezione di codice specifica in base al tipo di interrupt, mentre quelli in arrivo vengono disabilitati.
 
@@ -80,13 +81,15 @@ I/O asincrono: controllo ritorna all’utente senza aspettare che I/O venga comp
 DIRECT MEMORY ACCESS: in caso di dispositive estremamente rapidi i controller trasferiscono dati direttamente alla memoria senza intervento CPU, ciò riduce considerevolmente il numero di interrupt. Richiede un controller DMA
 
 DUAL MODE: condivisione delle risorse richiede che il SO assicuri che un programma scorretto non possa portare inconsistenze oppure altri programmi a funzionare scorrettamente. Implementata tramite del supporto hw specifico, ad esempio con un mode bit (0 supervisor, 1 user) che indica lo stato della cpu.
--	Kernel mode: cpu esegue codice del sistema operativo, generalmente operazioni pericolose e istruzioni privilegiate che non devono essere richiamate in modo erroneo
--	User mode: cpu esegue codice utente, nel caso processo necessiti di servizio di sistema meccanismo di chiamate di sistema
+
+- Kernel mode: cpu esegue codice del sistema operativo, generalmente operazioni pericolose e istruzioni privilegiate che non devono essere richiamate in modo erroneo
+- User mode: cpu esegue codice utente, nel caso processo necessiti di servizio di sistema meccanismo di chiamate di sistema
 
 PROTEZIONE MEMORIA: il SO ha accesso a tutti gli indirizzi mentre i programmi hanno accesso a un range determinato da indirizzo registro base + range di memoria indicato da registro limite:. Se cpu consegna un indirizzo non valido si genera una trap (addressing error). Serve a proteggere le parti sensibili della memoria (es vettore degli interrupt)
 
 PROTEZIONE CPU: bisogna impedire che un programma monopolizzi la CPU, si mediante
--	timer: ogni tick (1/50 sec) viene decrementato, a 0 si genera un interrupt
+
+- timer: ogni tick (1/50 sec) viene decrementato, a 0 si genera un interrupt
 
 COMPONENTI E STRUTTURA SISTEMA OPERATIVO
 
@@ -100,20 +103,22 @@ NETWORKING:
 INTERPRETI COMANDI:
 
 SERVIZI DEI SISTEMI OPERATIVI/FUNZIONALITA’
--	esecuzione dei programmi: caricamento dei programmi in memoria e loro esecuzione;
--	operazioni di I/O: il sistema operativo deve fornire un modo per condurre le operazioni di I/O, dato che gli utenti non possono eseguirle direttamente;
--	manipolazione del file system: capacità di creare, cancellare, leggere, scrivere file e directory;
--	comunicazioni: scambio di informazioni tra processi in esecuzione sullo stesso computer o su sistemi diversi collegati da una rete (implementati attraverso memoria condivisa o passaggio di messaggi);
--	individuazione di errori: garantire una computazione corretta individuando errori nell’hardware
+
+- esecuzione dei programmi: caricamento dei programmi in memoria e loro esecuzione;
+- operazioni di I/O: il sistema operativo deve fornire un modo per condurre le operazioni di I/O, dato che gli utenti non possono eseguirle direttamente;
+- manipolazione del file system: capacità di creare, cancellare, leggere, scrivere file e directory;
+- comunicazioni: scambio di informazioni tra processi in esecuzione sullo stesso computer o su sistemi diversi collegati da una rete (implementati attraverso memoria condivisa o passaggio di messaggi);
+- individuazione di errori: garantire una computazione corretta individuando errori nell’hardware
 
 SYSTEM CALLS: formano l’interfaccia tra programma in esecuzione e sistema operativo. Generalmente sono implementate come istruzioni assembler oppure chiamate di sistema nei linguaggi pensati per sistema operativi. Posso passare i parametri tramite registri, in memorizzare i parametri in una tabella in memoria e poi passare indirizzo come parametro, push/pop sullo stack
 
-Svolgono diverse funzioni: 
--	controllo di processi (fork)
--	gestione dei file (open)
--	gestione dispositivi
--	informazioni di sistema (stat)
--	comunicazioni (send, receive)
+Svolgono diverse funzioni:
+
+- controllo di processi (fork)
+- gestione dei file (open)
+- gestione dispositivi
+- informazioni di sistema (stat)
+- comunicazioni (send, receive)
 
 PROGRAMMI DI SISTEMA: forniscono un ambiente per lo sviluppo e l’esecuzione dei programmi. SI dividono in base ai compiti (gestione file, stato del sistema, linguaggi di programmazione, caricamento/esecuzione programmi, comunicazioni)
 
@@ -124,8 +129,9 @@ STRUTTURA SO STRATIFICATA: sistema operativo diviso in diversi livelli, ognuno c
 KERNEL: parte del sistema operativo tra system calls e hardware. Implementa file system, scheduling cpu, gestione della memoria e altre funzioni del sistema operativo. Generalmente non prelazionabile (esclusione dei sistemi real-time, con punti di prelazionabilità)
 
 MACCHINE VIRTUALI: forniscono interfaccia identica all’hardware sottostante a diversi ambienti di esecuzioni, a ogni processo guest viene fornita una copia dell’host. Il VMM impiega le risorse fisiche del calcolatore per creare macchine virtuali: scheduling crea illusione processo dedicato, gestione memoria illusione di memoria virtuale, spooling per stampanti virtuali, spazio disco per dischi virtuali.
--	vantaggi: protezione completa delle risorse (isolamento), emulazione protetta
+
 -	svantaggi: non c’è condivisione diretta delle risorse, implementazione complessa
+-	vantaggi: protezione completa delle risorse (isolamento), emulazione protetta
 
 EXOKERNEL: tipologia di kernel che fornisce un’interfaccia molto minimale dell’hw, consentendo alle applicazioni di avere un controllo più diretto sulle risorse di sistema. Si distingue per la sua separazione tra meccanismi e politiche. Si concentra sulla fornitura di risorse, tracciandone l’utilizzo. Molto flessibile, inoltre semplifica l’uso delle risorse allocate, dato che si occupa di tenere separati i domini delle risorse.
 
@@ -135,13 +141,14 @@ POLITICHE: cosa deve essere fatto
 KERNEL MONOLITICO: inglobano tutto ciò che sta tra hardware e chiamate di sistema. Non distingue tra politiche e meccanismi, poco flessibile ma molto efficiente. Al massimo può essere stratificato.
 
 MICROKERNEL: tipologia di kernel minimale, fornisce soltanto meccanismi di comunicazione tra processi, minima gestione della memoria e dei processi e driver per gestione hw. Il resto dei processi vengono gestiti in spazio utente. Si occupa della gestione di base di processi e memoria.
--	Vantaggi: molto flessibile, scalabile in ambiente di rete
--	Svantaggi: meno efficiente
+
+- Vantaggi: molto flessibile, scalabile in ambiente di rete
+- Svantaggi: meno efficiente
 
 KERNEL PRELAZIONABILE: kernel che può essere prelazionato durante una system call, adatto ai sistemi real-time. Può essere implementato mediante
--	Punti di prelazionabilità: punti sicuri in cui si può saltare allo scheduler per verificare presenza processi a maggiore priorità
--	Kernel prelazionabile: processo può essere sempre interrotto, tutte le strutture dati sono protette con semafori 
 
+- Punti di prelazionabilità: punti sicuri in cui si può saltare allo scheduler per verificare presenza processi a maggiore priorità
+- Kernel prelazionabile: processo può essere sempre interrotto, tutte le strutture dati sono protette con semafori
 
 PROCESSI E THREAD
 
@@ -203,9 +210,6 @@ In base a come processi interagiscono con il kernel:
 2 COMPONENTI:
 unità allocazione risorse: codice, variabili globali, heap, risorse mantenute dal kernel (file, I/O), controlli accesso (UID, GID)
 unità di esecuzione: percorso di esecuzione attraverso più programmi: PC, registri, stack (variabili locali), stato, priorità, scheduling…
-
-
-
 
 PROCESSI IN UNIX
 
@@ -285,7 +289,6 @@ CRITERI DI VALUTAZIONE DELLO SCHEDULING:
     Tempo di risposta: quando tempo si impiega per ricevere una risposta dopo richiesta
     Varianza tempo di risposta
 
-
 OBIETTIVI ALGORITMO SCHEDULING CPU
 Generali (tutti sistemi):
     Equità: ogni processo giusta quota cpu
@@ -325,7 +328,6 @@ Primo arriva, primo servito
 Vantaggi: no prelazione, no starvation
 Svantaggi: effetto convoglio, inadatto time-sharing (tempo riposta)
 
-
 SJF: shortest job first
 Si associa a ogni processo la lunghezza del suo prossimo burst cpu. I processi vengono schedulati per tempi crescenti. L’SJF puro non prevede prelazione
 Vantaggi: fonisce il minimo tempo di attesa per un dato insieme di processi
@@ -334,12 +336,17 @@ Svantaggi: starvation
 SRTF: shortest remaining time first
 É come SJF con prelazione, si associa a ogni processo lunghezza del suo prossimo burst cpu, se durante esecuzione di un processo arriva in ready un processo con cpu-burst minore al tempo rimanente del processo corrente allora viene prelazionato.
 
-Formula di stima:  τ_((n+1) )≔αt_n+(1-α) τ_n
+Formula di stima:  
 
-Generica: τ_((n+1) )=αt_n+(1-α)⋅t_((n-1) )+(1-α)^2⋅t_((n-2) )+⋯+(1-α)^((n+1) )⋅τ_0
+$$\tau_{n+1} := \alpha t_n + (1-\alpha) \tau_n$$
 
-alpha = 1 conta storia recente, alpha = 0 non conta storia recente
+Generica: 
+$$
+\tau_{n+1} = \alpha t_n + (1-\alpha) \tau_{n-1} + (1-\alpha)^2 \tau_{n-2} + \cdots + (1-\alpha)^{n+1} \cdot \tau_0
+$$
 
+$\alpha = 1$ conta storia recente
+$\alpha = 0$ non conta storia recente
 
 SCHEDULING CON PRIORITA’
 Numero intero di priorità associato a ogni processo, allocando la cpu al processo con priorità maggiore.
@@ -385,13 +392,13 @@ Dati m eventi periodici, sono schedulabili se la sommatoria del tempo di cpu per
 SCHEDULING RMS Rate Monotonic Scheduling
 A priorità statiche proporzionali alla frequenza, con prelazione. Adatto solo a processi periodici, costo costante. Semplice da implementare
 
-∑_(i=1)^m▒〖C_i/P_i ≤m(2^(1/m)-1)〗
+$$
+\sum_{i=1}^{m} \frac{C_i}{P_i} \leq m(2^{1/m}-1)
+$$
 
 SCHEDULING EDF – Earliest Deadline First
 
 Priorità dinamiche, in base a chi scade prima, adatto a processi non periodici, permette anche 100% cpu
-
-
 
 CORSA CRITICA: si verifica una race condition quando più processi accedono concorrentemente agli stessi dati e il risultato dipende dall’ordine di interleaving dei processi. Sono frequenti nei sistemi operativi multitasking, sia per quanto riguarda i dati in user space che in kernel space. Portano al malfunzionamento dei processi cooperanti, o anche dell’intero sistema.
 
@@ -447,7 +454,7 @@ In realtà si tratta di un record una variabile intera su cui operano up e down,
 
 up(s): incrementa S, eventualmente processi in attesa messi in ready
 down(s) : wait fino a S>0, quindi decrementa S
-l’implementazione di up e down è sufficientemente breve da poter essere 
+l’implementazione di up e down è sufficientemente breve da poter essere
 
 MUTEX: semaforo binario con due valori possibili (lock, unlock) e due primitive mutex_lock() e mutex_unlock()
 
@@ -481,7 +488,6 @@ Ogni processo è in un ciclo (think(),take_fork(),eat(),put_fork().
     …esce sez. critica e down sul proprio semaforo. (fine take_forks)
     Mangia e poi put_forks(), ovvero riporta lo stato in thinking e fa test(sx) e test (dx) per eventualmente farli mangiare, infine rilascia sezione critica
 
-
 LETTORI – SCRITTORI: insieme di dati condiviso tra processi scrittori e lettori
     lettori: accesso contemponeao
     scrittori: accesso esclusivo
@@ -492,7 +498,6 @@ SOL:
     semaphore_db: semaforo a protezione del database
 lettore: si segnala su rc, se quando entra è il primo blocca db, legge, se quando esce è l’ultimo sblocca db
 scrittore: prova a ad accedere a db(down), scrive, rilascia db (up)
-
 
 BARBIERE CHE DORME processo in wait se non ci sono clienti, se ci sono ne serve uno alla volta, ci sono tot posti per attesa
 SOL:
