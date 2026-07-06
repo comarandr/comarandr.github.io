@@ -1,4 +1,8 @@
-# C secondo sCagnetto
+---
+layout: default
+title: Linguaggio C secondo sCagnetto
+permalink: /linguaggi/csheet/
+---
 
 ## indice
 

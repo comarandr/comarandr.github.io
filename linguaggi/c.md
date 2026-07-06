@@ -1,4 +1,8 @@
-# C SHEET
+---
+layout: default
+title: Linguaggio C
+permalink: /linguaggi/c/
+---
 
 ## compilazione semplice
 
