@@ -17,3 +17,5 @@ permalink: /linguaggi/
 - [java](./java.md)
 - [scheme](./scheme.md)
 - [javascript](./javascript.md)
+- [c](./c.md)
+- [sheet c](./csheet.md)
