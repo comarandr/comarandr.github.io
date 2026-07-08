@@ -1,0 +1,164 @@
+/* ===================================================================
+   C Syntax Highlighting - Light Theme (Rouge / Jekyll)
+   Ispirato a IntelliJ IDEA Light / VS Code Light+ / GitHub Light
+   Rouge è l'highlighter integrato di Jekyll (basato su Pygments).
+   Genera classi abbreviate tipo: <span class="kt">int</span>
+   Struttura HTML tipica generata da Rouge per un blocco ```c:
+
+   <div class="language-c highlighter-rouge">
+     <div class="highlight">
+       <pre class="highlight"><code>...</code></pre>
+     </div>
+   </div>
+   =================================================================== */
+
+/* --- Blocco di codice base --- */
+.language-c.highlighter-rouge {
+  margin: 0.5em 0;
+}
+
+.language-c.highlighter-rouge .highlight,
+.language-c.highlighter-rouge pre.highlight {
+  background-color: #fafafa;
+  color: #1e1e1e;
+  font-family: "JetBrains Mono", "Fira Code", Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 1em;
+  margin: 0;
+  overflow: auto;
+  border-radius: 6px;
+  border: 1px solid #e1e4e8;
+  tab-size: 4;
+}
+
+/* Codice inline `come questo` */
+code.highlighter-rouge {
+  background-color: #f3f3f3;
+  color: #1e1e1e;
+  font-family: "JetBrains Mono", "Fira Code", Consolas, "Courier New", monospace;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.92em;
+}
+
+/* Selezione testo dentro il blocco */
+.language-c.highlighter-rouge pre.highlight ::selection {
+  background-color: #c9e6ff;
+}
+
+/* ===================================================================
+   TOKEN COLORS - classi Rouge/Pygments standard - stile IntelliJ Light
+   =================================================================== */
+
+/* Commenti: .c = comment, .c1 = single-line (//), .cm = multiline (/* */
+.language-c .c,
+.language-c .c1,
+.language-c .cm {
+  color: #8c8c8c;
+  font-style: italic;
+}
+
+/* Direttive preprocessore: #include, #define, #ifdef, #pragma... */
+.language-c .cp {
+  color: #808000;
+  font-weight: 600;
+}
+
+/* Nome file dentro #include <stdio.h> o "file.h" */
+.language-c .cpf {
+  color: #067d17;
+}
+
+/* Keyword: .k = keyword generico (if/for/while/return/switch/struct...) */
+.language-c .k,
+.language-c .kd,
+.language-c .kr {
+  color: #0033b3;
+  font-weight: 600;
+}
+
+/* Tipi: int, char, void, float, double, unsigned, size_t, ecc. */
+.language-c .kt {
+  color: #0033b3;
+  font-weight: 600;
+}
+
+/* NULL, true, false (stdbool.h) */
+.language-c .kc {
+  color: #0033b3;
+  font-weight: 600;
+}
+
+/* Stringhe: .s = string, .s1 = single quote, .s2 = double quote, .sc = char */
+.language-c .s,
+.language-c .s1,
+.language-c .s2,
+.language-c .sc,
+.language-c .se {
+  color: #067d17;
+}
+
+/* Numeri: .m = number generico, .mi = integer, .mf = float, .mh = hex, .mo = octal */
+.language-c .m,
+.language-c .mi,
+.language-c .mf,
+.language-c .mh,
+.language-c .mo,
+.language-c .il {
+  color: #1750eb;
+}
+
+/* Operatori: .o = operator, .ow = operator word (sizeof) */
+.language-c .o,
+.language-c .ow {
+  color: #1e1e1e;
+}
+
+/* Punteggiatura: .p = punctuation (parentesi, graffe, punto e virgola) */
+.language-c .p {
+  color: #1e1e1e;
+}
+
+/* Nomi di funzione: .nf = function name (definizione e chiamata) */
+.language-c .nf {
+  color: #7a7a17;
+}
+
+/* Variabili e identificatori generici: .n = name, .nv = variable */
+.language-c .n,
+.language-c .nv,
+.language-c .vi {
+  color: #1e1e1e;
+}
+
+/* Costanti macro: .no = name.constant (spesso da #define MAIUSCOLO) */
+.language-c .no {
+  color: #871094;
+}
+
+/* Etichette per goto: .nl = name.label */
+.language-c .nl {
+  color: #871094;
+}
+
+/* Nomi di struct/tipi definiti con typedef: .nc / .kt a seconda del lexer */
+.language-c .nc {
+  color: #00696b;
+  font-weight: 500;
+}
+
+/* Whitespace/errore fallback (evita strani highlight rossi) */
+.language-c .err {
+  color: #1e1e1e;
+  background: transparent;
+}
+
+/* ===================================================================
+   Numeri di riga (se in futuro abiliti {% highlight c linenos %})
+   =================================================================== */
+.language-c .lineno {
+  color: #a9b0bc;
+  padding-right: 1em;
+  user-select: none;
+}
