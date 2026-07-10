@@ -6,7 +6,7 @@ permalink: /personali/ContributoIrrilevante
 
 ## Cos'è
 
-Contributo Irrilevante nasce come spazio di riflessione ed espressione personale, dove potermi esercitare nella scrittura senza nessuna pretesa di dover dire qualcosa di degno di nota.
+Contributo Irrilevante nasce come spazio di riflessione ed espressione personale, dove potermi esercitare nella scrittura senza nessuna pretesa di dover dire qualcosa degno di nota.
 
 Si tratta di un contenitore di pensieri di una persona mediocre, senza studi agli spalle, il cui contributo è per l'appunto, irrilevante. Da qui il nome.
 

@@ -559,6 +559,64 @@ assert x > 0 : "x deve essere positivo";
 
 - mediante class annidation, fortemente accoppiato ma offre maggior incapsulamento
 
+##### Interfaccia Iterable
+
+L'interfaccia `Iterable<T>` definisce soltanto un metodo:
+
+`iterator()`: ritorna un oggetto di tipo `Iterator<T>`
+
+Serve a implementare l'iteratore
+
+##### Interfaccia Iterator
+
+L'iteratore è l'oggetto che attraversa la collezione, definisce due metodi fondamentali:
+
+- `hasNext()`: ritorna true se ci sono altri elementi da visitare
+- `next()`: ritorna l'elemento successivo e avanza l'iteratore
+
+Posso ovviamente aggiungere funzioni opzionali come:
+
+- `remove()`: rimuove l'elemento corrente dalla collezione
+
+```mermaid
+---
+config:
+    class:
+        hideEmptyMembersBox: true
+---
+classDiagram
+    class Iterable{
+        <<Interfaccia>>
+        + Iterator<T> iterator()
+    }
+
+    class Iterator{
+        <<Interfaccia>>
+        + boolean hasNext()
+        + T next()
+        + void remove()
+    }
+
+    class CollezioneStudenti{
+        - Lista<Studente> studenti
+        + void aggiungiStudente(Studente s)
+        + Iterator<Studente> iterator()  IteratoreStudenti
+    }
+
+    class IteratoreStudenti{
+        - int currentIndex
+        + boolean hasNext()
+        + Studente next()
+        + void remove()
+    }
+
+    Iterable <|-- CollezioneStudenti
+    Iterator <|-- IteratoreStudenti
+
+```
+
+L'iterator concreto può essere definito internamente alla classe che implementa Iterable, oppure esternamente come classe separata.
+
 ```java
 import java.util.Iterator;
 import java.util.List;
@@ -810,20 +868,28 @@ title: Builder classe interna
 ---
 classDiagram
     direction LR
-    class `Tipo principale`{
-        variabili d'istanza
+    class Tipo{
+        variabili d'istanza private
+        private variabile1
+        private variabile2
         static class Builder
-        + costruttore(Builder b) tipo
+        - costruttore(Builder b) this
     }
 
     class `Static class Builder`{
-        variabili d'istanza
+        variabili d'istanza pubbliche
+        public variabile1
+        public variabile2
+
+        + build() Tipo
         + Builder (variabili obbligatorie)
-        + build(variabile opzionale) this
+        + variabile(variabile opzionale) Builder
     }
 
-    `Tipo principale` -- `Static class Builder`
+    Tipo -- `Static class Builder`
 ```
+
+NOTA: il builder non può essere utilizzato una volta che l'oggetto è stato costruito, quindi non è possibile modificare l'oggetto dopo la costruzione.
 
 ```java
 //classe prodotto
