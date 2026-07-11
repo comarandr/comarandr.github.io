@@ -17,11 +17,12 @@ custom_css: /assets/oop.css
 
 **CLASSE GENERICA**: parametrizzata su più tipi (riutilizzabile con più tipi)
 
-ACCESSIBILITÀ DI UNA CLASSE:
+**ACCESSIBILITÀ DI UNA CLASSE:**
 
-- public: accessibile da qualsiasi classe
-- default: accessibile da classi nello stesso package o sottoclassi
-- protected: solo per classi interne
+- **public**: accessibile da qualsiasi classe
+- **default**: accessibile da classi nello stesso package o sottoclassi
+- **protected**: solo per classi interne
+- **private**: accessibile solo all'interno della classe
 
 #### CLASSE TIPO CONCRETO
 
