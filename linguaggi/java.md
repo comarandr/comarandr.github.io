@@ -154,6 +154,16 @@ for (inizializzazione; condizione; incremento){
 inizializzazione: prima volta
 incremento: dopo ogni iterazione
 
+#### Costrutto FOR-EACH
+
+Ottimo per iterare su collezioni di oggetti, array o stream
+
+```java
+for (tipo elemento : collezione) {
+    instruction //esegue il blocco per ogni elemento della collezione
+}
+```
+
 #### Costrutto RETURN
 
 permette di restituire un valore all'esterno
@@ -163,8 +173,6 @@ return //esce dal metodo e restituisce il valore
 ```
 
 #### Costrutto SWITCH
-
-
 
 ```java
 switch (variabile) {
@@ -211,6 +219,13 @@ esempio:
 (x, y) -> { return x + y; }
 
 Predicate<Integer> isEven = num -> num % 2 == 0
+```
+
+#### ForEach con lambda
+
+```java
+List<Integer> numeri = Arrays.asList(1, 2, 3, 4, 5, 6);
+numeri.forEach(n -> System.out.println(n));
 ```
 
 ### Tipi di variabili
@@ -344,7 +359,7 @@ Set<Integer> insieme = new HashSet<>();
 
 ##### Map
 
-Collezione di coppie chiave-valore, le chiavi sono univoche
+Collezione di più coppie chiave-valore, le chiavi sono univoche
 
 `.put(K key, V value)`: aggiunge una coppia chiave-valore alla collezione
 
@@ -361,6 +376,7 @@ Collezione di coppie chiave-valore, le chiavi sono univoche
 ```java
 Map<String, Integer> mappa = new HashMap<>();
 mappa.put("uno", 1);
+mappa.put("due", 2);
 mappa.get("uno"); // restituisce 1
 mappa.remove("uno"); // rimuove la coppia chiave-valore "uno
 ", 1
