@@ -856,7 +856,7 @@ veicolo2.muovi(); // Output: La moto si muove
 
 #### BUILDER
 
-provvede flessibilità quando inizializzi un tipo con molti attributi
+provvede flessibilità quando inizializzi un tipo con molti attributi, opzionali e non.
 
 - classe prodotto esterna, con costruttore privato con argomento builder
 - classe interna builder statica con attributi pubblici corrispondenti

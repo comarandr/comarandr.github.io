@@ -29,11 +29,17 @@ Raccolta di pensieri scritti durante il liceo. Il titolo della rubrica è lo ste
 - [Pensieri Sparsi 3](./Pensieri3.md)
 - [Pensieri Sparsi 4](./Pensieri4.md)
 
-### Note Sparse & i taccuini verdi
+### Note Sparse
 
 Serie di note successive alle precedenti.
 
 - [Note Sparse](./noteSparse.md)
+- [Piccola analisi sulla mia visione del mondo](./piccolaAnalisi.md)
+
+In particolare l'ultimo articolo è una raccolta che racchiude dei piccoli articoli in cui presento diverse tesi sulla mia visione.
+
+### Taccuini verdi
+
 - [Il Taccuino Verde](./taccuinoVerde.md)
 
 ### Articoli odierni

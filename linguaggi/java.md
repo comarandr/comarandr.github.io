@@ -385,6 +385,43 @@ mappa.containsValue(1); // restituisce false
 mappa.size(); // restituisce 0
 ```
 
+**concetto di entrySet()**: restituisce un set di coppie chiave-valore, utile per iterare su una mappa
+
+Per iterare su una mappa si può usare un ciclo for-each con `entrySet()`:
+
+```java
+for (Map.Entry<String, Integer> entry : mappa.entrySet()) {
+    String key = entry.getKey();
+    Integer value = entry.getValue();
+    System.out.println(key + ": " + value);
+}
+```
+
+##### Pair
+
+Collezione di due oggetti, utile per restituire più valori da un metodo
+
+`.getKey()`: restituisce il primo elemento della coppia
+
+`.getValue()`: restituisce il secondo elemento della coppia
+
+```java
+Pair<String, Integer> coppia = new Pair<>("uno", 1);
+String key = coppia.getKey(); // restituisce "uno"
+Integer value = coppia.getValue(); // restituisce 1
+```
+
+##### Record
+
+Struttura dati immutabile, utile per rappresentare un insieme di valori associati a nomi
+
+```java
+public record Persona(String nome, int eta) {}
+Persona p = new Persona("Mario", 30);
+String nome = p.nome(); // restituisce "Mario"
+int eta = p.eta(); // restituisce 30
+```
+
 ##### Predicate (BiPredicate)
 
 Accetta un argomento e restituisce un booleano, utile per filtrare collezioni
