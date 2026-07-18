@@ -5,6 +5,8 @@ permalink: /linguaggi/java
 custom_css: /assets/oop.css
 ---
 
+Linguaggio a oggetti, pertanto è utile il collegamento alla pagina di [oop](/universita/oop.md)
+
 ## Basi di java
 
 il tipo di dato è statico, quindi va dichiarato prima di essere usato.

@@ -7,6 +7,61 @@ custom_css: /assets/oop.css
 
 ## Concetti di base
 
+Utile il collegamento alla pagina di [java](/linguaggi/java.md)
+
+### ASTRAZIONE
+
+Permette di ignorare i dettagli implementativi e concentrarsi sul comportamento di un oggetto.
+
+Tramite:
+
+- **parametrizzazione**: generalizzazione, riuso del codice con dati differenti (es. 2+3, 2+4, 1+5 &rarr; x+y, x=, y=)
+
+- **specificazione**: rimozione dei dettagli implementativi (incapsulamento) e definizione di un contratto (se mi dai qualcosa &rarr; ti prometto qualcosa). Ottiene il disaccoppiamento
+
+#### CONTRATTO
+
+- **precondizioni**: cosa deve essere vero prima di chiamare il metodo affinché i risultati siano ben definiti, si riferiscono agli argomenti o allo stato dell'oggetto (implica funzione parziale)
+- **postcondizioni**: cosa deve essere vero dopo l'esecuzione del metodo, si riferiscono all'output
+
+#### TIPI DATI ASTRATTI (ADT)
+
+L'Obiettivo degli adt è creare una struttura che ricacalchi il problema.
+Si tratta di un tipo di dato **definito dal suo comportamento**, non dalla sua implementazione.
+
+Un ADT è composto da:
+
+- **rappresentazione**: strutture dati, componenti
+- **operazioni**: metodi dell'ADT
+
+Generalmente in un ADT abbiamo:
+
+- variabili d'istanza **private** (stato)
+- metodi **non static** (comportamento)
+
+**SPECIFICAZIONE**:
+
+- STATO ASTRATTO: valori possibili adt (es. matrice bidimensionale di float)
+- PROTOCOLLO: operazioni su valori, vale anche sequenza di chiamate di operazioni, con contratti riferiti allo stato astratto
+
+esempio. ADT = insieme di interi. Metodo ha delle POST condizioni su eccezione
+
+- `//solleva EmptyIntSetException se array ha 0 elementi`: NON VA BENE, riferito a implementazione
+- `//solleva EmptyIntSetException se insieme è vuoto`: OTTIMO, riferito a stato astratto
+
+**MISSION**: cosa sa (stato) e cosa può fare (transizioni di stato)
+
+**INVARIANTE**: "matrice valida m definita come m è NxM con N,M > 0"
+
+- indipendente da implementazione
+- funge da pre per tutti i metodi (tranne per costruttore)
+- vale per tutti gli stati
+
+**INVARIANTE DI RAPPRESENTAZIONE:**
+
+- legato alla funzione di astrazione f: dato astratto &rarr; stato concreto
+- descritto nella classe
+
 ### CLASSE
 
 **NORMALE**: definizione e implementazione di un tipo
@@ -26,6 +81,11 @@ custom_css: /assets/oop.css
 
 #### CLASSE TIPO CONCRETO
 
+- MISSION: cosa sa e cosa può fare
+- ABSTRACT FUNCTION: metodi astratti che devono essere implementati dalle sottoclassi
+- INVARIANTE: proprietà che deve essere sempre vera per tutti gli stati dell'oggetto
+
+
 ```java
 public class MyClass{
     //MISSION:
@@ -43,6 +103,8 @@ public class MyClass{
 ```
 
 #### CLASSE MAIN
+
+generalmente possiede il metodo `public static void main(String[] args)` che è il punto di ingresso del programma
 
 ```java
 public class Main{
@@ -69,6 +131,27 @@ Classe che implementa interfaccia:
 
 - tutti i metodi dell'interfaccia (essendo astratti)
 - eventualmente altri metodi + variabili d'istanza
+
+```mermaid
+classDiagram
+
+    class Interfaccia{
+        <<Interfaccia>>
+        + metodo1()
+        + metodo2()
+        + metodo3()
+    }
+
+    class MyClass{
+        <<MyCLass implements Interfaccia>>
+        - variabili d'istanza
+        + metodo1()
+        + metodo2()
+        + metodo3()
+    }
+
+    Interfaccia <|.. MyClass
+```
 
 ```java
 public interface Interfaccia{
@@ -324,42 +407,6 @@ Animale a = new Cane(); // Polimorfismo
 a.faiVerso(); // Stampa: Bau Bau
 ```
 
-#### TIPI DATI ASTRATTI (adt)
-
-obiettivo degli adt è creare una struttura che ricacalchi il problema
-
-Un dato astratto è composto da:
-
-- rappresentazione: strutture dati, componenti
-- operazioni: metodi dell'adt
-
-Viene definito dal suo comportamento
-
-variabili d'istanza (private) e metodi **non** devono essere **statici**
-
-**SPECIFICAZIONE**:
-
-- STATO ASTRATTO: valori possibili adt (es. matrice bidimensionale di float)
-- PROTOCOLLO: operazioni su valori, vale anche sequenza di chiamate di operazioni, con contratti riferiti allo stato astratto
-
-esempio. ADT = insieme di interi. Metodo ha delle POST condizioni su eccezione
-
-- `//solleva EmptyIntSetException se array ha 0 elementi`: NON VA BENE, riferito a implementazione
-- `//solleva EmptyIntSetException se insieme è vuoto`: OTTIMO, riferito a stato astratto
-
-MISSION: cosa sa (stato) e cosa può fare (transizioni di stato)
-
-INVARIANTE: "matrice valida m definita come m è NxM con N,M > 0"
-
-- indipendente da implementazione
-- funge da pre per tutti i metodi (tranne per costruttore)
-- vale per tutti gli stati
-
-INVARIANTE DI RAPPRESENTAZIONE:
-
-- legato alla funzione di astrazione f: dato astratto &rarr; stato concreto
-- descritto nella classe
-
 #### TIPO GENERICO
 
 garantisce type safety a compile-time
@@ -460,11 +507,6 @@ class Calcolatrice{
     public int somma(int a, int b, int c){ return a + b + c; }
 }
 ```
-
-#### CONTRATTO
-
-- pre-condizioni: cosa deve essere vero prima di chiamare il metodo affinché i risultati siano ben definiti, si riferiscono agli argomenti o allo stato dell'oggetto
-- post-condizioni: cosa deve essere vero dopo l'esecuzione del metodo, si riferiscono all'output
 
 ### ECCEZIONI
 
