@@ -364,7 +364,7 @@ Le ripetizione di serie di suoni servono a dare ritmo al testo e a associare tra
 
 **rima facile**: scarso impegno stilistico, di cui sono disponibili molte parole
 
-- **desinenziale**: parole di uguale desinenza (mentire / sentire) 
+- **desinenziale**: parole di uguale desinenza (mentire / sentire)
 - **suffissale**: parole di uguale suffisso (avverbi in -mente)
 
 **rima difficile**: rima con poche paroli disponibili
@@ -388,6 +388,75 @@ L'assonanza al posto della rima non è necessariamente segno di trascuratezza.
 NOTA: il concetto di identità non è unicamente fonetica ma anche culturale: in italiano _è_ aperta fa rima con _é_ chiusa. Nelle metriche romanza e provenzale per esempio non è così. Pare che questo sia dovuta anche all'influenza del siciliano. Un esempio di rima culturale è la rima siciliana, uscita dall'uso odierno.
 
 ### rima piana, tronca, sdrucciola
+
+**rima piana**: rima tra due parole piane (ultima tonica in penultima sillaba)
+
+**rima tronca**: rima tra due parole tronche (ultima tonica in ultima sillaba)
+  
+**rima tronca in consonante**: rima tra due parole tronche che terminano con la stessa consonante (ultima tonica in ultima sillaba): amor/finir/man
+
+**rima sdrucciola**: rima tra due parole sdrucciole (ultima tonica in terzultima sillaba)
+
+### rime tecniche
+
+**rima tecnica**: tipologie di rime ricavate da tipologie particolari (è un insieme di tipologie di rime)
+
+**rima ricca**: identità di uno o più suoni precedenti l'ultima vocale tonica: sentero/altero
+
+**rima ricca contraffatta**: si estende al di là delle parole stesse: l'ore/colore
+
+**rima grammaticale**: rapporto di derivazione o parentela grammaticale istituito fra le due serie di rime:
+clami/clama/ch'ami/ch'ama
+
+**rima equivoca**: identità di suono delle parole in rima
+
+**rima identica**: una parola rima con se stessa (indice di scarsa capacità tecnica).
+
+Di regola le parole omofone devono differire tra loro per
+
+- significato
+- categoria grammaticale
+- genere, numero, modo verbale
+
+**rima equivoca contraffatta**: equivocazione ottenuta sommando due parole (m'ai / mai)
+
+**rima composta(spezzata, franta, rotta)**: parola in rima ottenuta artificiosamente sommando parole distinte (sòl tre /oltre/poltre)
+
+  in questo caso l'alterazione dell'accento consiste nel subordinare all'accento che cade nella posizione richiesta quello del monosillabo successivo
+
+**rima equivoca contraffatta (con alterazione d'accento)**: par l'à (da scandire pàrla) / parla
+(...)
+
+**rima per l'occhio**: identià nella parte finale di due versi è grafica. Tuttavia la versione propriamente detta richiederebbe uno spostamento dell'accento di parola. 
+
+- caso uno: mando / comandò (accentato comàndo)
+- caso due: perché (accentato pérche)/ cerche
+
+**rima per l'occhio irriducibile**: identità puramente convenzionale (perché / cerche)
+
+**rima in tmesi**: divide una parola in fine di verso (... differente - mente ... / ... lente)
+
+**rima ipermetra**: sillaba in più che riguarda la rima e non il verso (tACIta / tenACI)
+
+### Rima interna
+
+Le rime possono cadere anche all'interno del verso.
+
+**rima al mezzo**: divide il verso in emistichi (in cesura nell'endecasillabo)
+
+**rima interna**: non corrisponde a tale divisione
+
+Non impediscono mai la sinalefe
+
+**rima sineretica**: forma bisillabica di un nesso di vocale atonica + atona (leggiadria / svia)
+
+> che leggiadria
+> di svia cotanto e più che quant'io conto
+
+**rima interna/al mezzo con apocope**:
+
+>ché più onta che mort'è da dottare
+>e portar - disragion più che dannaggio.
 
 ## FORME REGOLATE E FORME FISSE
 
