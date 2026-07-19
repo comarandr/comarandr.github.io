@@ -831,34 +831,34 @@ config:
 ---
 classDiagram
     note for Factory " public class Main: 
-     Prodotto p = creaProdotto(arg) "
+     Veicolo v = creaVeicolo(arg) "
 
-    class ClasseConcreta-A{
-        @Override metodoComune()
-        CostruttoreConcreto() A
+    class Moto{
+        @Override suona()
+        CostruttoreConcreto() Moto
     }
-    class ClasseConcreta-B{
-        @Override metodoComune()
-        CostruttoreConcreto() B
+    class Automobile{
+        @Override suona()
+        CostruttoreConcreto() Automobile
     }
     class Factory{ 
-        public static Prodotto creaProdotto(String tipo)
-        creaProdotto("A") new ClasseConcreta-A
-        creaProdotto("B") new ClasseConcreta-B
+        public static Veicolo creaVeicolo(String tipo)
+        creaVeicolo("Moto") new Moto
+        creaVeicolo("Automobile") new Automobile
     }
 
-    class Prodotto{
-        + metodoComune()
+    class Veicolo{
+        + suona()
     }
 
-    Factory <|-- Prodotto
-    Prodotto <|-- ClasseConcreta-A
-    Prodotto <|-- ClasseConcreta-B
-    Factory --> `oggetto A`
-    Factory --> `oggetto B`
+    Factory <|-- Veicolo
+    Veicolo <|-- Moto
+    Veicolo <|-- Automobile
+    Factory --> `oggetto Moto`
+    Factory --> `oggetto Automobile`
 
-    class `oggetto A`
-    class `oggetto B`
+    class `oggetto Moto`
+    class `oggetto Automobile`
 ```
 
 ```java
@@ -1106,39 +1106,39 @@ config:
         hideEmptyMembersBox: true
 ---
 classDiagram
-    class OggettoDaDecorare{
+    class Drink{
         <<Interfaccia>>
-        + metodo1()
-        + metodo2()
+        + getDescription()
+        + costo()
     }
 
-    class OggettoConcreto{
-        + metodo1()
-        + metodo2()
+    class Caffe{
+        + getDescription()
+        + costo()
     }
 
-    class `Decoratore implements Oggetto`{
+    class `Decorator`{
         <<Classe astratta>>
-        - Oggetto oggetto
-        Costrruttore(Oggetto oggetto) this
+        - Drink drink
+        Costruttore(Drink drink) this
     }
 
-    class `A extends Decoratore`{
+    class `ConPanna`{
         <<decoratore concreto>>
-        + metodo1()
-        + metodo2()
+        + getDescription()
+        + costo()
     }
 
-    class `B extends Decoratore`{
+    class `ConChoco`{
         <<decoratore concreto>>
-        + metodo1()
-        + metodo2()
+        + getDescription()
+        + costo()
     }
 
-    OggettoDaDecorare <|-- OggettoConcreto
-    OggettoDaDecorare <|-- `Decoratore implements Oggetto`
-    `Decoratore implements Oggetto` <|-- `A extends Decoratore`
-    `Decoratore implements Oggetto` <|-- `B extends Decoratore`
+    Drink <|-- Caffe
+    Drink <|-- `Decorator`
+    `Decorator` <|-- `ConPanna`
+    `Decorator` <|-- `ConChoco`
 ```
 
 ```java
@@ -1203,30 +1203,27 @@ config:
         hideEmptyMembersBox: true
 ---
 classDiagram
-    class Elemento{
+    class Composite{
         <<Interfaccia>>
-        + metodo1()
-        + metodo2()
+        + stampa()
+        + getSize()
     }
 
-    class `Foglia implements Elemento`{
-        - variabili d'istanza
-        + Costruttore(variabili)
-        @Override metodo1()
-        @Override metodo2()
+    class `File`{
+        @Override stampa()
+        @Override getSize()
     }
 
-    class `Composita implements Elemento`{
-        - variabili d'istanza
-        - Lista< Elemento >
-        + void add(Elemento)
-        + void remove(Elemento)
-        @Override metodo1()
-        @Override metodo2()
+    class `Directory`{
+        - List < Composite >
+        + void add(Composite e)
+        + void remove(Composite e)
+        @Override stampa()
+        @Override getSize()
     }
 
-    Elemento <|-- `Foglia implements Elemento` 
-    Elemento <|-- `Composita implements Elemento`
+    Composite <|-- `File` 
+    Composite <|-- `Directory`
 ```
 
 ```java
@@ -1516,66 +1513,66 @@ definisce famiglia di algoritmi incapsulati in classi separate e intercambiali i
 classDiagram
     direction LR
 
-    class Contesto{
-        private Strategy opzione;
-        + setStrategy(Strategy opzione)
+    class Spedizione{
+        private Strategy strategy;
+        + setStrategy(Strategy strategy)
     }
 
     class Strategy {
     <<Interfaccia>>
-    + metodo1()
+    + getPrice()
     }
 
-    class Opzione1{
+    class Standard{
         <<Classe concreta>>
-        + metodo1()
+        + getPrice()
     }
 
-    class Opzione2{
+    class Express{
         <<Classe concreta>>
-        + metodo1()
+        + getPrice()
     }
 
-    class Opzione3{
+    class International{
         <<Classe concreta>>
-        + metodo1()
+        + getPrice()
     }
 
-    Contesto --> Strategy
-    Strategy <|-- Opzione1
-    Strategy <|-- Opzione2
-    Strategy <|-- Opzione3
+    Spedizione --> Strategy
+    Strategy <|-- Standard
+    Strategy <|-- Express
+    Strategy <|-- International
 ```
 
 ```java
 //interfaccia
-public interface SpedizioneStrategy {
-    double costo(double peso);
+public interface Strategy {
+    double getPrice(double peso);
 }
 
 //classi concrete che implementano algoritmo
 
-public class Standard implements SpedizioneStrategy {
-    @Override public double costo(double peso) {return peso * 2;}
+public class Standard implements Strategy {
+    @Override public double getPrice(double peso) {return peso * 2;}
 }
 
-public class Express implements SpedizioneStrategy {
-    @Override public double costo(double peso) {return peso * 3;}
+public class Express implements Strategy {
+    @Override public double getPrice(double peso) {return peso * 3;}
 }
 
-public class Internazionale implements SpedizioneStrategy {
-    @Override public double costo(double peso) {return peso * 4;}
+public class International implements Strategy {
+    @Override public double getPrice(double peso) {return peso * 4;}
 }
 
 //classe che usa strategia
 public class SetSpedizione {
-    private SpedizioneStrategy tipologia; //strategia
-    public void setTipologia(SpedizioneStrategy tipologia) {
-        this.tipologia = tipologia;
+    private Strategy strategy; //strategia
+    public void setStrategy(Strategy strategy) {
+        this.strategy = strategy;
     }
 
     public double costo(double peso) {
-        return tipologia.costo(peso);
+        return strategy.costo(peso);
     }
 }
 
@@ -1583,7 +1580,7 @@ public class SetSpedizione {
 //inizializzo classe che usa strategia
 SetSpedizione spedizione = new SetSpedizione();
 //imposto e uso diverse strategie, basta cambiare classe nell'argomento
-spedizione.setTipologia(new Standard());
+spedizione.setStrategy(new Standard());
 System.out.println(spedizione.costo(5));
 >> 10.0
 ```

@@ -524,6 +524,27 @@ pila.peek(); // restituisce 1
 pila.empty(); // restituisce false
 ```
 
+#### Scegliere come rappresentare una collezione
+
+Guida sintetica alla scelta della struttura dati più adatta:
+
+- `List` &rarr; elementi ordinati tramite indice, duplicati permessi
+  - `ArrayList` &rarr; accesso casuale, più veloce
+  - `LinkedList` &rarr; accesso sequenziale, più lento
+- `Set` &rarr; elementi unici, nessun duplicato
+  - `HashSet` &rarr; non ordinato, più veloce
+  - `TreeSet` &rarr; ordinato, più lento. Richiede *Comparable*
+- `Map` &rarr; chiavi uniche associate a valori
+  - `HashMap` &rarr; non ordinato, più veloce
+  - `TreeMap` &rarr; ordinato, più lento. Richiede *Comparable*
+
+#### Sintesi dei metodi 
+
+**List**: `.add()`,`.remove()`, `.get()`, `.set()`, `.contains()`, `.size()`
+**Set**: `.add()`, `.remove()`, `.contains()`, `.size()`
+**Map**: `.put()`, `.get()`, `.remove()`, `.containsKey()`, `.size()`
+**Stream**: `.filter()`, `.map()`, `.forEach()`, `.collect()`, `.reduce()`
+
 #### Confronto == e .equals()
 
 `==` : confronta due oggetti per riferimento (stesso oggetto in memoria), ottimo per primitivi
