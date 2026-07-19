@@ -6,6 +6,7 @@ mermaid: true
 kramdown:
   input: GFM
   math_engine: mathjax
+  hard_wrap: true
   syntax_highlighter: rouge 
   syntax_highlighter_opts: 
     disable: false
