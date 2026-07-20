@@ -10,15 +10,15 @@ permalink: /personali/StrumentiPoesia/
 
 4 parti fondamentali:
 
-1. Fonetica/Fonologia: studio dei suoni (foni) del linguaggio e di come vengono organizzati in unità distintive (fonemi) per formare parole
-2. Morfologia: analizza la struttura interna delle parole (prefissi, suffissi, radici)
-3. Sintassi: studio di come le parole vengono combinate per frasi e come le relazioni strutturali determinano il significato
-4. Semantica: esamina il significato delle parole, frasi e testi
+1. **Fonetica/Fonologia**: studio dei suoni (foni) del linguaggio e di come vengono organizzati in unità distintive (fonemi) per formare parole
+2. **Morfologia**: analizza la struttura interna delle parole (prefissi, suffissi, radici)
+3. **Sintassi**: studio di come le parole vengono combinate per frasi e come le relazioni strutturali determinano il significato
+4. **Semantica**: esamina il significato delle parole, frasi e testi
 
 Con 2 elementi aggiuntivi:
 
-- Lessico: insieme delle parole di una lingua
-- Pragmatica: studio di come il contesto influenza significato e uso del linguaggio
+- **Lessico**: insieme delle parole di una lingua
+- **Pragmatica**: studio di come il contesto influenza significato e uso del linguaggio
 
 ### Strumenti della poesia
 
@@ -74,7 +74,7 @@ Nelle forme strofiche è normale che la strofa termini con un limite sintattico 
 
 Due serie hanno lo stesso numero di sillabe se l'ultima tonica è nella stessa posizione (conti le sillabe fino all'ultima tonica)
 
-##### 3 casi normali
+**3 casi normali:**
 
 - Uscita piana: ultima tonica + sillaba atona
 - Uscita tronca: ultima tonica
@@ -87,7 +87,7 @@ numero di sillabe fino all'ultima tonica compresa + 1
 
 In base a questa regola distinguiamo **parisillabi** e **imparisillabi**, che generalmente nella tradizione italiana vengono raramente mescolati.
 
-##### COMPUTO DELLE SILLABE ESEMPI
+### COMPUTO DELLE SILLABE ESEMPI
 
 - **Tutte le vocali sono separate da almeno una consonante:** numero di vocali
   - `di me medesmo meco mi vergogno`
@@ -104,7 +104,7 @@ In base a questa regola distinguiamo **parisillabi** e **imparisillabi**, che ge
 - **Semiconsonante:** una i o u senza valore di sillaba, articolata come consonante (ostruzione aria espirata)
 - **Semivocale:** analoga ma con minore ostruzione
 
-#### DIERESI E SINERESI
+### DIERESI E SINERESI
 
 - Nessi vocale tonica + atona fine parola: mai/mia, lei/mie, voi/io, rea/reo, sua, sue, fui, suo
   - Fine verso: 2 sillabe
@@ -120,7 +120,7 @@ In base a questa regola distinguiamo **parisillabi** e **imparisillabi**, che ge
   - `Buo-no` ← `bo-num`
   - `Cava-lie-re` ← `chevalier`
 
-##### NESSI TEORICAMENTE INSCINDIBILI
+#### NESSI TEORICAMENTE INSCINDIBILI
 
 - **au:** regolarmente monosillabico in (laude, lauro, causa, pausa, aura)
 - **eu:** generalmente monosillabico
@@ -137,7 +137,7 @@ In base a questa regola distinguiamo **parisillabi** e **imparisillabi**, che ge
 - **Nesso grafico:** i come suono palatale di c, g, l (minaccia, saggio, figlio)
   - Generalmente 1, ma capita 2 con latinismi (savio, filio – derivazione di i vocale latina: religione in dante con 5 e non 4)
 
-##### NESSI GENERALMENTE BISILLABICI
+#### NESSI GENERALMENTE BISILLABICI
 
 - **a, e, o + vocale tonica:**
   - `pa-e-se`, `pa-u-ra`, `ma-e-stro`, `be-a-to`, `le-a-le`, `le-o-ne`, `so-a-vi`
@@ -145,7 +145,7 @@ In base a questa regola distinguiamo **parisillabi** e **imparisillabi**, che ge
 - **Nessi voc + i cons. + voc:**
   - `gio-ia`, `no-ia`, `-a-io`
 
-##### NESSI SCANSIONE VARIABILE
+#### NESSI SCANSIONE VARIABILE
 
 - i, u atone + vocale tonica
   - Comune la dieresi, eccl iè, uò ← lat. È, ò
@@ -161,53 +161,85 @@ In base a questa regola distinguiamo **parisillabi** e **imparisillabi**, che ge
 Generalmente vocale finale + vocale iniziale: sinalefe
 
 - ahi quanto a dir qual era è cosa dura
-  - ahi^1^-quan^2^-to\^a^3^-dir^4^-qual^5^-e^6^-ra\^è^7^-co^8^sa^9^-du^10^ra^11^
+  
+> ahi<sub>1</sub> quan<sub>2</sub>to a<sub>3</sub> dir<sub>4</sub> qual<sub>5</sub> e<sub>6</sub> ra è<sub>7</sub> co<sub>8</sub> sa<sub>9</sub> du<sub>10</sub> ra<sub>11</sub>
 
 Una vocale può venir sopressa mediante:
 
-- **elisione** della vocale finale `nostr' intellecto` &larr; `nostro intellecto`
-- **aferesi** della vocale iniziale `ne 'ngombra` &larr; `ne ingombra`
-- **crasi** di due vocali `ma` &larr; `ma a`
+- **Elisione** della vocale finale `nostr' intellecto` &larr; `nostro intellecto`
+- **Aferesi** della vocale iniziale `ne 'ngombra` &larr; `ne ingombra`
+- **Crasi** di due vocali `ma` &larr; `ma a`
 
 Per saper distinguere davvero elisione, aferesi e crasi dalla sinalefe è necessaria una copia dell'autore
 
-(PAG 41)
+Probabilità di condizioni in cui usare la dialefe, dalla più probabile alla meno probabile:
+
+- dopo una vocale tonica o dopo una vocale tonica + atona
+- dopo certi monosillabi (che, ma, se, o)
+- tra vocale atona e vocale tonica
+- tra due atone
+- dopo una parola sdrucciola
+
+Nessi vocale tonica + atona :
+
+- sinalefe (sillaba sola)
+- dialefe (due sillabe)
+
+**anasinalefe o episinalefe**: dialefe tra due versi. Ripresa della figura latina della sinafìa.
 
 #### ALTRE FIGURE
 
-- **elisione** soppressione vocale finale davanti all'iniziale della seguente (in alternativa a sinalefe)
-- **aferesi** soppressione vocale iniziale davanti alla finale della precedente (in alternativa a sinalefe)
-- **apocope** caduta della vocale finale `vuol` &larr; `vuole`
+- **Elisione** soppressione vocale finale davanti all'iniziale della seguente (in alternativa a sinalefe)
+- **Aferesi** soppressione vocale iniziale davanti alla finale della precedente (in alternativa a sinalefe)
+- **Apocope** caduta della vocale finale `vuol` &larr; `vuole`
   - esempio: rima tronca in consonante ( `cuor / amor` &larr; `cuore / amore`)
-  - **epìtesi (paragoge)** aggiunta di una vocale finale `fue` &larr; `fu` 
+  - **Epìtesi (paragoge)** aggiunta di una vocale finale `fue` &larr; `fu` 
     - evitare le finali tronche, costruire versi piani
-- **sincope** caduta di una vocale interna di parola `lettre` &larr; `lettere`
+- **Sincope** caduta di una vocale interna di parola `lettre` &larr; `lettere`
   - può essere apparente
 
 #### CONVENZIONALITÀ DEL COMPUTO DELLE SILLABE
 
-Desiderabile che esecuzione rispetti il computo sillabico, esempio con dieresi o dialefe, stacco nella pronuncia fra le vocali che formano due sillabe diverse
+Desiderabile che esecuzione rispetti il computo sillabico
 
-Nel caso non siano indicate dialefe e dieresi ci si dovrebbe affidare a un rapido calcolo delle sillabe
+**Dieresi** e **dialefe** &rarr; più semplice, lieve stacco nella pronuncia delle vocali che formano due sillabe diverse.
 
-Maggiori problemi con sinalefe e sineresi, ma generalmente son rare e si potrebbe limitarsi a pronunciare il più rapidamente possibile le vocali che formano la stessa sillaba.
+Può esserci problema di riconoscimento se manca l'indicazione grafica (ä, ë, ï, ö, ü)
 
-Con la sinalefe questione più problematica:
+**Sineresi** &rarr; più difficile, esempio (pau-ra, gioia, aio come unica sillaba). Possibile pronuncia accelerata
 
-- vanno pronunciate entrambe vocali (altrimenti sarebbe elisione)
+**Sinalefe** &rarr; più difficile, pronuncia separata per distinguere da elisione.
 
-(...)
+**Casi marcati**:
+
+- sineresi di un nesso di regola bisillabico
+- dieresi di un nesso di regola monosillabico
+- dialefe
+
+Questi vanno segnalati nella pronuncia.
+
+La sillabazione della lingua poetica è convenzionale, presuppone un pubblico che condivida un sistema di regole distinto con l'autore. Alla fine si tratta di un fatto di cultura
 
 #### CESURA
 
-**cesura**: sillaba finale di parola che segue o coincide con sillaba tonica
+La cesura latina era un limite di parola che cadeva all'interno di un piede (unità metrica) inziché alla fine
 
-**emistichio (mezzo verso)**: parte di verso che precede o segue la cesura
+Nella metrica italiana i versi doppi sono articolati in due parti, detti emistichi.
 
-- cesura come fatto metrico: derivazione dal décasyllabe francese/provenzale, due emistichi di 4 e 6 sillabe (4^a^ e 6^a^ tonica)
-- cesura come fatto sintattico/ritmico: pausa sintattica o di intonazione circa a metà verso, in modo che le due parti siano simili a un quinario e settenario
+**Cesura**: separazione fra due emistichi di un verso
 
-(...)
+**Emistichio (mezzo verso)**: parte di verso che precede o segue la cesura
+
+Generalmente gli emistichi nei versi doppi sono trattati come versi veri e propri.
+
+- (quasi) mai sinalefe tra emistichi
+- primo emistichio tronco, piano o sdrucciolo senza alterare misura del totale (non frequente nella metrica moderna)
+
+**Cesura come fatto metrico**: propria dal décasyllabe francese/provenzale, due emistichi di 4 e 6 sillabe (4^a^ e 6^a^ tonica). Serve a riconoscere intuitivamente la misura del verso.
+
+**Cesura come fatto sintattico/ritmico**: pausa sintattica o di intonazione, solitamente circa a metà verso, in modo che le due parti siano ritmicamente simili a un quinario e settenario. Non è obbligatoria
+
+La funzione metrica della cesura si è persa nella metrica italiana, in quanto sostituita dalla disposizione degli accenti. L'endecasillabo può oscillare tra divisione interna in emistichi o andamento ritmico unitario. Questo fatto è stato favorito dalla presenza di parole sdrucciole assenti in francese e provenzale.
 
 #### ISOSILLABISMO E ANISOSILLABISMO
 
@@ -252,7 +284,58 @@ Tra accenti pertinenti nel verso e quelli rilevabili non c'è piena coincidenza,
 
 ### Interpretazione ritmica del verso
 
-(...)
+Il profilo ritmico del verso ha i suoi punti di riferimento negli accenti obbligatori e principali, ma soprattutto nell'ultimo accento.
+
+Esiste una tensione tra fra discorso in versi e lingua naturale.
+
+Prendiamo il caso di un limite di verso che separa due elementi sintattici strettamente connessi (aggettivo e il suo sostantivo)
+
+- pronuncia legata: distrugge il verso
+- pronuncia staccata: risulta innaturale
+
+Questa tensione tuttavia consente di usare come strumento del ritmo la distribuzione delle pause sintattiche.
+
+Ricordiamo che ogni forma di esecuzione (lettura ad alta voce) è corretta, mentre nella produzione del testo interviene un modello di forma metrica presente nell'autore.
+
+**regole metriche**: descrivono ciò che nel modello è il minimo essenziale per la correttezza metrica.
+
+Un verso è corretto rispetto al suo modello se esiste almeno un'esecuzione possibile che vi corrisponda.
+
+#### Come si individuano gli accenti
+
+Esiste un problema legato ai diversi schemi accentuativi.
+
+Un criterio è assumere che normalmente l'accento metrico coincide con un accento di parola.
+
+**atoni**:
+
+- articoli
+- preposizioni
+- congiunzioni
+- pronomi personali monosillabici (io, tu, lui) seguiti dal verbo
+- non (se in posizione non enfatica)
+- aggettivi personali monosillabici (mio, tuo) in posizione debole
+  - mia vita &rarr; atono
+  - vita mia &rarr; tonico
+- ausiliari di una sillaba seguiti da participio (è stato)
+- ausiliari di due sillabe se l'accento viene a contatto con quello del participio
+  - l'avea fatto &rarr; atono
+  - l'abbia perduto &rarr; tonico
+- aggettivi di una sillaba (gran, bel, buon) seguiti dal sostantivo
+
+#### Spostamenti d'accento
+
+**diàstole**: spostamento dell'accento in avanti
+
+**sìstole**: spostamento dell'accento all'indietro
+
+In passato avveniva per presenza di doppie forme di parole proprie della lingua poetica.
+
+#### Accenti consecutivi
+
+Esistono teorie prosodiche secondo cui non sono possibili due toniche né tre atone consecutive.
+
+Accenti consecutivi possono essere eseguiti con una lieve pausa fra l'uno e l'altro, in caso di più atone consecutive ci si potrà appoggiare con la voce a una delle sillabe.
 
 ## I VERSI ITALIANI
 
@@ -270,6 +353,9 @@ ultima sillaba tonica in 10^a^ posizione
 ultima sillaba tonica in 9^a^ posizione
 
 - **forma accenti fissi**: 3^a^ + 6^a^ + 9^a^ toniche
+
+> S'ode a dé$_3$stra uno squillo di tròmba,
+> a sinís$_3$tra rispón$_6$de uno squillo
 
 ### Novenario
 
@@ -387,7 +473,7 @@ L'assonanza al posto della rima non è necessariamente segno di trascuratezza.
 
 NOTA: il concetto di identità non è unicamente fonetica ma anche culturale: in italiano _è_ aperta fa rima con _é_ chiusa. Nelle metriche romanza e provenzale per esempio non è così. Pare che questo sia dovuta anche all'influenza del siciliano. Un esempio di rima culturale è la rima siciliana, uscita dall'uso odierno.
 
-### rima piana, tronca, sdrucciola
+### Rime piane, tronche, sdrucciole
 
 **rima piana**: rima tra due parole piane (ultima tonica in penultima sillaba)
 
@@ -397,7 +483,7 @@ NOTA: il concetto di identità non è unicamente fonetica ma anche culturale: in
 
 **rima sdrucciola**: rima tra due parole sdrucciole (ultima tonica in terzultima sillaba)
 
-### rime tecniche
+### Rime tecniche
 
 **rima tecnica**: tipologie di rime ricavate da tipologie particolari (è un insieme di tipologie di rime)
 
@@ -425,7 +511,6 @@ Di regola le parole omofone devono differire tra loro per
   in questo caso l'alterazione dell'accento consiste nel subordinare all'accento che cade nella posizione richiesta quello del monosillabo successivo
 
 **rima equivoca contraffatta (con alterazione d'accento)**: par l'à (da scandire pàrla) / parla
-(...)
 
 **rima per l'occhio**: identià nella parte finale di due versi è grafica. Tuttavia la versione propriamente detta richiederebbe uno spostamento dell'accento di parola. 
 
@@ -453,10 +538,12 @@ Non impediscono mai la sinalefe
 > che leggiadria
 > di svia cotanto e più che quant'io conto
 
-**rima interna/al mezzo con apocope**:
+**rima interna/al mezzo con apocope**: dottare/portar
 
->ché più onta che mort'è da dottare
->e portar - disragion più che dannaggio.
+> ché più onta che mort'è da dottare
+> e portar - disragion più che dannaggio.
+
+**rima irrelata**: verso che non rima con nessun altro (verso irrelato). Concetto che ha senso soltanto se il verso è parte di uno schema di rime che prevede/ammette versi non rimati in certe posizioni.
 
 ## FORME REGOLATE E FORME FISSE
 
