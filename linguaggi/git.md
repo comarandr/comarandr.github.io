@@ -111,7 +111,7 @@ in assenza di conflitti non sarà necessario risolvere manualmente le modifiche
 
 `git cherry-pick <commit>` : Applica le modifiche introdotte da un commit specifico al branch attivo (utile per portare modifiche specifiche da un branch all'altro senza unire tutto il branch)
 
-`git rebase -i <nome-branch/commit>` : apre un editor interattivo che ti permette di selezionare i commit da includere, moficare o eliminare durante un rebase, dal branch o commit specificato fino al branch attivo.
+`git rebase -i <nome-branch/commit>` : apre un editor interattivo che ti permette di selezionare i commit da includere, modificare o eliminare durante un rebase, dal branch o commit specificato fino al branch attivo.
 
 ## Git tag
 

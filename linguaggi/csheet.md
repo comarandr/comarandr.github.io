@@ -12,7 +12,7 @@ custom_css: /assets/c.css
 ```c
 $clang programma.c #genera a.out
 $ ./a.out #esegue
-$clang file.c -o nome #rinomica a.out in nome
+$clang file.c -o nome #rinomina a.out in nome
 
 $clang -s file.c #crea file.s in assembly
 $clang -c file.c #genera il file binario file.o

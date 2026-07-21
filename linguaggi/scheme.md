@@ -5,7 +5,7 @@ permalink: /linguaggi/scheme/
 ---
 
 
-Scheme è un linguaggio di programmaziona funzionale derivato da Lisp.
+Scheme è un linguaggio di programmazione funzionale derivato da Lisp.
 
 ## Lambda
 
@@ -206,7 +206,7 @@ NOTA: errore perché "e" è una stringa, accadrebbe lo stesso se usassi come arg
 - `(+ 2 3 4 5 6 7)`
 - `(* 2 4 67 109)`
 
-**esponanziale generico**: `(expt base esponente)` &rarr; valore 
+**esponenziale generico**: `(expt base esponente)` &rarr; valore 
 
 nota bene: `expt` ≠ `exp`
 `exp`usa il numero di nepero $e$ come base
@@ -569,4 +569,3 @@ La procedura ‘ non calcola le funzioni all’interno della lista
 (map (lambda (x) (* 2 x)) ‘(1 2 3 4 5))`
 `(list 2 4 6 8 10)
 ```
-

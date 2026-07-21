@@ -38,7 +38,7 @@ L'**indirizzamento** più efficiente è quello che adopera $n$ bit per indirizza
   - un byte va in posizione con bit = 0
   - l'altro byte va in posizione con bit = 1
 
-## Algebra Booleana
+## Algebra Booleana e porte algebriche
 
 Si basa su due valori:
 
@@ -157,7 +157,7 @@ $AB + \overline{A}\overline{B} = \overline{(A+B)(\overline{A}+\overline{B})}$
 |:---:|:---:|:---:|
 |0|0|1|
 |0|1|0|
-|1|0|0| 
+|1|0|0|
 |1|1|1|
 
 ### Mappe di Karnaugh
@@ -253,3 +253,21 @@ $B \rarr 10$ = Accumulazione parte intera + Accumulazione parte frazionaria
   passo da $N$ a $M$ bit aggiungendo $M-N$ bit
 
 ### Operazioni
+
+## Circuiti combinatori e memorie
+
+## Binari
+
+## Caratteri
+
+## Processore
+
+## Arm
+
+## Isa
+
+## Bus
+
+## Gerarchie della memoria
+
+## Arduino

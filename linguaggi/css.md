@@ -6,7 +6,7 @@ permalink: /linguaggi/css/
 
 ## Fogli di stile
 
-I cascading Style Sheets (CSS), o fogli di stile servono a formulare e gestire il layout di un sito web. Posso essere inseriti più volte in uno stesso documento seguendo regole gerarchiche precise. Servono essenzialmente a riderfinire e/o potenziare i tag HTML.
+I cascading Style Sheets (CSS), o fogli di stile servono a formulare e gestire il layout di un sito web. Posso essere inseriti più volte in uno stesso documento seguendo regole gerarchiche precise. Servono essenzialmente a ridefinire e/o potenziare i tag HTML.
 
 ### Regole
 
