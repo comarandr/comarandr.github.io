@@ -342,7 +342,7 @@ Nota: $4 \div 5 = 0*5 + 4 \quad 5 \div 4 = 1*4 + 1$
 #false
 ```
 
-**controllo di tipo**: 
+**controllo di tipo**:
 
 - `number?``
 - `string?`

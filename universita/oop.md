@@ -7,7 +7,7 @@ custom_css: /assets/oop.css
 
 ## Concetti di base
 
-Utile il collegamento alla pagina di [java](/linguaggi/java.md)
+Utile il collegamento alla pagina di [java]({% link /linguaggi/java.md %})
 
 ### ASTRAZIONE
 
@@ -350,7 +350,7 @@ List<Student> lista = new ArrayList<Student>(); //apparente: List, reale: ArrayL
 public class Sottotipo extends Supertipo{
     //variabili d'istanza super
     //variabili d'istanza sottotipo
-    //@Override metodi super (obbligatiori se astratti)
+    //@Override metodi super (obbligatori se astratti)
     //metodi sottotipo
 }
 ```
@@ -358,6 +358,14 @@ public class Sottotipo extends Supertipo{
 ##### Ereditarietà multipla
 
 In java una classe può estendere una sola classe concreta o astratta, ma può implementare più interfacce.
+
+```java
+public class Sottotipo implements Interfaccia1, Interfaccia2{
+    //variabili d'istanza 
+    //@Override metodi interfaccia1
+    //@Override metodi interfaccia2
+}
+```
 
 #### POLIMORFISMO
 
@@ -1149,29 +1157,29 @@ public interface Drink {
 }
 
 //classe concreta componente O implementa I
-public class Espresso implements Drink {
+public class Caffe implements Drink {
     @Override
-    public String getDescription() { return "Espresso"; }
+    public String getDescription() { return "Caffe"; }
     @Override
     public double costo() { return 1.50; }
 }
 
 //classe decoratore astratta D implementa I
-public abstract class DrinkDecorator implements Drink {
+public abstract class Decorator implements Drink {
     protected Drink drink;
-    public DrinkDecorator(Drink drink) {this.drink = drink;}
+    public Decorator(Drink drink) {this.drink = drink;}
 }
 
 //classe decoratore concreta estende D
-public class Latte extends DrinkDecorator {
-    public Latte(Drink drink) {super(drink);}
+public class Panna extends Decorator {
+    public Panna(Drink drink) {super(drink);}
     @Override
-    public String getDescription() {return drink.getDescription() + ", Latte";}
+    public String getDescription() {return drink.getDescription() + ", Panna";}
     @Override
     public double costo() {return drink.costo() + 0.50;}
 }
 
-public class Choco extends DrinkDecorator {
+public class Choco extends Decorator {
     public Choco(Drink drink) {super(drink);}
     @Override
     public String getDescription() {return drink.getDescription() + ", Choco";}
@@ -1181,11 +1189,11 @@ public class Choco extends DrinkDecorator {
 
 //uso del decorator
 Drink myDrink = new Espresso();
-myDrink = new Latte(myDrink);
+myDrink = new Panna(myDrink);
 myDrink = new Choco(myDrink);
 
 System.out.println(myDrink.getDescription() + " $" + myDrink.costo());
->>> Espresso, Latte, Choco $2.70
+>>> Espresso, Panna, Choco $2.70
 ```
 
 #### COMPOSITE
@@ -1287,39 +1295,36 @@ Abstraction a = new RefinedAbstraction(new ConcreteImplementor());
 - classi concrete astrazione che estendono
 
 ```mermaid
----
-    config:
-        class:
-            hideEmptyMembersBox: true
----
 classDiagram
-    class Abstraction{
-        <<Classe astratta>>
-        protected Implementation i;
-        Costruttore(Implementation i) this
-        + abstract void metodo1()
-        + abstract void metodo2()
-
-    }
-    class Implementation{
+    class Dispositivo{
         <<Interfaccia>>
-        + metodo1()
-        + metodo2()
+        + accendi()
+        + spegni()
+        + setVol(int vol)
     }
-    class `RefinedAbstraction extends Abstraction`{
+    class TV{
         <<Classe concreta>>
-        + RefinedAbstraction(Implementor i)( super() )
-        + @Override metodo1( Implementor.metodo1())
-        + @Override metodo2( Implementor.metodo2())
+        + @Override accendi()
+        + @Override spegni()
+        + @Override setVol(int vol)
     }
-    class `Implementor implements Implementation`{
-        <<Classe concreta>> 
-        + @Override metodo1()
-        + @Override metodo2()
+    class Telecomando{
+        <<Classe astratta>>
+        protected Dispositivo dispositivo
+        Costruttore(Dispositivo d) this
+        + abstract void accendi()
+        + abstract void spegni()
+        + abstract void alzaVolume()
     }
-    Abstraction -- Implementation
-    Abstraction <|-- `RefinedAbstraction extends Abstraction`
-    Implementation <|-- `Implementor implements Implementation`
+    class `TelecomandoBase extends Telecomando`{
+        <<Classe concreta>>
+        + @Override accendi() (dispositivo.accendi())
+        + @Override spegni() (dispositivo.spegni())
+        + @Override alzaVolume() (dispositivo.setVol(...))
+    }
+
+    Dispositivo <|-- TV
+    Telecomando <|-- `TelecomandoBase extends Telecomando`
 ```
 
 ```java
@@ -1380,20 +1385,10 @@ classDiagram
 
     note for Element "interfaccia per elementi"
 
-    class Main{
-        E x = new Tipo1()
-        E y = new Tipo2()
-        Visitor v1 = new Operazione1()
-        Visitor v2 = new Operazione2()
-
-        x.accept(v1)
-        y.accept(v2)
-    }
-
     class Visitor{
         <<Interfaccia>>
-        + visit(Tipo1 t)
-        + visit(Tipo2 t)
+        + visit(Cerchio c)
+        + visit(Rettangolo r)
     }
 
     class Element{
@@ -1401,36 +1396,32 @@ classDiagram
         + void accept(Visitor v)
     }
 
-    class `Tipo1 implements Element`{
+    class `Cerchio`{
         <<classe concreta>>
-        variabili d'istanza
-        getter()
         @Override accept(Visitor v)
     }
 
-    class `Tipo2 implements Element`{
+    class `Rettangolo`{
         <<classe concreta>>
-        variabili d'istanza
-        getter()
         @Override accept(Visitor v)
     }
 
-    class `Operazione1 implements Visitor`{
+    class `Area`{
         <<classe concreta>>
-        + visit(Tipo1 t) per tipo1
-        + visit(Tipo2 t) per tipo2
+        + visit(Cerchio c) per cerchio
+        + visit(Rettangolo r) per rettangolo
     }
 
-    class `Operazione2 implements Visitor`{
+    class `Print`{
         <<classe concreta>>
-        + visit(Tipo1 t) per tipo1
-        + visit(Tipo2 t) per tipo2
+        + visit(Cerchio c) per cerchio
+        + visit(Rettangolo r) per rettangolo
     }
 
-    Visitor <|-- `Operazione1 implements Visitor`
-    Visitor <|-- `Operazione2 implements Visitor`
-    Element <|-- `Tipo1 implements Element`
-    Element <|-- `Tipo2 implements Element`
+    Visitor <|-- `Area`
+    Visitor <|-- `Print`
+    Element <|-- `Cerchio`
+    Element <|-- `Rettangolo`
 ```
 
 ```java

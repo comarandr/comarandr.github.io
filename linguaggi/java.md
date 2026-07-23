@@ -5,7 +5,7 @@ permalink: /linguaggi/java
 custom_css: /assets/oop.css
 ---
 
-Linguaggio a oggetti, pertanto è utile il collegamento alla pagina di [oop](/universita/oop.md)
+Linguaggio a oggetti, pertanto è utile il collegamento alla pagina di [oop]({% link /universita/oop.md %})
 
 ## Basi di java
 
@@ -161,7 +161,7 @@ incremento: dopo ogni iterazione
 Ottimo per iterare su collezioni di oggetti, array o stream
 
 ```java
-for (tipo elemento : collezione) {
+for (Tipo elemento : collezione) {
     instruction //esegue il blocco per ogni elemento della collezione
 }
 ```
