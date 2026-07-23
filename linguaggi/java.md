@@ -5,7 +5,7 @@ permalink: /linguaggi/java
 custom_css: /assets/oop.css
 ---
 
-Linguaggio a oggetti, pertanto è utile il collegamento alla pagina di [oop]({% link /universita/oop.md %})
+Linguaggio a oggetti, pertanto è utile il collegamento alla pagina di [oop](/universita/oop.html)
 
 ## Basi di java
 

@@ -7,7 +7,7 @@ custom_css: /assets/oop.css
 
 ## Concetti di base
 
-Utile il collegamento alla pagina di [java]({% link /linguaggi/java.md %})
+Utile il collegamento alla pagina di [java](/linguaggi/java.html)
 
 ### ASTRAZIONE
 
