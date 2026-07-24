@@ -1296,73 +1296,90 @@ Abstraction a = new RefinedAbstraction(new ConcreteImplementor());
 
 ```mermaid
 classDiagram
-    class Dispositivo{
+    class Canale{
         <<Interfaccia>>
-        + accendi()
-        + spegni()
-        + setVol(int vol)
+        + invia()
     }
-    class TV{
-        <<Classe concreta>>
-        + @Override accendi()
-        + @Override spegni()
-        + @Override setVol(int vol)
-    }
-    class Telecomando{
-        <<Classe astratta>>
-        protected Dispositivo dispositivo
-        Costruttore(Dispositivo d) this
-        + abstract void accendi()
-        + abstract void spegni()
-        + abstract void alzaVolume()
-    }
-    class `TelecomandoBase extends Telecomando`{
-        <<Classe concreta>>
-        + @Override accendi() (dispositivo.accendi())
-        + @Override spegni() (dispositivo.spegni())
-        + @Override alzaVolume() (dispositivo.setVol(...))
+    class Whatsapp{
+        + @Override invia()
     }
 
-    Dispositivo <|-- TV
-    Telecomando <|-- `TelecomandoBase extends Telecomando`
+    class Email{
+        + @Override invia()
+    }
+
+    class Sms{
+        + @Override invia()
+    }
+
+    class Notifica{
+        <<Classe astratta>>
+        protected Canale c
+        Costruttore(Canale c)
+        + abstract invia()
+    }
+
+    class NotificaNormale{
+        <<Classe concreta>>
+        + @Override invia()
+    }
+
+    class NotificaAvanzata{
+        <<Classe concreta>>
+        + @Override invia()
+    }
+
+    Canale <|-- Whatsapp
+    Canale <|-- Email
+    Canale <|-- Sms
+    Notifica <|-- NotificaNormale
+    Notifica <|-- NotificaAvanzata
 ```
 
 ```java
 //interfaccia implementazione
-public interface Dispositivo{
-    void accendi();
-    void spegni();
-    void setVol(int vol);
-    }
+public interface Canale{ {
+    void invia();
+}
 
 //classe concreta implementazione
-public class TV implements Dispositivo{
-    @Override public void accendi(){...}
-    @Override public void spegni(){...}
-    @Override public void setVol(int vol){...}
+public class Whatsapp implements Canale{
+    @Override public void invia(){...}
+}
+
+//classe concreta implementazione
+public class Email implements Canale{
+    @Override public void invia(){...}
+}
+
+//classe concreta implementazione
+public class Sms implements Canale{
+    @Override public void invia(){...}
 }
 
 //classe astratta astrazione
-public abstract class Telecomando{
-    protected Dispositivo dispositivo;
-    public Telecomando(Dispositivo dispositivo){...}
-    public abstract void accendi();
-    public abstract void spegni();
-    public abstract void alzaVolume();
+public abstract class Notifica{
+    protected Canale canale;
+    public Notifica(Canale canale){...}
+    public abstract void invia();
 }
 
 //classe concreta astrazione
-public class TelecomandoBase extends Telecomando{
-    public TelecomandoBase(Dispositivo dispositivo){super(dispositivo);}
-    @Override public void accendi(){dispositivo.accendi();}
-    @Override public void spegni(){dispositivo.spegni();}
-    @Override public void alzaVolume(){dispositivo.setVol(...);}
+public class NotificaNormale extends Notifica{
+    public NotificaNormale(Canale canale){super(canale);}
+    @Override public void invia(){...}
+}
+
+//classe concreta astrazione
+public class NotificaAvanzata extends Notifica{
+    public NotificaAvanzata(Canale canale){super(canale);}
+    @Override public void invia(){...}
 }
 
 //uso del bridge
-Dispositivo tv = new TV();
-Telecomando telecomando = new TelecomandoBase(tv);
-telecomando.accendi();
+Canale whatsapp = new Whatsapp();
+Notifica notifica = new NotificaNormale(whatsapp);
+notifica.invia();
 ```
 
 #### VISITOR
