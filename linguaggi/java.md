@@ -98,6 +98,12 @@ variabili d'istanza: variabili che appartengono all'oggetto, rappresentate in ci
 
 `->` : separa i parametri dalla funzione
 
+#### Pacchetto Math
+
+`Math.sqrt(x)` : radice quadrata di x
+`Math.abs(x)` : valore assoluto di x
+
+
 ### Costrutti
 
 #### Costrutto IF
