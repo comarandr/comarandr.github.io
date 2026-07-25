@@ -102,7 +102,19 @@ variabili d'istanza: variabili che appartengono all'oggetto, rappresentate in ci
 
 `Math.sqrt(x)` : radice quadrata di x
 `Math.abs(x)` : valore assoluto di x
+`Math.pow(x, y)` : x elevato alla y
+`Math.max(x, y)` : massimo tra x e y
+`Math.min(x, y)` : minimo tra x e y
 
+### Metodi comodi
+
+#### Verificare che un oggetto non sia nullo
+
+`Object.requireNonNull(obj)` : lancia un'eccezione se obj è nullo
+
+#### Verificare il tipo di un oggetto
+
+`obj instanceof Tipo` : restituisce true se obj è un'istanza di Tipo, altrimenti false
 
 ### Costrutti
 

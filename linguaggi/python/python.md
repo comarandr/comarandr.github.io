@@ -22,7 +22,7 @@ permalink: /linguaggi/python/
 - gestione booleani: 0 falso, altro vero
 - stampa: `print('ciao')`
 
-### aritmentica
+### aritmetica
 
 - operazioni matematiche: + - * /
 - numeri complessi: `1 + 2j` oppure `complex(1, 2)`
@@ -37,7 +37,7 @@ permalink: /linguaggi/python/
 - posso usare `r` per evitare l'escape dei caratteri speciali, es. `ciao = r"ciao\n\come\n\stai?"`
 - escape caratteri speciali anche con `'''` o circondate da ulteriori `"`
 - concatenazione di stringhe: `a + b`
-- concatenazione di ripetizine di stringa: `stringa* 3`
+- concatenazione di ripetizione di stringa: `stringa* 3`
 - stringhe dichiarate consecutivamente vengono concatenate: `'str' 'in' 'ga'` &rarr; `'stringa'`
 - indicizzazione: `stringa[posizione]`
 - indicizzazione a fette: `stringa[inizio:fine:step]`
@@ -119,7 +119,7 @@ for elemento in lista:
 
 - `pass` è un'istruzione nulla, utile per evitare errori di sintassi
 
-#  ## funzioni e metodi
+### funzioni e metodi
 
 - definizione di una funzione: `def funzione(parametro):`
 - funzione con più parametri: `def funzione(parametro1, parametro2):`
@@ -178,7 +178,7 @@ nota: posso creare array da liste
   `np.random.choice(a=range(x), size = (righe, colonne), replace = boolean)`
 Se replace = false posso estrarre ogni elemento 1 sola volta
 
-(possiamo gerare array 16 o 32 bit)
+(possiamo generare array 16 o 32 bit)
 
 ### np array
 

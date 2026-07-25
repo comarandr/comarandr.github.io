@@ -47,3 +47,38 @@ OOp:
 - [Scienza dei dati]
 - [Machine Learning]
 - [Internet e tecnologie web]
+- [Analisi Matematica 2]
+- [plc]
+- [Sistemi embedded]
+
+## Da Economia e Commercio
+
+1 anno:
+
+- [Storia economica]
+- Matematica generale: in analisi 1 e altre materie
+- [Economia aziendale]
+- [Microeconomia](./microeconomia.md)
+- [Diritto privato]
+
+2 anno:
+
+- [Economia e gestione delle imprese]
+- [Macroeconomia]
+- [Economia industriale]
+- [Matematica per le applicazioni economiche]
+- [Statistica economica]
+- [Diritto del lavoro]
+
+3 anno:
+
+- [Politica economica e monetaria]
+- [Econometria]
+- [Sociologia]
+- [Strumenti statistici per l'economia]
+- [Economia degli intermediari finanziari]
+- [Diritto commerciale]
+
+## Altri appunti
+
+- Roba di diritto europeo (istituzioni) e diritto pubblico (istituzioni)

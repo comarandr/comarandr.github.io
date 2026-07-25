@@ -372,7 +372,7 @@ public class Sottotipo implements Interfaccia1, Interfaccia2{
 - metodi: posso instradare verso metodi diversi in una classe in base alle firme
 - oggetti: istanza supertipo castata in istanza sottotipo
 
-principio liskov
+principio Liskov
 
 - rispettato: uso gerarchia + ereditarietà
 - non rispettato: delega o associazione
@@ -413,6 +413,28 @@ class Gatto extends Animale{
 
 Animale a = new Cane(); // Polimorfismo
 a.faiVerso(); // Stampa: Bau Bau
+```
+
+#### Uso di super
+
+Il metodo `super()` serve a richiamare membri (metodi, costruttori o variabili) della classe padre (superclasse) da una sottoclasse. Può essere usato per:
+
+- richiamare il costruttore della superclasse; in tale caso deve essere sempre la prima istruzione
+  - serve a passare i dati necessari a inizializzare le variabili ereditate dalla classe padre
+
+- richiamare un metodo con `super.metodo()`, utile soprattutto per richiamare il comportamento della superclasse quando si fa l'override di un metodo nella sottoclasse
+
+- accedere a una variabile del padre con `super.variabile`
+
+```java
+class Animale{
+    protected String nome;
+    public Animale(String nome){this.nome = nome;}
+}
+
+class Cane extends Animale{
+    public Cane(String nome){super(nome);}
+}
 ```
 
 #### TIPO GENERICO
@@ -495,12 +517,16 @@ public Tipo NomeMetodo(Tipo argomento) throws Tipo exception{
 
 ```java
 class Animale{
-    public void faiVerso(){System.out.println("Verso generico");}
+    public void faiVerso(){
+        System.out.println("Verso generico");
+        }
 }
 
 class Cane extends Animale{
     @Override
-    public void faiVerso(){System.out.println("Bau Bau");}
+    public void faiVerso(){
+        System.out.println("Bau Bau");
+        }
 }
 ```
 

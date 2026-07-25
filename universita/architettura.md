@@ -72,6 +72,7 @@ Operazioni fondamentali:
 |0|1|
 |1|0|
 
+
 Nota bene: una tabella di verita
 
 - $k$ input = $k$ colonne
